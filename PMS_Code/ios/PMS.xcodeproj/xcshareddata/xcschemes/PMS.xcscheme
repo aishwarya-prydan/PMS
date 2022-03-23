@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "PMS_Code.app"
-               BlueprintName = "PMS_Code"
-               ReferencedContainer = "container:PMS_Code.xcodeproj">
+               BuildableName = "PMS.app"
+               BlueprintName = "PMS"
+               ReferencedContainer = "container:PMS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "PMS_CodeTests.xctest"
-               BlueprintName = "PMS_CodeTests"
-               ReferencedContainer = "container:PMS_Code.xcodeproj">
+               BuildableName = "PMSTests.xctest"
+               BlueprintName = "PMSTests"
+               ReferencedContainer = "container:PMS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "PMS_Code.app"
-            BlueprintName = "PMS_Code"
-            ReferencedContainer = "container:PMS_Code.xcodeproj">
+            BuildableName = "PMS.app"
+            BlueprintName = "PMS"
+            ReferencedContainer = "container:PMS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "PMS_Code.app"
-            BlueprintName = "PMS_Code"
-            ReferencedContainer = "container:PMS_Code.xcodeproj">
+            BuildableName = "PMS.app"
+            BlueprintName = "PMS"
+            ReferencedContainer = "container:PMS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

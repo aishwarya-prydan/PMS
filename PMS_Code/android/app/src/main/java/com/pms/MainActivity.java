@@ -1,4 +1,4 @@
-package com.pms_code;
+package com.pms;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "PMS_Code";
+    return "PMS";
   }
 }

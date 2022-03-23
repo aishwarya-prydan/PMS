@@ -16,6 +16,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
 // import LandingPage from '../Screens/LandingPage/LandingPage.js';
 
+import WelcomeScreen from '../Screens/WelcomeScreen/WelcomeScreen.js';
 import SignInScreen from '../Screens/SignInScreen/SignInScreen.js';
 import SignUpScreen from '../Screens/SignUpScreen/SignUpScreen.js';
 import ConfirmEmailScreen from '../Screens/ConfirmEmailScreen/ConfirmEmailScreen.js';
@@ -60,6 +61,7 @@ const Navigation = () => {
     // isAppFirstLaunched != null && (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="SignIn" component={SignInScreen} />
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
         <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
