@@ -37,6 +37,7 @@ import LandingPage2 from '../Screens/LandingPage2/LandingPage2.js';
 import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
 import {ScreenStack} from 'react-native-screens';
+import Header from './../Components/Header/Header';
 
 const Stack = createNativeStackNavigator();
 const ProfileStack = createStackNavigator();
@@ -59,29 +60,61 @@ const Navigation = () => {
   return (
     // isAppFirstLaunched != null && (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="SignIn" component={SignInScreen} />
-        {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#3B71F3',
+          },
+          headerTitleAlign: 'center',
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            // fontWeight: 'bold',
+          },
+        }}>
+        {/* <Stack.Screen name="Onboarding" component={OnboardingScreen} /> */}
+        <Stack.Screen
+          name="SignIn"
+          component={SignInScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUpScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ConfirmEmail"
+          component={ConfirmEmailScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ForgotPassword"
+          component={ForgotPasswordScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ConfirmCode"
+          component={ConfirmCodeScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="NewPassword"
+          component={NewPasswordScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen name="LandingPage2" component={LandingPage2} />
+        <Stack.Screen name="Home" component={TabNavigator} />
+        <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
+        <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
+        <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
         <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} />
+        {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
         <Stack.Screen
           name="PartialPaymentScreen"
           component={PartialPaymentScreen}
         />
-
-        {/* <Stack.Screen name="Onboarding" component={OnboardingScreen} /> */}
-
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
-        <Stack.Screen name="ConfirmEmail" component={ConfirmEmailScreen} />
-        <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
-        <Stack.Screen name="ConfirmCode" component={ConfirmCodeScreen} />
-        <Stack.Screen name="NewPassword" component={NewPasswordScreen} />
-        <Stack.Screen name="LandingPage2" component={LandingPage2} />
-        <Stack.Screen name="Home" component={TabNavigator} />
-        {/* <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} /> */}
-        <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
-        <Stack.Screen name="EditProfile" component={EditProfileScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
