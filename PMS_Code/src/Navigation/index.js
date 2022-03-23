@@ -63,10 +63,10 @@ const Navigation = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="SignIn" component={SignInScreen} />
+        {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
-        <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
-        <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} />
+        {/* <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
+        <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} /> */}
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
