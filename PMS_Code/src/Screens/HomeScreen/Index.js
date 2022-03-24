@@ -2,16 +2,33 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
+import {useNavigation} from '@react-navigation/native';
 
 const Index = () => {
+  const navigation = useNavigation();
+
+  const OnProjectPressed = () => {
+    navigation.navigate('GiveProject');
+  };
+  const OnEmployeePressed = () => {
+    navigation.navigate('HireEmployee');
+  };
   return (
     <View style={{backgroundColor: '#f0f0f0'}}>
       <View style={styles.container}>
         <Text style={styles.texts}>
           Welcome to PMS. Select an option below to get started
         </Text>
-        <CustomButtons text="Post a Project" type="FOUR" />
-        <CustomButtons text="Hire Employee" type="FOUR" />
+        <CustomButtons
+          text="Post a Project"
+          type="FOUR"
+          onPress={OnProjectPressed}
+        />
+        <CustomButtons
+          text="Hire Employee"
+          type="FOUR"
+          onPress={OnEmployeePressed}
+        />
       </View>
     </View>
   );
