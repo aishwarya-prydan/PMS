@@ -21,6 +21,7 @@ const TabNavigator = () => {
         tabBarStyle: {backgroundColor: '#3B71F3'},
         tabBarInactiveTintColor: '#fff',
         tabBarActiveTintColor: '#f7ffbf',
+        headerShown: false,
       }}>
       <Tab.Screen
         name="Home2"
