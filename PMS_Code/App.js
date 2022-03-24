@@ -14,13 +14,13 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 import Navigation from './src/Navigation/index';
+
 // import CustomDatePickerInput from './src/Components/CustomDatePicker/CustomDatePickerInput';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
       <Navigation />
-      {/* <CustomDatePickerInput /> */}
     </SafeAreaView>
   );
 };
