@@ -3,7 +3,7 @@ import React from 'react';
 import ProgressBar from '../../Components/ProgressBar/ProgressBar.js';
 
 const data = [{
-  percentage: 90,
+  percentage: 70,
   color: 'blue',
   max: 10
 }]

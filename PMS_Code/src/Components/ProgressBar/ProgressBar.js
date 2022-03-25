@@ -17,7 +17,7 @@ export default function UpdatestatusScreen({
     percentage = 75,
     radius = 100,
     strokeWidth = 10,
-    duration = 500,
+    duration = 20,
     color = "tomato",
     delay = 0,
     textColor,
