@@ -61,9 +61,17 @@ const Navigation = () => {
   return (
     // isAppFirstLaunched != null && (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-
-        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#3B71F3',
+          },
+          headerTitleAlign: 'center',
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}>
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
@@ -100,7 +108,11 @@ const Navigation = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="LandingPage2" component={LandingPage2} />
-        <Stack.Screen name="Home" component={TabNavigator} />
+        <Stack.Screen
+          name="Home"
+          component={TabNavigator}
+          options={{ headerShown: true }}
+        />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
         <Stack.Screen name="EditProfile" component={EditProfileScreen} />

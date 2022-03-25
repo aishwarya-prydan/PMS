@@ -37,7 +37,7 @@ const SignUpScreen = ({Navigation}) => {
   return (
     <ScrollView>
       <View style={styles.root}>
-        <Text style={styles.title}>Create a new account</Text>
+        <Text style={styles.title}>Create Account</Text>
 
         <CustomInput
           placeholder="Username"
@@ -76,7 +76,8 @@ const SignUpScreen = ({Navigation}) => {
         />
 
         <CustomButtons
-          buttonTitle="Sign Up"
+          // buttonTitle="Sign Up"
+          text="Sign Up"
           onPress={OnRegisterPressed}
           // onPress={() => register(email, password)}
         />
@@ -116,6 +117,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#051C60',
     margin: 10,
+    marginTop: 20,
   },
 
   text: {

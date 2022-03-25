@@ -53,6 +53,13 @@ const styles = StyleSheet.create({
   // container_LEFT:{
   //     align: 'left',
   // },
+  container_FOUR: {
+    backgroundColor: '#fff',
+    borderWidth: 3,
+    borderColor: '#3B71F3',
+    width: '60%',
+    borderRadius: 0,
+  },
 
   text_PRIMARY: {
     fontWeight: 'bold',
@@ -66,6 +73,12 @@ const styles = StyleSheet.create({
 
   text_TERTIARY: {
     color: 'gray',
+  },
+
+  text_FOUR: {
+    fontWeight: 'bold',
+    color: '#3B71F3',
+    fontSize: 13,
   },
 });
 

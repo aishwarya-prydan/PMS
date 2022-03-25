@@ -10,6 +10,7 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
+
 import Logo from '../../../assets/images/Logo.png';
 import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
@@ -26,6 +27,10 @@ const SignInScreen = () => {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  const [Customer, setCustomer] = useState(false);
+  const [Employee, setEmployee] = useState(false);
+  const [Select, setSelect] = useState('');
 
   const OnSignInPressed = data => {
     // console.log(data);
@@ -56,14 +61,6 @@ const SignInScreen = () => {
           resizeMode="contain"
         />
 
-        {/* <CustomInput name={username} placeholder="Username" control={control} />
-
-        <CustomInput
-          name={password}
-          placeholder="Password"
-          control={control}
-          secureTextEntry={true}
-        /> */}
         <CustomInput
           placeholder="Username"
           // value={username}
