@@ -76,7 +76,8 @@ const SignUpScreen = ({Navigation}) => {
         />
 
         <CustomButtons
-          buttonTitle="Sign Up"
+          // buttonTitle="Sign Up"
+          text="Sign Up"
           onPress={OnRegisterPressed}
           // onPress={() => register(email, password)}
         />

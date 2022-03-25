@@ -72,12 +72,12 @@ const Navigation = () => {
             fontWeight: 'bold',
           },
         }}>
-        {/* <Stack.Screen name="Welcome" component={WelcomeScreen} /> */}
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
         {/* <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
         <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} /> */}
-        {/* <Stack.Screen
+        <Stack.Screen
           name="SignIn"
           component={SignInScreen}
           options={{headerShown: false}}
@@ -107,7 +107,7 @@ const Navigation = () => {
           component={NewPasswordScreen}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="LandingPage2" component={LandingPage2} /> */}
+        <Stack.Screen name="LandingPage2" component={LandingPage2} />
         <Stack.Screen
           name="Home"
           component={TabNavigator}
