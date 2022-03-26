@@ -15,7 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
 // import LandingPage from '../Screens/LandingPage/LandingPage.js';
-
+import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen.js';
 import WelcomeScreen from '../Screens/WelcomeScreen/WelcomeScreen.js';
 import SignInScreen from '../Screens/SignInScreen/SignInScreen.js';
 import SignUpScreen from '../Screens/SignUpScreen/SignUpScreen.js';
@@ -32,6 +32,7 @@ import MainPaymentScreen from '../Screens/PaymentScreen/MainPaymentScreen.js';
 import FullPaymentScreen from '../Screens/PaymentScreen/FullPaymentScreen.js';
 import PartialPaymentScreen from '../Screens/PaymentScreen/PartialPaymentScreen.js';
 import CustomDatePicker from '../Components/CustomDatePicker/CustomDatePickerInput.js';
+import TopTabNavigator from '../Navigation/TopTabNavigator.js';
 
 import LandingPage2 from '../Screens/LandingPage2/LandingPage2.js';
 // import HomeScreen from '../Screens/HomeScreen/Index.js';
@@ -119,6 +120,7 @@ const Navigation = () => {
         <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
         <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} />
+        <Stack.Screen name="MainProject" component={MainProjectScreen} />
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
         <Stack.Screen
           name="PartialPaymentScreen"
