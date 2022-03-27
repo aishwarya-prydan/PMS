@@ -33,12 +33,14 @@ import FullPaymentScreen from '../Screens/PaymentScreen/FullPaymentScreen.js';
 import PartialPaymentScreen from '../Screens/PaymentScreen/PartialPaymentScreen.js';
 import CustomDatePicker from '../Components/CustomDatePicker/CustomDatePickerInput.js';
 import TopTabNavigator from '../Navigation/TopTabNavigator.js';
+import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
+import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
 
 import LandingPage2 from '../Screens/LandingPage2/LandingPage2.js';
 // import HomeScreen from '../Screens/HomeScreen/Index.js';
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
-import { ScreenStack } from 'react-native-screens';
+import {ScreenStack} from 'react-native-screens';
 import Header from './../Components/Header/Header';
 
 const Stack = createNativeStackNavigator();
@@ -83,38 +85,38 @@ const Navigation = () => {
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmEmail"
           component={ConfirmEmailScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmCode"
           component={ConfirmCodeScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="NewPassword"
           component={NewPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen name="LandingPage2" component={LandingPage2} />
         <Stack.Screen
           name="Home"
           component={TabNavigator}
-          options={{ headerShown: true }}
+          options={{headerShown: true}}
         />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
@@ -124,6 +126,8 @@ const Navigation = () => {
         <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} />
         <Stack.Screen name="MainProject" component={MainProjectScreen} />
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
+        <Stack.Screen name="Terms Of Use" component={TermsOfUseScreen} />
+        <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
         <Stack.Screen
           name="PartialPaymentScreen"
           component={PartialPaymentScreen}

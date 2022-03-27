@@ -9,6 +9,7 @@ import {
   useWindowDimensions,
   TextInput,
   ScrollView,
+  Button,
 } from 'react-native';
 
 import Logo from '../../../assets/images/Logo.png';
@@ -74,20 +75,20 @@ const SignInScreen = () => {
         />
 
         <CustomButtons
+          style={styles.FP}
           text="Forgot Password?"
           onPress={OnForgotPasswordPressed}
-          type="TERTIARY"
+          // type="TERTIARY"
+          type="FP"
         />
+
         {/* <CustomButtons text="Sign In" onPress={handleSubmit(OnSignInPressed)} /> */}
         <CustomButtons text="Sign In" onPress={OnSignInPressed} />
 
         <SocialSignInButtons />
 
-        <CustomButtons
-          text="Don't have an account? Create one"
-          onPress={OnSignUpPress}
-          type="TERTIARY"
-        />
+        <CustomButtons text="Create one" onPress={OnSignUpPress} type="CO" />
+        <Text style={styles.text1}>Don't have an account? </Text>
       </View>
     </ScrollView>
   );
@@ -103,6 +104,16 @@ const styles = StyleSheet.create({
     width: 200,
     maxWidth: 500,
     maxHeight: 200,
+  },
+
+  text1: {
+    marginTop: -40,
+    marginLeft: -90,
+    fontSize: 15,
+  },
+
+  link: {
+    color: '#3B71F3',
   },
 });
 

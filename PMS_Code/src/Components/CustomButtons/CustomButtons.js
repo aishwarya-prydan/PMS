@@ -80,6 +80,40 @@ const styles = StyleSheet.create({
     color: '#3B71F3',
     fontSize: 13,
   },
+  text_FP: {
+    fontWeight: 'bold',
+    color: '#3B71F3',
+    fontSize: 15,
+  },
+
+  text_CO: {
+    fontWeight: 'bold',
+    color: '#3B71F3',
+    fontSize: 15,
+    marginLeft: 150,
+  },
+  text_BS: {
+    fontWeight: 'bold',
+    color: '#3B71F3',
+    fontSize: 15,
+    marginLeft: 70,
+  },
+
+  text_TU: {
+    fontWeight: 'bold',
+    color: '#FDB075',
+    // fontSize: 15,
+    marginLeft: -240,
+    marginTop: -21,
+  },
+
+  text_PP: {
+    fontWeight: 'bold',
+    color: '#FDB075',
+    // fontSize: 15,
+    marginLeft: 6,
+    marginTop: -39.5,
+  },
 });
 
 export default CustomButtons;
