@@ -37,9 +37,9 @@ export default class DeveloperInfoScreen extends React.Component {
     data: [
       {
         name: 'Aishwarya Birewar',
-        email: 'miyah.myles@gmail.com',
+        email: 'miyah.myles44@gmail.com',
         position: 'React Native Developer',
-        photo: 'https://randomuser.me/api/portraits/men/97.jpg',
+        photo: 'https://randomuser.me/api/portraits/women/44.jpg',
       },
       {
         name: 'Vedangi Patel',
@@ -52,7 +52,7 @@ export default class DeveloperInfoScreen extends React.Component {
         name: 'Kishan Das',
         email: 'june.cha@gmail.com',
         position: 'Python Developer',
-        photo: 'https://randomuser.me/api/portraits/women/44.jpg',
+        photo: 'https://randomuser.me/api/portraits/men/97.jpg',
       },
     ],
   };
