@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Alert} from 'react-native';
 import React, {UseEffect, useState} from 'react';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {CheckBox} from 'react-native-elements';
@@ -18,8 +18,31 @@ const WelcomeScreen = ({navigation}) => {
     setCustomer(false);
   };
 
+  // if (setCustomer == false) {
+  //   OnContinuePress(false);
+  // }
+
   const OnContinuePress = () => {
-    navigation.navigate('SignIn');
+    // navigation.navigate('SignIn');
+    // if (setCustomer.checked || setEmployee.checked != true) {
+    //   // navigation.navigate('SignIn');
+    //   Alert.alert('Please select the write option');
+    // } else {
+    //   // console.log('Please select the write option');
+    //   // Alert.alert('Please select the write option');
+    //   // navigation.navigate('SignIn');
+    // }
+
+    if (SelectCustomer || SelectEmployee) {
+      // Alert.alert('you have selected a customer');
+      navigation.navigate('SignIn');
+    } else {
+      Alert.alert('Please select the write option');
+    }
+
+    // if (SelectEmployee) {
+    //   Alert.alert('you have selected a Employee');
+    // }
   };
 
   return (

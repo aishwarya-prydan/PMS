@@ -12,7 +12,7 @@ const SignUpScreen = ({Navigation}) => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [passwordRepeat, setpasswordRepeat] = useState();
+  const [passwordConform, setpasswordConform] = useState();
   const [mobileNumber, setmobileNumber] = useState();
   const navigation = useNavigation();
 
@@ -27,11 +27,13 @@ const SignUpScreen = ({Navigation}) => {
   };
 
   const OnTermsOfUsePressed = () => {
-    console.warn('Terms of use');
+    // console.warn('Terms of use');
+    navigation.navigate('Terms Of Use');
   };
 
   const OnPrivacyPressed = () => {
-    console.warn('OnPrivacyPressed');
+    // console.warn('OnPrivacyPressed');
+    navigation.navigate('Privacy Policy');
   };
 
   return (
@@ -69,9 +71,9 @@ const SignUpScreen = ({Navigation}) => {
         />
 
         <CustomInput
-          placeholder="Repeat Password"
-          value={passwordRepeat}
-          setValue={setpasswordRepeat}
+          placeholder="Conform Password"
+          value={passwordConform}
+          setValue={setpasswordConform}
           secureTextEntry={true}
         />
 
@@ -82,7 +84,7 @@ const SignUpScreen = ({Navigation}) => {
           // onPress={() => register(email, password)}
         />
 
-        <Text style={styles.text}>
+        {/* <Text style={styles.text}>
           By Registering, you confirm that you accept our{' '}
           <Text style={styles.link} OnPress={OnTermsOfUsePressed}>
             {' '}
@@ -92,15 +94,27 @@ const SignUpScreen = ({Navigation}) => {
           <Text style={styles.link} OnPress={OnPrivacyPressed}>
             Privacy policy.
           </Text>
+        </Text> */}
+
+        <Text style={styles.text2}>
+          By Registering, you confirm that you accept our
         </Text>
+        <CustomButtons
+          text="Terms of Use"
+          onPress={OnTermsOfUsePressed}
+          type="TU"
+        />
+        <Text style={styles.text3}>and </Text>
+        <CustomButtons
+          text="Privacy policy."
+          onPress={OnPrivacyPressed}
+          type="PP"
+        />
 
         <SocialSignInButtons />
 
-        <CustomButtons
-          text="Have an account? Sign in"
-          onPress={OnSignInPress}
-          type="TERTIARY"
-        />
+        <CustomButtons text="Sign in" onPress={OnSignInPress} type="CO" />
+        <Text style={styles.text1}>Do you have an account? </Text>
       </View>
     </ScrollView>
   );
@@ -127,6 +141,28 @@ const styles = StyleSheet.create({
 
   link: {
     color: '#FDB075',
+  },
+
+  text1: {
+    marginTop: -40,
+    marginLeft: -80,
+    fontSize: 15,
+  },
+
+  text2: {
+    // fontWeight: 'bold',
+    marginTop: 10,
+    marginLeft: -30,
+    fontSize: 14,
+    // marginBottom: 10,
+  },
+
+  text3: {
+    // fontWeight: 'bold',
+    marginTop: -40.8,
+    marginLeft: -115,
+    fontSize: 14,
+    // marginBottom: 10,
   },
 });
 
