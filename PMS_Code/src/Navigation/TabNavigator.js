@@ -9,6 +9,7 @@ import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen.js
 import TopTabNavigator from '../Navigation/TopTabNavigator.js';
 import {Icon} from 'react-native-elements';
 import {color} from 'react-native-reanimated';
+import HireEmployee from './../Screens/HireEmployee/HireEmployeeScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -34,7 +35,17 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="HireEmp"
+        name="Hire"
+        component={HireEmployee}
+        options={{
+          tabBarIcon: ({color, size}) => (
+            <Icon name="users" type="font-awesome" color={color} size={size} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Project"
         component={TopTabNavigator}
         options={{
           tabBarBadge: 3,
