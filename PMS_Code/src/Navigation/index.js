@@ -3,10 +3,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
@@ -75,8 +75,6 @@ const Navigation = () => {
             fontWeight: 'bold',
           },
         }}>
-
-        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
@@ -125,19 +123,19 @@ const Navigation = () => {
         <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
         <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} />
         <Stack.Screen name="MainProject" component={MainProjectScreen} />
-        {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
         <Stack.Screen name="Terms Of Use" component={TermsOfUseScreen} />
         <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
         <Stack.Screen
           name="PartialPaymentScreen"
           component={PartialPaymentScreen}
         />
+        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
-const ProfileStackScreen = ({ navigation }) => (
+const ProfileStackScreen = ({navigation}) => (
   <ProfileStack.Navigator
     screenOptions={{
       headerStyle: {
