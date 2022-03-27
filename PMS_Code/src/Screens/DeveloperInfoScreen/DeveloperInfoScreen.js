@@ -15,13 +15,10 @@ const DeveloperInfoScreen = () => {
       index: '3',
       name: 'Vedangi',
     },
-    {
-      index: '4',
-      name: 'Project',
-    },
   ];
   return (
     <FlatList
+      // style={styles.listStyle}
       keyExtractor={index => {
         return index.index;
       }}
@@ -41,11 +38,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     margin: 15,
     color: '#fff',
+    textAlign: 'center',
   },
   listStyle: {
-    textAlign: 'center',
     margin: 20,
-    padding: 10,
+    // padding: 1,
   },
 });
 

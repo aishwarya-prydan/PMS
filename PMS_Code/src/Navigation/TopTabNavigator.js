@@ -8,7 +8,11 @@ import DeveloperInfoScreen from '../Screens/DeveloperInfoScreen/DeveloperInfoScr
 const TopTab = createMaterialTopTabNavigator();
 const TopTabNavigator = () => {
   return (
-    <TopTab.Navigator>
+    <TopTab.Navigator
+      screenOptions={{
+        tabBarLabelStyle: {fontSize: 13},
+        tabBarItemStyle: {height: 35, marginBottom: 4},
+      }}>
       <TopTab.Screen name="Hire" component={HireEmployee} />
       <TopTab.Screen name="Developerinfo" component={DeveloperInfoScreen} />
     </TopTab.Navigator>
