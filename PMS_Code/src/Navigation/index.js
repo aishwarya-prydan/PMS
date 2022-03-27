@@ -38,9 +38,9 @@ import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScr
 
 import LandingPage2 from '../Screens/LandingPage2/LandingPage2.js';
 // import HomeScreen from '../Screens/HomeScreen/Index.js';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
-import {ScreenStack} from 'react-native-screens';
+import { ScreenStack } from 'react-native-screens';
 import Header from './../Components/Header/Header';
 
 const Stack = createNativeStackNavigator();
@@ -76,7 +76,7 @@ const Navigation = () => {
           },
         }}>
 
-        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
+        {/* <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} /> */}
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
@@ -85,38 +85,38 @@ const Navigation = () => {
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="ConfirmEmail"
           component={ConfirmEmailScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPasswordScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="ConfirmCode"
           component={ConfirmCodeScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="NewPassword"
           component={NewPasswordScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen name="LandingPage2" component={LandingPage2} />
         <Stack.Screen
           name="Home"
           component={TabNavigator}
-          options={{headerShown: true}}
+          options={{ headerShown: true }}
         />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
