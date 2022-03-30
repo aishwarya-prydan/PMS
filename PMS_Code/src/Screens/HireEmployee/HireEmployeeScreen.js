@@ -1,14 +1,15 @@
-import {View, Text, StyleSheet} from 'react-native';
-import React, {useState} from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
 import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from '@react-native-picker/picker';
 
 const HireEmployee = () => {
   const [ProjectName, setProjectName] = useState('');
   const [Language, setLanguage] = useState('');
   const [Experience, setExerience] = useState('');
   const [ProjectDescription, setProjectDescription] = useState('');
+  const [Location, setLocation] = useState('');
 
   const [selectedValue, setSelectedValue] = useState('WebSite');
 
@@ -23,6 +24,8 @@ const HireEmployee = () => {
       <CustomInput placeholder="Language" setValue={setLanguage} />
 
       <CustomInput placeholder="Experience" setValue={setExerience} />
+
+      <CustomInput placeholder="Location" setValue={setLocation} />
 
       <Picker
         selectedValue={selectedValue}
@@ -51,7 +54,7 @@ const HireEmployee = () => {
         setValue={setProjectDescription}
       />
 
-      <CustomButtons text="Submit" onPress={() => {}} />
+      <CustomButtons text="Submit" onPress={() => { }} />
     </View>
   );
 };

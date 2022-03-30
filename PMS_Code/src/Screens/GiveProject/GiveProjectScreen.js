@@ -1,8 +1,8 @@
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from '@react-native-picker/picker';
 // import {ModalPicker } from '../Components/ModelPicker/ModelPicker';
 
 // import Picker from '../../.js';
@@ -20,14 +20,17 @@ const GiveProject = () => {
   const [ProjectName, setProjectName] = useState('');
   const [Language, setLanguage] = useState('');
   const [ProjectDescription, setProjectDescription] = useState('');
+  const [Department, setDepartment] = useState('');
 
   const [selectedValue, setSelectedValue] = useState('WebSite');
 
   return (
     <View style={styles.container}>
       <CustomInput placeholder="ProjectName" setValue={setProjectName} />
-      
+
       <CustomInput placeholder="Language" setValue={setLanguage} />
+
+      <CustomInput placeholder="Department" setValue={setDepartment} />
 
       <Picker
         selectedValue={selectedValue}
@@ -65,7 +68,7 @@ const GiveProject = () => {
         setValue={setProjectDescription}
       />
 
-      <CustomButtons text="Submit" onPress={() => {}} />
+      <CustomButtons text="Submit" onPress={() => { }} />
     </View>
   );
 };
