@@ -1,22 +1,38 @@
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import ProgressBar from '../../Components/ProgressBar/ProgressBar.js';
 import LastStatus from '../../Components/LastStatusComponent/LastStatusComponent.js';
 
-const data = [{
-  percentage: 70,
-  color: 'blue',
-  max: 10
-}]
+const data = [
+  {
+    percentage: 70,
+    color: 'blue',
+    max: 10,
+  },
+];
 
 export default function UpdateSatusScreen() {
   return (
     <View style={styles.container}>
       {/* <StatusBar hidden /> */}
-      <LastStatus />
-      <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap', alignItems: 'center' }}>
+
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-evenly',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+        }}>
         {data.map((p, i) => {
-          return <ProgressBar key={i} percentage={p.percentage} color={p.color} delay={500 + 100 * i} max={p.max} />
+          return (
+            <ProgressBar
+              key={i}
+              percentage={p.percentage}
+              color={p.color}
+              delay={500 + 100 * i}
+              max={p.max}
+            />
+          );
         })}
       </View>
     </View>
@@ -37,4 +53,3 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
-

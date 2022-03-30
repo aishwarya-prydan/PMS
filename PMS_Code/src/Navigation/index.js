@@ -3,10 +3,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
@@ -15,7 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
 // import LandingPage from '../Screens/LandingPage/LandingPage.js';
-import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen.js';
+
 import WelcomeScreen from '../Screens/WelcomeScreen/WelcomeScreen.js';
 import SignInScreen from '../Screens/SignInScreen/SignInScreen.js';
 import SignUpScreen from '../Screens/SignUpScreen/SignUpScreen.js';
@@ -35,12 +35,13 @@ import CustomDatePicker from '../Components/CustomDatePicker/CustomDatePickerInp
 import TopTabNavigator from '../Navigation/TopTabNavigator.js';
 import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
 import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
+import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
 
 import LandingPage2 from '../Screens/LandingPage2/LandingPage2.js';
 // import HomeScreen from '../Screens/HomeScreen/Index.js';
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
-import { ScreenStack } from 'react-native-screens';
+import {ScreenStack} from 'react-native-screens';
 import Header from './../Components/Header/Header';
 
 const Stack = createNativeStackNavigator();
@@ -83,38 +84,38 @@ const Navigation = () => {
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmEmail"
           component={ConfirmEmailScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmCode"
           component={ConfirmCodeScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="NewPassword"
           component={NewPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen name="LandingPage2" component={LandingPage2} />
         <Stack.Screen
           name="Home"
           component={TabNavigator}
-          options={{ headerShown: true }}
+          options={{headerShown: true}}
         />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
@@ -130,12 +131,13 @@ const Navigation = () => {
           component={PartialPaymentScreen}
         />
         <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
+        <Stack.Screen name="MainProj" component={MainProjectScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
-const ProfileStackScreen = ({ navigation }) => (
+const ProfileStackScreen = ({navigation}) => (
   <ProfileStack.Navigator
     screenOptions={{
       headerStyle: {
