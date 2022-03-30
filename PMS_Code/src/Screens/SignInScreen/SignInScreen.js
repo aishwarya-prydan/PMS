@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: 200,
-    maxWidth: 500,
-    maxHeight: 200,
+    width: 370,
+    maxWidth: 470,
+    maxHeight: 380,
   },
 
   text1: {
