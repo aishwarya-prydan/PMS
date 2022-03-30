@@ -75,6 +75,8 @@ const Navigation = () => {
             fontWeight: 'bold',
           },
         }}>
+
+        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
@@ -129,7 +131,7 @@ const Navigation = () => {
           name="PartialPaymentScreen"
           component={PartialPaymentScreen}
         />
-        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
+        {/* <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
