@@ -27,7 +27,7 @@
     "react": "17.0.2",
     "react-facebook-login": "^4.1.1",
     "react-hook-form": "^7.28.1",
-    "react-last-status": "0.0.18",
+    "react-last-status": "^0.0.18",
     "react-native": "0.67.1",
     "react-native-date-input": "^1.0.11",
     "react-native-datefield": "^0.3.5",
