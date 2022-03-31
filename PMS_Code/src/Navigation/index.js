@@ -41,6 +41,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
 import {ScreenStack} from 'react-native-screens';
 import Header from './../Components/Header/Header';
+import {Title} from 'react-native-paper';
 
 const Stack = createNativeStackNavigator();
 const ProfileStack = createStackNavigator();
@@ -59,11 +60,16 @@ const Navigation = () => {
             fontWeight: 'bold',
           },
         }}>
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
         {/* <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
         <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} /> */}
+        <Stack.Screen
+          name="Onboarding"
+          component={OnboardingScreen}
+          options={{headerShown: false}}
+        />
+
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
@@ -117,7 +123,6 @@ const Navigation = () => {
           name="PartialPaymentScreen"
           component={PartialPaymentScreen}
         />
-        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

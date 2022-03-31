@@ -19,14 +19,14 @@ const slides = [
   {
     id: '1',
     image: require('../../../assets/images/image1.png'),
-    title: 'Best Digital Solution',
+    title: 'Post a Project',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     id: '2',
     image: require('../../../assets/images/image2.png'),
-    title: 'Achieve Your Goals',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Hire Developers',
+    subtitle: 'Hire dedicated and experienced developers.',
   },
   {
     id: '3',
@@ -112,8 +112,8 @@ const OnboardingScreen = ({navigation}) => {
             <View style={{height: 50}}>
               <TouchableOpacity
                 style={styles.btn}
-                onPress={() => navigation.navigate('SignInScreen') }>
-                <Text style={{fontWeight: 'bold', fontSize: 15,}}>
+                onPress={() => navigation.navigate('SignIn')}>
+                <Text style={{fontWeight: 'bold', fontSize: 15}}>
                   GET STARTED
                 </Text>
               </TouchableOpacity>
