@@ -9,9 +9,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
-// import RecentProjectScreen from '../Screens/RecentProjectScreen/RecentProjectScreen.js';
-// import DevelopersScreen from '../Screens/DevelopersScreen/DevelopersScreen.js';
+import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
+import RecentProjectScreen from '../Screens/RecentProjectScreen/RecentProjectScreen.js';
+import DevelopersScreen from '../Screens/DevelopersScreen/DevelopersScreen.js';
 
 import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
 // import LandingPage from '../Screens/LandingPage/LandingPage.js';
@@ -38,9 +38,9 @@ import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScr
 
 import LandingPage2 from '../Screens/LandingPage2/LandingPage2.js';
 // import HomeScreen from '../Screens/HomeScreen/Index.js';
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
-import { ScreenStack } from 'react-native-screens';
+import {ScreenStack} from 'react-native-screens';
 import Header from './../Components/Header/Header';
 
 const Stack = createNativeStackNavigator();
@@ -75,9 +75,12 @@ const Navigation = () => {
             fontWeight: 'bold',
           },
         }}>
-
-        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen
+          name="Onboarding"
+          component={OnboardingScreen}
+          options={{headerShown: false}}
+        />
+        {/* <Stack.Screen name="Welcome" component={WelcomeScreen} /> */}
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
         {/* <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
@@ -85,38 +88,38 @@ const Navigation = () => {
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmEmail"
           component={ConfirmEmailScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmCode"
           component={ConfirmCodeScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="NewPassword"
           component={NewPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen name="LandingPage2" component={LandingPage2} />
         <Stack.Screen
           name="Home"
           component={TabNavigator}
-          options={{ headerShown: true }}
+          options={{headerShown: true}}
         />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
@@ -127,6 +130,10 @@ const Navigation = () => {
         <Stack.Screen name="MainProject" component={MainProjectScreen} />
         <Stack.Screen name="Terms Of Use" component={TermsOfUseScreen} />
         <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
+        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
+        <Stack.Screen name="About Screen" component={AboutCompanyScreen} />
+        <Stack.Screen name="Recent Project" component={RecentProjectScreen} />
+        <Stack.Screen name="Developers Screen" component={DevelopersScreen} />
         <Stack.Screen
           name="PartialPaymentScreen"
           component={PartialPaymentScreen}
