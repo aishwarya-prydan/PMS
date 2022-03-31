@@ -6,16 +6,14 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
+ *
  * @format
  * @flow strict-local
  */
 
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import Navigation from './src/Navigation/index';
-
-// import CustomDatePickerInput from './src/Components/CustomDatePicker/CustomDatePickerInput';
 
 const App = () => {
   return (

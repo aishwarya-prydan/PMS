@@ -13,20 +13,6 @@ const CustomInput = ({control, name, placeholder, secureTextEntry}) => {
         style={styles.input}
         secureTextEntry={secureTextEntry}
       />
-      {/* <Controller
-        control={control}
-        name={name}
-        render={({field: {value, onChange, onBlur}}) => (
-          <TextInput
-            value={value}
-            onChangeText={onChange}
-            onBlur={onBlur}
-            placeholder={placeholder}
-            style={styles.input}
-            secureTextEntry={secureTextEntry}
-          />
-        )}
-      /> */}
     </View>
   );
 };
