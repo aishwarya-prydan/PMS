@@ -122,6 +122,17 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}>Settings</Text>
           </View>
         </TouchableRipple>
+        <TouchableRipple onPress={() => {}}>
+          <View style={styles.menuItem}>
+            <Icon
+              name="right-from-bracket"
+              type="font-awesome"
+              size={22}
+              color="#777777"
+            />
+            <Text style={styles.menuItemText}>Log Out</Text>
+          </View>
+        </TouchableRipple>
       </View>
     </SafeAreaView>
   );

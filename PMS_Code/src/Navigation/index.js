@@ -109,7 +109,12 @@ const Navigation = () => {
         <Stack.Screen
           name="Home"
           component={TabNavigator}
+<<<<<<< Updated upstream
           options={{ headerShown: true }}
+=======
+          options={{headerShown: true}}
+
+>>>>>>> Stashed changes
         />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
