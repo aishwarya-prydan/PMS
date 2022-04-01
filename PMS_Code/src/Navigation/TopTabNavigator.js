@@ -1,10 +1,10 @@
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 import React from 'react';
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen.js';
 import DeveloperInfoScreen from '../Screens/DeveloperInfoScreen/DeveloperInfoScreen';
-import UpdateSatusScreen from '../Screens/UpdateSatusScreen/UpdateSatusScreen';
+import UpdateSatusScreen from '../Screens/UpdateStatusScreen/UpdateStatusScreen';
 import GiveProjectScreen from '../Screens/GiveProject/GiveProjectScreen.js';
 
 const TopTab = createMaterialTopTabNavigator();
@@ -12,8 +12,8 @@ const TopTabNavigator = () => {
   return (
     <TopTab.Navigator
       screenOptions={{
-        tabBarLabelStyle: {fontSize: 13},
-        tabBarItemStyle: {height: 35, marginBottom: 4},
+        tabBarLabelStyle: { fontSize: 13 },
+        tabBarItemStyle: { height: 35, marginBottom: 4 },
       }}>
       <TopTab.Screen name="Projects" component={MainProjectScreen} />
       <TopTab.Screen name="Add" component={GiveProjectScreen} />

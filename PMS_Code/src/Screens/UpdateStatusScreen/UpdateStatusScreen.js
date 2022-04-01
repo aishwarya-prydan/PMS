@@ -1,7 +1,7 @@
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import ProgressBar from '../../Components/ProgressBar/ProgressBar.js';
-import LastStatus from '../../Components/LastStatusComponent/LastStatusComponent.js';
+// import LastStatus from '../../Components/LastStatusComponent/LastStatusComponent.js';
 
 const data = [
   {
@@ -11,7 +11,7 @@ const data = [
   },
 ];
 
-export default function UpdateSatusScreen() {
+export default function UpdateStatusScreen() {
   return (
     <View style={styles.container}>
       {/* <StatusBar hidden /> */}

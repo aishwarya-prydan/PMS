@@ -8,12 +8,12 @@ import {
   StyleSheet,
 } from 'react-native';
 // import Constants from 'expo-constants';
-import Svg, {G, Circle, Rect} from 'react-native-svg';
+import Svg, { G, Circle, Rect } from 'react-native-svg';
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
 
-export default function UpdatestatusScreen({
+export default function ProgressBar({
   percentage = 70,
   radius = 100,
   strokeWidth = 10,
@@ -69,7 +69,7 @@ export default function UpdatestatusScreen({
 
   return (
     <View
-      style={{width: radius * 2, height: radius * 2, justifyContent: 'center'}}>
+      style={{ width: radius * 2, height: radius * 2, justifyContent: 'center' }}>
       <Svg
         height={radius * 2}
         width={radius * 2}
@@ -106,7 +106,7 @@ export default function UpdatestatusScreen({
         defaultValue="0"
         style={[
           StyleSheet.absoluteFillObject,
-          {fontSize: radius / 2, color: textColor ?? color},
+          { fontSize: radius / 2, color: textColor ?? color },
           styles.text,
         ]}
       />

@@ -3,10 +3,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
@@ -26,7 +26,7 @@ import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen.js';
 import EditProfileScreen from '../Screens/EditProfileScreen/EditProfileScreen.js';
 import HireEmployeeScreen from '../Screens/HireEmployee/HireEmployeeScreen.js';
 import GiveProjectScreen from '../Screens/GiveProject/GiveProjectScreen.js';
-import UpdateStatusScreen from '../Screens/UpdateSatusScreen/UpdateSatusScreen.js';
+import UpdateStatusScreen from '../Screens/UpdateStatusScreen/UpdateStatusScreen.js';
 import MainPaymentScreen from '../Screens/PaymentScreen/MainPaymentScreen.js';
 import FullPaymentScreen from '../Screens/PaymentScreen/FullPaymentScreen.js';
 import PartialPaymentScreen from '../Screens/PaymentScreen/PartialPaymentScreen.js';
@@ -37,10 +37,11 @@ import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScr
 import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
 
 // import HomeScreen from '../Screens/HomeScreen/Index.js';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
-import {ScreenStack} from 'react-native-screens';
+import { ScreenStack } from 'react-native-screens';
 import Header from './../Components/Header/Header';
+import UpdateSatusScreen from '../Screens/UpdateStatusScreen/UpdateStatusScreen.js';
 
 const Stack = createNativeStackNavigator();
 const ProfileStack = createStackNavigator();
@@ -59,6 +60,7 @@ const Navigation = () => {
             fontWeight: 'bold',
           },
         }}>
+
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
@@ -67,38 +69,38 @@ const Navigation = () => {
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="ConfirmEmail"
           component={ConfirmEmailScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPasswordScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="ConfirmCode"
           component={ConfirmCodeScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="NewPassword"
           component={NewPasswordScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
 
         <Stack.Screen
           name="Home"
           component={TabNavigator}
-          options={{headerShown: true}}
+          options={{ headerShown: true }}
         />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
@@ -109,7 +111,7 @@ const Navigation = () => {
         <Stack.Screen name="MainProject" component={MainProjectScreen} />
         <Stack.Screen name="Terms Of Use" component={TermsOfUseScreen} />
         <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
-        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
+        <Stack.Screen name="UpdateStatusScreen" component={UpdateStatusScreen} />
         <Stack.Screen name="About Screen" component={AboutCompanyScreen} />
         <Stack.Screen name="Recent Project" component={RecentProjectScreen} />
         <Stack.Screen name="Developers Screen" component={DevelopersScreen} />
@@ -123,7 +125,7 @@ const Navigation = () => {
   );
 };
 
-const ProfileStackScreen = ({navigation}) => (
+const ProfileStackScreen = ({ navigation }) => (
   <ProfileStack.Navigator
     screenOptions={{
       headerStyle: {
