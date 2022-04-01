@@ -3,10 +3,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
@@ -38,11 +38,11 @@ import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
 import FlatList from '../Components/FlatList/FlatList.js';
 
 // import HomeScreen from '../Screens/HomeScreen/Index.js';
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
-import { ScreenStack } from 'react-native-screens';
+import {ScreenStack} from 'react-native-screens';
 import Header from './../Components/Header/Header';
-import { Title } from 'react-native-paper';
+import {Title} from 'react-native-paper';
 
 const Stack = createNativeStackNavigator();
 const ProfileStack = createStackNavigator();
@@ -134,35 +134,5 @@ const Navigation = () => {
     </NavigationContainer>
   );
 };
-
-const ProfileStackScreen = ({ navigation }) => (
-  <ProfileStack.Navigator
-    screenOptions={{
-      headerStyle: {
-        backgroundColor: '#fff',
-      },
-      headerTintColor: '#000',
-      headerTitleContainerStyle: {
-        fontWeight: 'bold',
-      },
-    }}>
-    <ProfileStackScreen
-      name="Profile"
-      component={ProfileScreen}
-      options={{
-        title: 'Profile',
-        headerLeft: () => (
-          <Icon.Button
-            name="android-menu"
-            size={25}
-            backgroundColor="#1f65ff"
-            color="#000"
-            onPress={() => navigation.OpenDrawer()}
-          />
-        ),
-      }}
-    />
-  </ProfileStack.Navigator>
-);
 
 export default Navigation;

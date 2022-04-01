@@ -125,7 +125,7 @@ const ProfileScreen = () => {
         <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
             <Icon
-              name="right-from-bracket"
+              name="sign-out"
               type="font-awesome"
               size={22}
               color="#777777"

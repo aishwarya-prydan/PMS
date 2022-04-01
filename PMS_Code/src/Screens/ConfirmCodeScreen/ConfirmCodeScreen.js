@@ -30,7 +30,6 @@ const ConfirmCodeScreen = () => {
           placeholder="Enter your Code"
           value={Code}
           setValue={SetCode}
-          // secureTextEntry={true}
           keyboardType="number-pad"
         />
 
