@@ -18,10 +18,6 @@ const NewPasswordScreen = () => {
     console.warn('Forgot Password');
   };
 
-  const OnSignInPress = () => {
-    console.warn('On Sign In');
-  };
-
   const OnResendPress = () => {
     console.warn('Code');
   };
@@ -46,12 +42,6 @@ const NewPasswordScreen = () => {
         />
 
         <CustomButtons text="Submit" onPress={OnSubmitPressed} />
-
-        <CustomButtons
-          text="Back to Sign in"
-          onPress={OnSignInPress}
-          type="TERTIARY"
-        />
       </View>
     </ScrollView>
   );
