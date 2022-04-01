@@ -61,7 +61,6 @@ const Navigation = () => {
             fontWeight: 'bold',
           },
         }}>
-
         {/* <Stack.Screen name="FlatList" component={FlatList} /> */}
         {/* <Stack.Screen name="Welcome" component={WelcomeScreen} />
          */}
@@ -72,49 +71,44 @@ const Navigation = () => {
         <Stack.Screen
           name="Onboarding"
           component={OnboardingScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
 
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmEmail"
           component={ConfirmEmailScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmCode"
           component={ConfirmCodeScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="NewPassword"
           component={NewPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
 
         <Stack.Screen
           name="Home"
           component={TabNavigator}
-<<<<<<< Updated upstream
-          options={{ headerShown: true }}
-=======
           options={{headerShown: true}}
-
->>>>>>> Stashed changes
         />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
