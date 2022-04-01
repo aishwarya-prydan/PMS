@@ -61,8 +61,8 @@ const Navigation = () => {
             fontWeight: 'bold',
           },
         }}>
-
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        {/* <Stack.Screen name="Welcome" component={WelcomeScreen} />
+         */}
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
         {/* <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
@@ -70,44 +70,44 @@ const Navigation = () => {
         <Stack.Screen
           name="Onboarding"
           component={OnboardingScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
 
         <Stack.Screen
           name="SignIn"
           component={SignInScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUpScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmEmail"
           component={ConfirmEmailScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="ConfirmCode"
           component={ConfirmCodeScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="NewPassword"
           component={NewPasswordScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
 
         <Stack.Screen
           name="Home"
           component={TabNavigator}
-          options={{ headerShown: true }}
+          options={{headerShown: true}}
         />
         <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
         <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
@@ -118,7 +118,10 @@ const Navigation = () => {
         <Stack.Screen name="MainProject" component={MainProjectScreen} />
         <Stack.Screen name="Terms Of Use" component={TermsOfUseScreen} />
         <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
-        <Stack.Screen name="UpdateStatusScreen" component={UpdateStatusScreen} />
+        <Stack.Screen
+          name="UpdateStatusScreen"
+          component={UpdateStatusScreen}
+        />
         <Stack.Screen name="About Screen" component={AboutCompanyScreen} />
         <Stack.Screen name="Recent Project" component={RecentProjectScreen} />
         <Stack.Screen name="Developers Screen" component={DevelopersScreen} />
@@ -126,8 +129,8 @@ const Navigation = () => {
           name="PartialPaymentScreen"
           component={PartialPaymentScreen}
         />
-      </Stack.Navigator >
-    </NavigationContainer >
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
