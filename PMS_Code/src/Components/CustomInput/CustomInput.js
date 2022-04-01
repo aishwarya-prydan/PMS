@@ -12,6 +12,7 @@ const CustomInput = ({control, name, placeholder, secureTextEntry}) => {
         placeholder={placeholder}
         style={styles.input}
         secureTextEntry={secureTextEntry}
+        // keyboardType="number-pad"
       />
     </View>
   );
