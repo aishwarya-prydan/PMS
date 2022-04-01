@@ -13,7 +13,7 @@ import {
 
 const {width, height} = Dimensions.get('window');
 
-const COLORS = {primary: '#ffff', white: '#000'};
+const COLORS = {primary: '#ffff', black: '#000', blue: '#3B71F3'};
 
 const slides = [
   {
@@ -98,7 +98,7 @@ const OnboardingScreen = ({navigation}) => {
               style={[
                 styles.indicator,
                 currentSlideIndex == index && {
-                  backgroundColor: COLORS.white,
+                  backgroundColor: COLORS.black,
                   width: 25,
                 },
               ]}
@@ -111,9 +111,21 @@ const OnboardingScreen = ({navigation}) => {
           {currentSlideIndex == slides.length - 1 ? (
             <View style={{height: 50}}>
               <TouchableOpacity
-                style={styles.btn}
+                style={[
+                  styles.btn,
+                  {
+                    borderColor: COLORS.black,
+                    borderWidth: 1,
+                    backgroundColor: 'transparent',
+                  },
+                ]}
                 onPress={() => navigation.navigate('SignIn')}>
-                <Text style={{fontWeight: 'bold', fontSize: 15}}>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    fontSize: 15,
+                    color: COLORS.black,
+                  }}>
                   GET STARTED
                 </Text>
               </TouchableOpacity>
@@ -125,7 +137,7 @@ const OnboardingScreen = ({navigation}) => {
                 style={[
                   styles.btn,
                   {
-                    borderColor: COLORS.white,
+                    borderColor: COLORS.black,
                     borderWidth: 1,
                     backgroundColor: 'transparent',
                   },
@@ -135,7 +147,7 @@ const OnboardingScreen = ({navigation}) => {
                   style={{
                     fontWeight: 'bold',
                     fontSize: 15,
-                    color: COLORS.white,
+                    color: COLORS.black,
                   }}>
                   SKIP
                 </Text>
@@ -147,7 +159,7 @@ const OnboardingScreen = ({navigation}) => {
                 style={[
                   styles.btn,
                   {
-                    borderColor: COLORS.white,
+                    borderColor: COLORS.black,
                     borderWidth: 1,
                     backgroundColor: 'transparent',
                   },
@@ -156,7 +168,7 @@ const OnboardingScreen = ({navigation}) => {
                   style={{
                     fontWeight: 'bold',
                     fontSize: 15,
-                    color: COLORS.white,
+                    color: COLORS.black,
                   }}>
                   NEXT
                 </Text>
@@ -188,7 +200,7 @@ const OnboardingScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
   subtitle: {
-    color: COLORS.white,
+    color: COLORS.black,
     fontSize: 15,
     marginTop: 10,
     maxWidth: '70%',
@@ -196,7 +208,7 @@ const styles = StyleSheet.create({
     lineHeight: 23,
   },
   title: {
-    color: COLORS.whizte,
+    color: COLORS.black,
     fontSize: 25,
     fontWeight: 'bold',
     marginTop: 20,
@@ -221,6 +233,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffff',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+
+  get: {
+    flex: 1,
+    height: 50,
+    width: 200,
+    borderRadius: 5,
+    backgroundColor: '#ffff',
+    borderColor: COLORS.blue,
+    backgroundColor: 'transparent',
+    fontWeight: 'bold',
+    fontSize: 18,
+    color: COLORS.blue,
+    maxWidth: '70%',
+    textAlign: 'center',
+    lineHeight: 23,
   },
 });
 export default OnboardingScreen;
