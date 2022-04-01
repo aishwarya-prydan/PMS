@@ -29,12 +29,7 @@ const ConfirmCodeScreen = () => {
           placeholder="Enter your Code"
           value={Code}
           setValue={SetCode}
-<<<<<<< Updated upstream
           // secureTextEntry={true}
-=======
-          secureTextEntry={true}
-          keyboardType="number-pad"
->>>>>>> Stashed changes
         />
 
         <CustomButtons text="Confirm" onPress={ConfirmPressed} />
