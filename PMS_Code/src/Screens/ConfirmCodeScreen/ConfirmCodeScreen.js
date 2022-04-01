@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
+import NumInput from '../../Components/NumInput/NumInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';
 
@@ -25,7 +26,7 @@ const ConfirmCodeScreen = () => {
       <View style={styles.root}>
         <Text style={styles.title}>Reset your Password</Text>
 
-        <CustomInput
+        <NumInput
           placeholder="Enter your Code"
           value={Code}
           setValue={SetCode}
