@@ -234,21 +234,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
-  get: {
-    flex: 1,
-    height: 50,
-    width: 200,
-    borderRadius: 5,
-    backgroundColor: '#ffff',
-    borderColor: COLORS.blue,
-    backgroundColor: 'transparent',
-    fontWeight: 'bold',
-    fontSize: 18,
-    color: COLORS.blue,
-    maxWidth: '70%',
-    textAlign: 'center',
-    lineHeight: 23,
-  },
 });
 export default OnboardingScreen;
