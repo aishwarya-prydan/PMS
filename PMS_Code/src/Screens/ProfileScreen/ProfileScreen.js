@@ -1,14 +1,24 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import {View, StyleSheet, SafeAreaView, Text} from 'react-native';
+import {View, StyleSheet, SafeAreaView, Text, Alert} from 'react-native';
 import React from 'react';
 import {Avatar, Title, Caption, TouchableRipple} from 'react-native-paper';
-import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
-// import Icon from 'react-native-vector-icons/FontAwesome';
+import CustomButtons from '../../../src/Components/CustomButtons.js';
+import {useNavigation} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {Icon} from 'react-native-elements';
-
 const ProfileScreen = () => {
+  const navigation = useNavigation();
+
+  const OnLogOutPressed = () => {
+    // navigation.navigate('SignIn');
+    if (!OnLogOutPressed) {
+      Alert.alert('Do you want to log out');
+    } else {
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.userInfoSection}>
@@ -45,7 +55,7 @@ const ProfileScreen = () => {
             color="#777777"
           />
           <Text style={{color: '#777777', marginLeft: 20}}>
-            Ahemdabad, India
+            Ahmedabad, India
           </Text>
         </View>
 
@@ -130,7 +140,9 @@ const ProfileScreen = () => {
               size={22}
               color="#777777"
             />
-            <Text style={styles.menuItemText}>Log Out</Text>
+            <Text style={styles.menuItemText} onPress={OnLogOutPressed}>
+              Log Out
+            </Text>
           </View>
         </TouchableRipple>
       </View>
@@ -148,11 +160,11 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   title: {
-    fontSize: '24',
+    fontSize: 24,
     fontWeight: 'bold',
   },
   caption: {
-    fontsize: '11',
+    fontsize: 11,
     lineHeight: 13,
     fontWeight: '500',
   },
