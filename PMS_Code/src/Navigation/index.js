@@ -3,10 +3,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
@@ -37,12 +37,12 @@ import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScr
 import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
 
 // import HomeScreen from '../Screens/HomeScreen/Index.js';
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from './TabNavigator';
-import { ScreenStack } from 'react-native-screens';
+import {ScreenStack} from 'react-native-screens';
 import Header from './../Components/Header/Header';
 import UpdateSatusScreen from '../Screens/UpdateStatusScreen/UpdateStatusScreen.js';
-import { Title } from 'react-native-paper';
+import {Title} from 'react-native-paper';
 
 const Stack = createNativeStackNavigator();
 const ProfileStack = createStackNavigator();
@@ -134,7 +134,7 @@ const Navigation = () => {
   );
 };
 
-const ProfileStackScreen = ({ navigation }) => (
+const ProfileStackScreen = ({navigation}) => (
   <ProfileStack.Navigator
     screenOptions={{
       headerStyle: {
