@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {  Text, View , StyleSheet, ScrollView } from 'react-native';
+import {Text, View, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';
@@ -9,7 +9,7 @@ const ConfirmEmailScreen = () => {
   const navigation = useNavigation();
 
   const ConfirmPressed = () => {
-    navigation.navigate('Home');
+    navigation.navigate('ConfirmCode');
   };
 
   const OnResendPress = () => {
@@ -26,7 +26,7 @@ const ConfirmEmailScreen = () => {
         <Text style={styles.title}>Email Confirmation</Text>
 
         <CustomInput
-          placeholder="Enter your confirmation code"
+          placeholder="Enter your Email"
           value={code}
           setValue={SetCode}
           secureTextEntry={true}
@@ -34,13 +34,15 @@ const ConfirmEmailScreen = () => {
 
         <CustomButtons text="Confirm" onPress={ConfirmPressed} />
 
-        <Text style={styles.text1}>We have sent you a confirmation code.</Text>
+        <Text style={styles.text1}>
+          Enter your email to reset your password.
+        </Text>
 
-        <CustomButtons
+        {/* <CustomButtons
           text="Resend Code"
           onPress={OnResendPress}
           type="SECONDARY"
-        />
+        /> */}
 
         {/* <CustomButtons text="Back to Sign in"
          onPress={OnSignInPress} 
@@ -90,4 +92,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ConfirmEmailScreen
+export default ConfirmEmailScreen;

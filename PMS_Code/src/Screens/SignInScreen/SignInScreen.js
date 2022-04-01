@@ -38,7 +38,7 @@ const SignInScreen = () => {
     navigation.navigate('Home');
   };
   const OnForgotPasswordPressed = () => {
-    navigation.navigate('ForgotPassword');
+    navigation.navigate('ConfirmEmail');
   };
 
   const OnSignInFacebook = () => {
