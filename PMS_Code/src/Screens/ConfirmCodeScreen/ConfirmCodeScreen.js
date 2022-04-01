@@ -30,6 +30,7 @@ const ConfirmCodeScreen = () => {
           value={Code}
           setValue={SetCode}
           // secureTextEntry={true}
+          keyboardType="number-pad"
         />
 
         <CustomButtons text="Confirm" onPress={ConfirmPressed} />
@@ -42,11 +43,8 @@ const ConfirmCodeScreen = () => {
           type="SECONDARY"
         />
 
-        <CustomButtons
-          text="Back to Sign in"
-          onPress={OnSignInPress}
-          type="TERTIARY"
-        />
+        <CustomButtons text="Sign in" onPress={OnSignInPress} type="BS" />
+        <Text style={styles.text2}>Back to </Text>
       </View>
     </ScrollView>
   );
@@ -68,6 +66,13 @@ const styles = StyleSheet.create({
   text: {
     color: 'gray',
     marginVertical: 10,
+  },
+
+  text2: {
+    fontWeight: 'bold',
+    marginTop: -40,
+    marginLeft: -40,
+    fontSize: 15,
   },
 
   link: {

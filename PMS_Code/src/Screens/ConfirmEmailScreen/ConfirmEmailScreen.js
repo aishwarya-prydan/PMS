@@ -29,6 +29,7 @@ const ConfirmEmailScreen = () => {
           placeholder="Enter your Email"
           value={code}
           setValue={SetCode}
+          keyboardType="email-address"
           // secureTextEntry={true}
         />
 

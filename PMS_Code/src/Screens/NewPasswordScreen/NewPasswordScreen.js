@@ -11,7 +11,7 @@ const NewPasswordScreen = () => {
   const navigation = useNavigation();
 
   const OnSubmitPressed = () => {
-    navigation.navigate('Home');
+    navigation.navigate('SignIn');
   };
 
   const OnForgotPasswordPressed = () => {
@@ -25,7 +25,7 @@ const NewPasswordScreen = () => {
   return (
     <ScrollView>
       <View style={styles.root}>
-        <Text style={styles.title}>Reset your Password</Text>
+        <Text style={styles.title}>Set New Password</Text>
 
         <CustomInput
           placeholder="New Password"
