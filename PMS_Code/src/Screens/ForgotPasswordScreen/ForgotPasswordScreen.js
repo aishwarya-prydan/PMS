@@ -10,7 +10,8 @@ import {useNavigation} from '@react-navigation/native';
       const navigation = useNavigation();
 
       const ConfirmPressed = () => {
-        console.warn('Confirm');
+        // console.warn('Confirm');
+        navigation.navigate('SignIn');
       };
 
       const OnSignInPress = () => {
@@ -18,7 +19,7 @@ import {useNavigation} from '@react-navigation/native';
       };
 
       const OnResendPress = () => {
-        console.warn('Code');
+        console.warn('Code will be send to your register email');
       };
 
       return (

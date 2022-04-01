@@ -119,7 +119,6 @@ const Navigation = () => {
           name="PartialPaymentScreen"
           component={PartialPaymentScreen}
         />
-        <Stack.Screen name="UpdateStatus" component={UpdateStatusScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
