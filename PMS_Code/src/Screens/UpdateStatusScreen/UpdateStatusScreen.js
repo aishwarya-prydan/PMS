@@ -1,13 +1,14 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import ProgressBar from '../../Components/ProgressBar/ProgressBar.js';
-// import LastStatus from '../../Components/LastStatusComponent/LastStatusComponent.js';
+import LastStatus from '../../Components/LastStatusComponent/LastStatusComponent.js';
+import FlatList from '../../Components/FlatList/FlatList.js';
 
 const data = [
   {
     percentage: 70,
     color: 'blue',
-    max: 10,
+    max: 15,
   },
 ];
 
@@ -15,7 +16,7 @@ export default function UpdateStatusScreen() {
   return (
     <View style={styles.container}>
       {/* <StatusBar hidden /> */}
-
+      <LastStatus />
       <View
         style={{
           flexDirection: 'row',
@@ -28,6 +29,7 @@ export default function UpdateStatusScreen() {
             <ProgressBar
               key={i}
               percentage={p.percentage}
+              text={p.text}
               color={p.color}
               delay={500 + 100 * i}
               max={p.max}
@@ -35,6 +37,7 @@ export default function UpdateStatusScreen() {
           );
         })}
       </View>
+      <FlatList />
     </View>
   );
 }

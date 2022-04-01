@@ -3,18 +3,6 @@ import React, { useState } from 'react';
 import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import { Picker } from '@react-native-picker/picker';
-// import {ModalPicker } from '../Components/ModelPicker/ModelPicker';
-
-// import Picker from '../../.js';
-
-// const GiveProject = () => {
-
-//     return (
-//         <View style={styles.container}>
-
-//         </View>
-//     );
-// };
 
 const GiveProject = () => {
   const [ProjectName, setProjectName] = useState('');

@@ -1,25 +1,25 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import {View, StyleSheet, SafeAreaView, Text} from 'react-native';
+import { View, StyleSheet, SafeAreaView, Text } from 'react-native';
 import React from 'react';
-import {Avatar, Title, Caption, TouchableRipple} from 'react-native-paper';
+import { Avatar, Title, Caption, TouchableRipple } from 'react-native-paper';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 // import Icon from 'react-native-vector-icons/FontAwesome';
-import {Icon} from 'react-native-elements';
+import { Icon } from 'react-native-elements';
 
 const ProfileScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.userInfoSection}>
-        <View style={{flexDirection: 'row', marginTop: 18}}>
+        <View style={{ flexDirection: 'row', marginTop: 18 }}>
           <Avatar.Image
             source={{
               uri: 'https://source.unsplash.com/random',
             }}
             size={80}
           />
-          <View style={{marginLeft: 20}}>
+          <View style={{ marginLeft: 20 }}>
             <Title
               style={
                 (styles.title,
@@ -44,21 +44,21 @@ const ProfileScreen = () => {
             size={20}
             color="#777777"
           />
-          <Text style={{color: '#777777', marginLeft: 20}}>
+          <Text style={{ color: '#777777', marginLeft: 20 }}>
             Ahemdabad, India
           </Text>
         </View>
 
         <View style={styles.row}>
           <Icon name="phone" type="font-awesome" size={20} color="#777777" />
-          <Text style={{color: '#777777', marginLeft: 20}}>
+          <Text style={{ color: '#777777', marginLeft: 20 }}>
             +91 9923475689{' '}
           </Text>
         </View>
 
         <View style={styles.row}>
           <Icon name="envelope" type="font-awesome" size={20} color="#777777" />
-          <Text style={{color: '#777777', marginLeft: 20}}>
+          <Text style={{ color: '#777777', marginLeft: 20 }}>
             aishwarya21@gmail.com
           </Text>
         </View>
@@ -83,7 +83,7 @@ const ProfileScreen = () => {
       </View>
 
       <View style={styles.menuWrapper}>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={() => { }}>
           <View style={styles.menuItem}>
             <Icon
               name="envelope"
@@ -94,7 +94,7 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}> Option1 </Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={() => { }}>
           <View style={styles.menuItem}>
             <Icon
               name="envelope"
@@ -105,7 +105,7 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}> Option1 </Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={() => { }}>
           <View style={styles.menuItem}>
             <Icon
               name="envelope"
@@ -116,7 +116,7 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}> Option1 </Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={() => { }}>
           <View style={styles.menuItem}>
             <Icon name="gear" type="font-awesome" size={22} color="#777777" />
             <Text style={styles.menuItemText}>Settings</Text>
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   caption: {
-    fontsize: 11,
+    fontsize: '11',
     lineHeight: 13,
     fontWeight: '500',
   },
