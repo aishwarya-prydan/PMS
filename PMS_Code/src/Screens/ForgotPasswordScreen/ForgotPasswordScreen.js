@@ -30,7 +30,7 @@ const ForgotPasswordScreen = () => {
           placeholder="Enter your Email"
           value={Email}
           setValue={SetEmail}
-          secureTextEntry={true}
+          // secureTextEntry={true}
         />
 
         <CustomButtons text="Confirm" onPress={ConfirmPressed} />

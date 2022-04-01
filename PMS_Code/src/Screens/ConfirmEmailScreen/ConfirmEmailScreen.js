@@ -23,13 +23,13 @@ const ConfirmEmailScreen = () => {
   return (
     <ScrollView>
       <View style={styles.root}>
-        <Text style={styles.title}>Email Confirmation</Text>
+        <Text style={styles.title}>Forgot Password</Text>
 
         <CustomInput
           placeholder="Enter your Email"
           value={code}
           setValue={SetCode}
-          secureTextEntry={true}
+          // secureTextEntry={true}
         />
 
         <CustomButtons text="Confirm" onPress={ConfirmPressed} />
