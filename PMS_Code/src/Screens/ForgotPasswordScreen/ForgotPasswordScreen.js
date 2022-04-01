@@ -9,7 +9,8 @@ const ForgotPasswordScreen = () => {
   const navigation = useNavigation();
 
   const ConfirmPressed = () => {
-    navigation.navigate('NewPassword');
+    // console.warn('Confirm');
+    navigation.navigate('SignIn');
   };
 
   const OnSignInPress = () => {
@@ -17,7 +18,7 @@ const ForgotPasswordScreen = () => {
   };
 
   const OnResendPress = () => {
-    console.warn('Code');
+    console.warn('Code will be send to your register email');
   };
 
   return (
@@ -26,7 +27,7 @@ const ForgotPasswordScreen = () => {
         <Text style={styles.title}>Reset your Password</Text>
 
         <CustomInput
-          placeholder="Enter your Code"
+          placeholder="Enter your Email"
           value={Email}
           setValue={SetEmail}
           secureTextEntry={true}
@@ -42,11 +43,11 @@ const ForgotPasswordScreen = () => {
           type="SECONDARY"
         />
 
-        <CustomButtons
-          text="Back to Sign in"
-          onPress={OnSignInPress}
-          type="TERTIARY"
-        />
+        {/* <CustomButtons
+              text="Back to Sign in"
+              onPress={OnSignInPress}
+              type="TERTIARY"
+            /> */}
 
         <CustomButtons text="Sign in" onPress={OnSignInPress} type="BS" />
         <Text style={styles.text2}>Back to </Text>
