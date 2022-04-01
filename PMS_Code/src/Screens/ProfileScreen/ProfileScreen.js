@@ -4,10 +4,8 @@
 import {View, StyleSheet, SafeAreaView, Text, Alert} from 'react-native';
 import React from 'react';
 import {Avatar, Title, Caption, TouchableRipple} from 'react-native-paper';
-import CustomButtons from '../../../src/Components/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Icon} from 'react-native-elements';
 const ProfileScreen = () => {
   const navigation = useNavigation();
 
