@@ -9,7 +9,7 @@ import AuthNavigator from './AuthNavigator';
 import AppNavigator from './AppNavigator';
 
 const Navigation = () => {
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(true);
   return (
     <NavigationContainer>
       {/* <AuthNavigator /> */}
