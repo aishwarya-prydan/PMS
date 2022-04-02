@@ -10,7 +10,8 @@ const ProfileScreen = () => {
   const navigation = useNavigation();
 
   const OnLogOutPressed = () => {
-    // navigation.navigate('SignIn');
+    navigation.navigate('SignIn');
+
     if (!OnLogOutPressed) {
       Alert.alert('Do you want to log out');
     } else {
@@ -130,7 +131,7 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}>Settings</Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={OnLogOutPressed}>
           <View style={styles.menuItem}>
             <Icon
               name="sign-out"
@@ -138,9 +139,7 @@ const ProfileScreen = () => {
               size={22}
               color="#777777"
             />
-            <Text style={styles.menuItemText} onPress={OnLogOutPressed}>
-              Log Out
-            </Text>
+            <Text style={styles.menuItemText}>Log Out</Text>
           </View>
         </TouchableRipple>
       </View>

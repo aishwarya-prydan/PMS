@@ -1,6 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {
   View,
@@ -12,78 +9,84 @@ import {
 } from 'react-native';
 
 import {useTheme} from 'react-native-paper';
+
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
-// import BottomSheet from 'reanimated-bottom-sheet';
-// import Animated from 'react-native-reanimated';
+import BottomSheet from 'reanimated-bottom-sheet';
+import Animated from 'react-native-reanimated';
+
+import ImagePicker from 'react-native-image-crop-picker';
 
 const EditProfileScreen = () => {
-
   const [image, setImage] = useState('https://source.unsplash.com/random');
   const {colors} = useTheme();
 
-//   const takePhotoFromCamera = () => {
-//     ImagePicker.openCamera({
-//       compressImageMaxWidth: 300,
-//       compressImageMaxHeight: 300,
-//       cropping: true,
-//       compressImageQuality: 0.7
-//     }).then(image => {
-//       console.log(image);
-//       setImage(image.path);
-//       this.bs.current.snapTo(1);
-//     });
-//   }
+  const takePhotoFromCamera = () => {
+    ImagePicker.openCamera({
+      compressImageMaxWidth: 300,
+      compressImageMaxHeight: 300,
+      cropping: true,
+      compressImageQuality: 0.7,
+    }).then(image => {
+      console.log(image);
+      setImage(image.path);
+      this.bs.current.snapTo(1);
+    });
+  };
 
-//   const choosePhotoFromLibrary = () => {
-//     ImagePicker.openPicker({
-//       width: 300,
-//       height: 300,
-//       cropping: true,
-//       compressImageQuality: 0.7
-//     }).then(image => {
-//       console.log(image);
-//       setImage(image.path);
-//       this.bs.current.snapTo(1);
-//     });
-//   }
+  const choosePhotoFromLibrary = () => {
+    ImagePicker.openPicker({
+      width: 300,
+      height: 300,
+      cropping: true,
+      compressImageQuality: 0.7,
+    }).then(image => {
+      console.log(image);
+      setImage(image.path);
+      this.bs.current.snapTo(1);
+    });
+  };
 
-  // renderInner = () => (
-  //   <View style={styles.panel}>
-  //     <View style={{alignItems: 'center'}}>
-  //       <Text style={styles.panelTitle}>Upload Photo</Text>
-  //       <Text style={styles.panelSubtitle}>Choose Your Profile Picture</Text>
-  //     </View>
-  //     <TouchableOpacity style={styles.panelButton} onPress={takePhotoFromCamera}>
-  //       <Text style={styles.panelButtonTitle}>Take Photo</Text>
-  //     </TouchableOpacity>
-  //     <TouchableOpacity style={styles.panelButton} onPress={choosePhotoFromLibrary}>
-  //       <Text style={styles.panelButtonTitle}>Choose From Library</Text>
-  //     </TouchableOpacity>
-  //     <TouchableOpacity
-  //       style={styles.panelButton}
-  //       onPress={() => this.bs.current.snapTo(1)}>
-  //       <Text style={styles.panelButtonTitle}>Cancel</Text>
-  //     </TouchableOpacity>
-  //   </View>
-  // );
+  renderInner = () => (
+    <View style={styles.panel}>
+      <View style={{alignItems: 'center'}}>
+        <Text style={styles.panelTitle}>Upload Photo</Text>
+        <Text style={styles.panelSubtitle}>Choose Your Profile Picture</Text>
+      </View>
+      <TouchableOpacity
+        style={styles.panelButton}
+        onPress={takePhotoFromCamera}>
+        <Text style={styles.panelButtonTitle}>Take Photo</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.panelButton}
+        onPress={choosePhotoFromLibrary}>
+        <Text style={styles.panelButtonTitle}>Choose From Library</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.panelButton}
+        onPress={() => this.bs.current.snapTo(1)}>
+        <Text style={styles.panelButtonTitle}>Cancel</Text>
+      </TouchableOpacity>
+    </View>
+  );
 
-  // renderHeader = () => (
-  //   <View style={styles.header}>
-  //     <View style={styles.panelHeader}>
-  //       <View style={styles.panelHandle} />
-  //     </View>
-  //   </View>
-  // );
+  renderHeader = () => (
+    <View style={styles.header}>
+      <View style={styles.panelHeader}>
+        <View style={styles.panelHandle} />
+      </View>
+    </View>
+  );
 
-  // bs = React.createRef();
-  // fall = new Animated.Value(1);
+  bs = React.createRef();
+  fall = new Animated.Value(1);
 
   return (
     <View style={styles.container}>
-      {/* <BottomSheet
+      <BottomSheet
         ref={this.bs}
         snapPoints={[330, 0]}
         renderContent={this.renderInner}
@@ -91,10 +94,12 @@ const EditProfileScreen = () => {
         initialSnap={1}
         callbackNode={this.fall}
         enabledGestureInteraction={true}
-      />  */}
-       {/* <Animated.View style={{margin: 20,
-        opacity: Animated.add(0.1, Animated.multiply(this.fall, 1.0)),
-    }}> */}
+      />
+      <Animated.View
+        style={{
+          margin: 20,
+          opacity: Animated.add(0.1, Animated.multiply(this.fall, 1.0)),
+        }}>
         <View style={{alignItems: 'center'}}>
           <TouchableOpacity onPress={() => this.bs.current.snapTo(0)}>
             <View
@@ -110,7 +115,7 @@ const EditProfileScreen = () => {
                   uri: image,
                 }}
                 style={{height: 100, width: 100}}
-                imageStyle={{borderRadius: 15 , marginTop:10}}>
+                imageStyle={{borderRadius: 15}}>
                 <View
                   style={{
                     flex: 1,
@@ -128,15 +133,14 @@ const EditProfileScreen = () => {
                       borderWidth: 1,
                       borderColor: '#fff',
                       borderRadius: 10,
-                      marginTop:15,
                     }}
                   />
                 </View>
               </ImageBackground>
             </View>
           </TouchableOpacity>
-          <Text  style={{marginTop: 15, marginBottom: 10, fontSize: 18, fontWeight: 'bold' , color: 'black'}}>
-            Aishwarya Birewar
+          <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}}>
+            John Doe
           </Text>
         </View>
 
@@ -147,7 +151,8 @@ const EditProfileScreen = () => {
             placeholderTextColor="#666666"
             autoCorrect={false}
             style={[
-              styles.textInput, {
+              styles.textInput,
+              {
                 color: colors.text,
               },
             ]}
@@ -228,8 +233,7 @@ const EditProfileScreen = () => {
         <TouchableOpacity style={styles.commandButton} onPress={() => {}}>
           <Text style={styles.panelButtonTitle}>Submit</Text>
         </TouchableOpacity>
-
-      {/* </Animated.View> */}
+      </Animated.View>
     </View>
   );
 };
@@ -243,11 +247,9 @@ const styles = StyleSheet.create({
   commandButton: {
     padding: 15,
     borderRadius: 10,
-    backgroundColor: '#3B71F3',
+    backgroundColor: '#FF6347',
     alignItems: 'center',
     marginTop: 10,
-    marginLeft:10,
-    marginRight:10,
   },
   panel: {
     padding: 20,
@@ -323,6 +325,5 @@ const styles = StyleSheet.create({
     marginTop: Platform.OS === 'ios' ? 0 : -12,
     paddingLeft: 10,
     color: '#05375a',
-    // borderRadius: 15,
   },
 });
