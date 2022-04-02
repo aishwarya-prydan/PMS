@@ -3,16 +3,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthNavigator from './AuthNavigator';
 import AppNavigator from './AppNavigator';
 
 const Navigation = () => {
+  const [auth, setAuth] = useState(true);
   return (
     <NavigationContainer>
       {/* <AuthNavigator /> */}
-      <AppNavigator />
+      {/* <AppNavigator /> */}
+
+      {auth ? <AppNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );
 };

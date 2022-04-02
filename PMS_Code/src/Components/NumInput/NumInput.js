@@ -1,20 +1,45 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View, Text, TextInput, StyleSheet, setValue} from 'react-native';
-// import {Controller} from 'react-hook-form';
+import {Controller} from 'react-hook-form';
 
-const NumInput = ({control, name, placeholder, secureTextEntry}) => {
+const NumInput = ({
+  control,
+  name,
+  rules = {},
+  placeholder,
+  secureTextEntry,
+}) => {
   return (
-    <View style={styles.container}>
-      <TextInput
-        // value={value}
-        onChangeText={setValue}
-        placeholder={placeholder}
-        style={styles.input}
-        secureTextEntry={secureTextEntry}
-        keyboardType={'number-pad'}
-      />
-    </View>
+    <Controller
+      control={control}
+      name={name}
+      rules={rules}
+      render={({field: {value, onChange, onBlur}, fieldState: {error}}) => (
+        <>
+          <View
+            style={[
+              styles.container,
+              {borderColor: error ? 'red' : '#e8e8e8'},
+            ]}>
+            <TextInput
+              value={value}
+              onChangeText={onChange}
+              onBlur={onBlur}
+              placeholder={placeholder}
+              style={styles.input}
+              secureTextEntry={secureTextEntry}
+              keyboardType={'number-pad'}
+            />
+          </View>
+          {error && (
+            <Text style={{color: 'red', alignSelf: 'stretch'}}>
+              {error.message || 'Error'}
+            </Text>
+          )}
+        </>
+      )}
+    />
   );
 };
 

@@ -3,23 +3,15 @@ import {Text, View, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';
+import {useForm} from 'react-hook-form';
 
 const NewPasswordScreen = () => {
-  const [Code, SetCode] = useState('');
-  const [NewPassword, SetNewPassword] = useState('');
-  const [CNewPassword, SetCNewPassword] = useState('');
+  const {control, handleSubmit, watch} = useForm();
+  const pwd = watch('password');
   const navigation = useNavigation();
 
   const OnSubmitPressed = () => {
     navigation.navigate('SignIn');
-  };
-
-  const OnForgotPasswordPressed = () => {
-    console.warn('Forgot Password');
-  };
-
-  const OnResendPress = () => {
-    console.warn('Code');
   };
 
   return (
@@ -28,20 +20,30 @@ const NewPasswordScreen = () => {
         <Text style={styles.title}>Set New Password</Text>
 
         <CustomInput
+          name="password"
+          control={control}
           placeholder="New Password"
-          value={NewPassword}
-          setValue={SetNewPassword}
-          secureTextEntry={true}
+          secureTextEntry
+          rules={{
+            required: 'Password is required',
+            minLength: {
+              value: 8,
+              message: 'Password should be at least 8 characters long',
+            },
+          }}
         />
 
         <CustomInput
+          name="password-repeat"
+          control={control}
           placeholder="Confirm New Password"
-          value={CNewPassword}
-          setValue={SetCNewPassword}
-          secureTextEntry={true}
+          secureTextEntry
+          rules={{
+            validate: value => value === pwd || 'Password do not match',
+          }}
         />
 
-        <CustomButtons text="Submit" onPress={OnSubmitPressed} />
+        <CustomButtons text="Submit" onPress={handleSubmit(OnSubmitPressed)} />
       </View>
     </ScrollView>
   );

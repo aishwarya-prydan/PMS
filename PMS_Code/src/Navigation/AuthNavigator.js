@@ -12,6 +12,8 @@ import ConfirmEmailScreen from '../Screens/ConfirmEmailScreen/ConfirmEmailScreen
 import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen/ForgotPasswordScreen.js';
 import ConfirmCodeScreen from '../Screens/ConfirmCodeScreen/ConfirmCodeScreen.js';
 import NewPasswordScreen from '../Screens/NewPasswordScreen/NewPasswordScreen.js';
+import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
+import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -64,6 +66,8 @@ const AuthNavigator = () => {
         component={NewPasswordScreen}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="Terms Of Use" component={TermsOfUseScreen} />
+      <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
     </Stack.Navigator>
   );
 };

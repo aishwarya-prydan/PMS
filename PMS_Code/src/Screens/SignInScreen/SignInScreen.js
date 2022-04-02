@@ -16,7 +16,6 @@ import Logo from '../../../assets/images/Logo.png';
 import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import SocialSignInButtons from '../../../src/Components/SocialSignInButtons/SocialSignInButtons.js';
-
 import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
 
@@ -24,37 +23,28 @@ const SignInScreen = () => {
   const {height} = useWindowDimensions();
   const navigation = useNavigation();
 
-  const {control, handleSubmit} = useForm();
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const [Customer, setCustomer] = useState(false);
-  const [Employee, setEmployee] = useState(false);
-  const [Select, setSelect] = useState('');
-
-  const OnSignInPressed = data => {
-    // console.log(data);
+  const onSignInPressed = data => {
+    console.log(data);
+    // validate user
     navigation.navigate('Home');
   };
-  const OnForgotPasswordPressed = () => {
+
+  const OnForgotPasswordPress = () => {
     navigation.navigate('ConfirmEmail');
   };
 
-  const OnSignInFacebook = () => {
-    console.warn('Facebook');
-  };
-
-  const OnSignGoogle = () => {
-    console.warn('Google');
-  };
-
-  const OnSignUpPress = () => {
+  const onSignUpPress = () => {
     navigation.navigate('SignUp');
   };
 
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Image
           source={Logo}
@@ -63,31 +53,47 @@ const SignInScreen = () => {
         />
 
         <CustomInput
+          name="username"
           placeholder="Username"
-          // value={username}
-          setValue={setUsername}
+          control={control}
+          rules={{required: 'Username is required'}}
         />
+
         <CustomInput
+          name="password"
           placeholder="Password"
-          // value={password}
-          setValue={setPassword}
           secureTextEntry
+          control={control}
+          rules={{
+            required: 'Password is required',
+            minLength: {
+              value: 3,
+              message: 'Password should be minimum 3 characters long',
+            },
+          }}
         />
+
+        <CustomButtons text="Sign In" onPress={handleSubmit(onSignInPressed)} />
+
+        {/* <CustomButtons
+          style={styles.FP}
+          text="Forgot Password?"
+          onPress={onForgotPasswordPressed}
+          // type="TERTIARY"
+          type="FP"
+        /> */}
 
         <CustomButtons
           style={styles.FP}
           text="Forgot Password?"
-          onPress={OnForgotPasswordPressed}
-          // type="TERTIARY"
+          // onPress={() => navigation.navigate(OnForgotPasswordPressed)}
+          onPress={OnForgotPasswordPress}
           type="FP"
         />
 
-        {/* <CustomButtons text="Sign In" onPress={handleSubmit(OnSignInPressed)} /> */}
-        <CustomButtons text="Sign In" onPress={OnSignInPressed} />
-
         <SocialSignInButtons />
 
-        <CustomButtons text="Create one" onPress={OnSignUpPress} type="CO" />
+        <CustomButtons text="Create one" onPress={onSignUpPress} type="CO" />
         <Text style={styles.text1}>Don't have an account? </Text>
       </View>
     </ScrollView>

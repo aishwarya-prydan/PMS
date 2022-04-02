@@ -4,9 +4,10 @@ import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
 import NumInput from '../../Components/NumInput/NumInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';
+import {useForm} from 'react-hook-form';
 
 const ConfirmCodeScreen = () => {
-  const [Code, SetCode] = useState('');
+  const {control, handleSubmit} = useForm();
   const navigation = useNavigation();
 
   const ConfirmPressed = () => {
@@ -27,13 +28,20 @@ const ConfirmCodeScreen = () => {
         <Text style={styles.title}>Reset your Password</Text>
 
         <NumInput
-          placeholder="Enter your Code"
-          value={Code}
-          setValue={SetCode}
+          placeholder="Enter your confirmation code"
           keyboardType="number-pad"
+          name="code"
+          control={control}
+          rules={{
+            required: 'Confirmation code is required',
+            maxLength: {
+              value: 4,
+              message: 'code should be max 4 characters long',
+            },
+          }}
         />
 
-        <CustomButtons text="Confirm" onPress={ConfirmPressed} />
+        <CustomButtons text="Confirm" onPress={handleSubmit(ConfirmPressed)} />
 
         <Text>We have sent you a confirmation code.</Text>
 

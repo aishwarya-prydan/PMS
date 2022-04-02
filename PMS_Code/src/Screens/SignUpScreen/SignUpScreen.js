@@ -7,95 +7,108 @@ import NumInput from '../../Components/NumInput/NumInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import SocialSignInButtons from '../../../src/Components/SocialSignInButtons/SocialSignInButtons.js';
 import {useNavigation} from '@react-navigation/native';
-import {AuthContext} from './../../Navigation/AuthProvider';
+import {useForm} from 'react-hook-form';
 
-const SignUpScreen = ({Navigation}) => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [passwordConform, setpasswordConform] = useState();
-  const [mobileNumber, setmobileNumber] = useState();
+const EMAIL_REGEX =
+  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+const SignUpScreen = () => {
+  const {control, handleSubmit, watch} = useForm();
+  const pwd = watch('password');
   const navigation = useNavigation();
 
-  // const {register} = useContext(AuthContext);
-
-  const OnRegisterPressed = () => {
+  const onRegisterPressed = () => {
     navigation.navigate('ConfirmEmail');
   };
 
-  const OnSignInPress = () => {
+  const onSignInPress = () => {
     navigation.navigate('SignIn');
   };
 
   const OnTermsOfUsePressed = () => {
-    // console.warn('Terms of use');
     navigation.navigate('Terms Of Use');
   };
 
   const OnPrivacyPressed = () => {
-    // console.warn('OnPrivacyPressed');
     navigation.navigate('Privacy Policy');
   };
 
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
-        <Text style={styles.title}>Create Account</Text>
+        <Text style={styles.title}>Create an account</Text>
 
         <CustomInput
+          name="username"
+          control={control}
           placeholder="Username"
-          //  value={username}
-          setValue={setUsername}
+          rules={{
+            required: 'Username is required',
+            minLength: {
+              value: 3,
+              message: 'Username should be at least 3 characters long',
+            },
+            maxLength: {
+              value: 24,
+              message: 'Username should be max 24 characters long',
+            },
+          }}
         />
 
         <NumInput
+          name="mobile number"
+          control={control}
           placeholder="Mobile Number"
-          keyboardType="numeric"
-          value={mobileNumber}
-          setValue={setmobileNumber}
+          rules={{
+            required: 'mobile number is required',
+            minLength: {
+              value: 10,
+              message: 'mobile number should be min 10 characters long',
+            },
+            maxLength: {
+              value: 10,
+              message: 'mobilenumber should be max 10 characters long',
+            },
+          }}
         />
 
         <CustomInput
-          labelValue={email}
+          name="email"
+          control={control}
           placeholder="Email"
-          onChangeText={userEmail => setEmail(userEmail)}
-          keyboardType="email-address"
-          autoCapitalize="none"
-          autoCorrect={false}
+          rules={{
+            required: 'Email is required',
+            pattern: {value: EMAIL_REGEX, message: 'Email is invalid'},
+          }}
         />
-
         <CustomInput
-          labelValue={password}
+          name="password"
+          control={control}
           placeholder="Password"
-          onChangeText={userPassword => setPassword(userPassword)}
-          secureTextEntry={true}
+          secureTextEntry
+          rules={{
+            required: 'Password is required',
+            minLength: {
+              value: 8,
+              message: 'Password should be at least 8 characters long',
+            },
+          }}
         />
 
         <CustomInput
-          placeholder="Conform Password"
-          value={passwordConform}
-          setValue={setpasswordConform}
-          secureTextEntry={true}
+          name="password-repeat"
+          control={control}
+          placeholder="Repeat Password"
+          secureTextEntry
+          rules={{
+            validate: value => value === pwd || 'Password do not match',
+          }}
         />
 
         <CustomButtons
-          // buttonTitle="Sign Up"
-          text="Sign Up"
-          onPress={OnRegisterPressed}
-          // onPress={() => register(email, password)}
+          text="Register"
+          onPress={handleSubmit(onRegisterPressed)}
         />
-
-        {/* <Text style={styles.text}>
-          By Registering, you confirm that you accept our{' '}
-          <Text style={styles.link} OnPress={OnTermsOfUsePressed}>
-            {' '}
-            Terms of Use
-          </Text>{' '}
-          and{' '}
-          <Text style={styles.link} OnPress={OnPrivacyPressed}>
-            Privacy policy.
-          </Text>
-        </Text> */}
 
         <Text style={styles.text2}>
           By Registering, you confirm that you accept our
@@ -114,12 +127,13 @@ const SignUpScreen = ({Navigation}) => {
 
         <SocialSignInButtons />
 
-        <CustomButtons text="Sign in" onPress={OnSignInPress} type="CO" />
+        <CustomButtons text="Sign in" onPress={onSignInPress} type="CO" />
         <Text style={styles.text1}>Do you have an account? </Text>
       </View>
     </ScrollView>
   );
 };
+
 
 const styles = StyleSheet.create({
   root: {

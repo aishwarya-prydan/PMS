@@ -16,8 +16,6 @@ import UpdateStatusScreen from '../Screens/UpdateStatusScreen/UpdateStatusScreen
 import MainPaymentScreen from '../Screens/PaymentScreen/MainPaymentScreen.js';
 import FullPaymentScreen from '../Screens/PaymentScreen/FullPaymentScreen.js';
 import PartialPaymentScreen from '../Screens/PaymentScreen/PartialPaymentScreen.js';
-import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
-import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
 import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
 import TabNavigator from './TabNavigator';
 
@@ -48,8 +46,6 @@ const AppNavigator = () => {
       <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
       <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} />
       <Stack.Screen name="MainProject" component={MainProjectScreen} />
-      <Stack.Screen name="Terms Of Use" component={TermsOfUseScreen} />
-      <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
       <Stack.Screen name="UpdateStatusScreen" component={UpdateStatusScreen} />
       <Stack.Screen name="About Screen" component={AboutCompanyScreen} />
       <Stack.Screen name="Recent Project" component={RecentProjectScreen} />
