@@ -30,7 +30,7 @@ const TabNavigator = () => {
         component={HomeScreen}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" type="font-awesome" color={color} size={size} />
+            <Icon name="home" type="font-awesome" size={30} color={color} />
           ),
         }}
       />
@@ -39,7 +39,7 @@ const TabNavigator = () => {
         component={HireEmployee}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="users" type="font-awesome" color={color} size={size} />
+            <Icon name="users" type="font-awesome" color={color} size={23} />
           ),
         }}
       />
@@ -48,14 +48,14 @@ const TabNavigator = () => {
         name="Project"
         component={TopTabNavigator}
         options={{
-          tabBarBadge: 3,
+          // tabBarBadge: 3,
           tabBarBadgeStyle: {backgroundColor: '#fff'},
           tabBarIcon: ({color, size}) => (
             <Icon
               name="address-card"
               type="font-awesome"
               color={color}
-              size={size}
+              size={23}
             />
           ),
         }}
@@ -65,7 +65,7 @@ const TabNavigator = () => {
         component={ProfileScreen}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="bars" type="font-awesome" color={color} size={size} />
+            <Icon name="bars" type="font-awesome" color={color} size={25} />
           ),
         }}
       />
