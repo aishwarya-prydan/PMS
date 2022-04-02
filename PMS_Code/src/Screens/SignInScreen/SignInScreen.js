@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
 
   text1: {
     marginTop: -40,
-    marginLeft: -90,
+    marginLeft: -100,
     fontSize: 15,
   },
 
