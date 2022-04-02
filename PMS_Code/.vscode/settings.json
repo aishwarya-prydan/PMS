@@ -8,6 +8,7 @@
     "cbutton",
     "datefield",
     "datepicker",
+    "datetime",
     "datetimepicker",
     "Inputnum",
     "Kishan",
@@ -20,6 +21,8 @@
     "Satus",
     "setmobile",
     "setpassword",
+    "swiper",
     "Vedangi"
-  ]
+  ],
+  "java.configuration.updateBuildConfiguration": "automatic"
 }
