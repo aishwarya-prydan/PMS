@@ -17,8 +17,9 @@ const SignUpScreen = () => {
   const pwd = watch('password');
   const navigation = useNavigation();
 
-  const onRegisterPressed = () => {
-    navigation.navigate('ConfirmEmail');
+  const onRegisterPressed = data => {
+    console.log(data);
+    navigation.navigate('Home');
   };
 
   const onSignInPress = () => {
