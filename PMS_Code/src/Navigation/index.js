@@ -64,10 +64,10 @@ const Navigation = () => {
         {/* <Stack.Screen name="FlatList" component={FlatList} /> */}
         {/* <Stack.Screen name="Welcome" component={WelcomeScreen} />
          */}
-        {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
-        {/* <Stack.Screen name="DatePicker" component={CustomDatePickerInput} /> */}
+
         {/* <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
         <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} /> */}
+
         <Stack.Screen
           name="Onboarding"
           component={OnboardingScreen}

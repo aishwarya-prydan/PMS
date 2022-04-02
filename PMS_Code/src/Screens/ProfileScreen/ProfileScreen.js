@@ -6,15 +6,16 @@ import React from 'react';
 import {Avatar, Title, Caption, TouchableRipple} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 const ProfileScreen = () => {
   const navigation = useNavigation();
 
+  const OnEditPressed = () => {
+    navigation.navigate('EditProfile');
+  };
+
   const OnLogOutPressed = () => {
-    // navigation.navigate('SignIn');
-    if (!OnLogOutPressed) {
-      Alert.alert('Do you want to log out');
-    } else {
-    }
+    navigation.navigate('SignIn');
   };
 
   return (
@@ -91,15 +92,15 @@ const ProfileScreen = () => {
       </View>
 
       <View style={styles.menuWrapper}>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={OnEditPressed}>
           <View style={styles.menuItem}>
             <Icon
-              name="envelope"
+              name="pencil-square-o"
               type="font-awesome"
               size={20}
               color="#777777"
             />
-            <Text style={styles.menuItemText}> Option1 </Text>
+            <Text style={styles.menuItemText}> Edit Profile </Text>
           </View>
         </TouchableRipple>
         <TouchableRipple onPress={() => {}}>
@@ -130,7 +131,7 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}>Settings</Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={OnLogOutPressed}>
           <View style={styles.menuItem}>
             <Icon
               name="sign-out"
@@ -138,9 +139,7 @@ const ProfileScreen = () => {
               size={22}
               color="#777777"
             />
-            <Text style={styles.menuItemText} onPress={OnLogOutPressed}>
-              Log Out
-            </Text>
+            <Text style={styles.menuItemText}>Log Out</Text>
           </View>
         </TouchableRipple>
       </View>
