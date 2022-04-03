@@ -50,7 +50,7 @@ export default class AboutEmployeeScreen extends React.Component {
           'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
       },
       {
-        name: 'Kishan Das',
+        name: 'Kishan Kumar',
         email: 'june.cha@gmail.com',
         position: 'Python and React Native Developer',
         photo: 'https://randomuser.me/api/portraits/men/97.jpg',
