@@ -16,6 +16,7 @@ import UpdateStatusScreen from '../Screens/UpdateStatusScreen/UpdateStatusScreen
 import MainPaymentScreen from '../Screens/PaymentScreen/MainPaymentScreen.js';
 import FullPaymentScreen from '../Screens/PaymentScreen/FullPaymentScreen.js';
 import PartialPaymentScreen from '../Screens/PaymentScreen/PartialPaymentScreen.js';
+import DeveloperOpenProfile from '../Screens/DeveloperOpenProfile/DeveloperOpenProfile.js';
 import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
 import TabNavigator from './TabNavigator';
 
@@ -49,7 +50,8 @@ const AppNavigator = () => {
       <Stack.Screen name="UpdateStatusScreen" component={UpdateStatusScreen} />
       <Stack.Screen name="About Screen" component={AboutCompanyScreen} />
       <Stack.Screen name="Recent Project" component={RecentProjectScreen} />
-      <Stack.Screen name="Developers Screen" component={DevelopersScreen} />
+      <Stack.Screen name="DevelopersScreen" component={DevelopersScreen} />
+      <Stack.Screen name="DeveloperProfile" component={DeveloperOpenProfile} />
       <Stack.Screen
         name="PartialPaymentScreen"
         component={PartialPaymentScreen}
