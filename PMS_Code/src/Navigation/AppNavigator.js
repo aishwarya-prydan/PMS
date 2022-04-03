@@ -7,7 +7,6 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
 import RecentProjectScreen from '../Screens/RecentProjectScreen/RecentProjectScreen.js';
-import DevelopersScreen from '../Screens/DevelopersScreen/DevelopersScreen.js';
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen.js';
 import EditProfileScreen from '../Screens/EditProfileScreen/EditProfileScreen.js';
 import HireEmployeeScreen from '../Screens/HireEmployee/HireEmployeeScreen.js';
