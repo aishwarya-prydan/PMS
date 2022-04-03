@@ -26,7 +26,7 @@ function Item({item}) {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <Text style={{color: 'green'}}>Open</Text>
+        <Text style={{color: 'green'}}>See More</Text>
       </TouchableOpacity>
     </View>
   );
@@ -38,6 +38,7 @@ export default class AboutEmployeeScreen extends React.Component {
       {
         name: 'Aishwarya Birewar',
         email: 'miyah.myles44@gmail.com',
+        profile: '',
         position: 'React Native Developer',
         photo: 'https://randomuser.me/api/portraits/women/44.jpg',
       },
@@ -51,7 +52,31 @@ export default class AboutEmployeeScreen extends React.Component {
       {
         name: 'Kishan Das',
         email: 'june.cha@gmail.com',
-        position: 'Python Developer',
+        position: 'Python and React Native Developer',
+        photo: 'https://randomuser.me/api/portraits/men/97.jpg',
+      },
+      {
+        name: 'Mahendra Parmar',
+        email: 'mahi@gmail.com',
+        position: 'React Js Developer',
+        photo: 'https://randomuser.me/api/portraits/men/97.jpg',
+      },
+      {
+        name: 'Abhishek Yadav',
+        email: 'abhishek@gmail.com',
+        position: 'React Js, Dot Net and Database Developer',
+        photo: 'https://randomuser.me/api/portraits/men/97.jpg',
+      },
+      {
+        name: 'Mihir Koshti',
+        email: 'mihir@gmail.com',
+        position: 'Backend API and React Js Developer',
+        photo: 'https://randomuser.me/api/portraits/men/97.jpg',
+      },
+      {
+        name: 'Sachin Koshti',
+        email: 'sachin@gmail.com',
+        position: 'React JS Developer',
         photo: 'https://randomuser.me/api/portraits/men/97.jpg',
       },
     ],
