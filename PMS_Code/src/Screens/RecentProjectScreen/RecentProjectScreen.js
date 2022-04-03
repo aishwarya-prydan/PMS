@@ -219,8 +219,8 @@ const styles = StyleSheet.create({
 
   followButton: {
     marginTop: 10,
-    height: 35,
-    width: 100,
+    height: 30,
+    width: 75,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
   },
   followButtonText: {
     color: '#FFFFFF',
-    fontSize: 20,
+    fontSize: 12,
   },
   /**** modals ****/
   popup: {
