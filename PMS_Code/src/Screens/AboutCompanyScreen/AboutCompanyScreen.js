@@ -5,7 +5,7 @@ const AboutCompanyScreen = () => {
   return (
     <ScrollView>
       <View>
-        <Text>Welcome To the Prydan PMS</Text>
+        <Text style={styles.head}>Welcome To the Prydan PMS</Text>
       </View>
 
       <Text style={styles.main}>
@@ -62,12 +62,24 @@ const AboutCompanyScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  head: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    justifyContent: 'center',
+    textAlign: 'center',
+    marginTop: 15,
+    marginBottom: 10,
+    color: '#000',
+  },
+
   main: {
     fontSize: 15,
+    marginLeft: 5,
+    marginRight: 5,
     fontWeight: 'bold',
     marginBottom: 10,
     justifyContent: 'center',
-    textAlign: 'left',
+    textAlign: 'justify',
   },
 });
 
