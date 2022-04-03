@@ -6,6 +6,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
+import MainScreenTabNavigator from './MainScreenTabNavigator.js';
 import SignInScreen from '../Screens/SignInScreen/SignInScreen.js';
 import SignUpScreen from '../Screens/SignUpScreen/SignUpScreen.js';
 import ConfirmEmailScreen from '../Screens/ConfirmEmailScreen/ConfirmEmailScreen.js';
@@ -14,6 +15,8 @@ import ConfirmCodeScreen from '../Screens/ConfirmCodeScreen/ConfirmCodeScreen.js
 import NewPasswordScreen from '../Screens/NewPasswordScreen/NewPasswordScreen.js';
 import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
 import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
+import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen';
+import AboutEmployeeScreen from './../Screens/AboutEmployeeScreen/AboutEmployeeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +38,7 @@ const AuthNavigator = () => {
         component={OnboardingScreen}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="CompanyInfo" component={MainScreenTabNavigator} />
 
       <Stack.Screen
         name="SignIn"
@@ -68,6 +72,8 @@ const AuthNavigator = () => {
       />
       <Stack.Screen name="Terms Of Use" component={TermsOfUseScreen} />
       <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
+      <Stack.Screen name="AboutCompany" component={AboutCompanyScreen} />
+      <Stack.Screen name="AboutEmployee" component={AboutEmployeeScreen} />
     </Stack.Navigator>
   );
 };
