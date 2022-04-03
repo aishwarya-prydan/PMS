@@ -44,7 +44,7 @@ export default class RecentProjectScreen extends Component {
         },
         {
           id: 4,
-          name: 'Prydan',
+          name: 'Prydan Blog',
           position: 'Website',
           image: 'https://bootdey.com/img/Content/avatar/avatar5.png',
           about:
@@ -52,8 +52,8 @@ export default class RecentProjectScreen extends Component {
         },
         {
           id: 5,
-          name: 'Mobile Application',
-          position: 'Backend-end dev',
+          name: 'E-waste',
+          position: 'Mobile Application',
           image: 'https://bootdey.com/img/Content/avatar/avatar4.png',
           about:
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
@@ -96,7 +96,7 @@ export default class RecentProjectScreen extends Component {
                   <TouchableOpacity
                     style={styles.followButton}
                     onPress={() => this.clickEventListener(item)}>
-                    <Text style={styles.followButtonText}>Follow</Text>
+                    <Text style={styles.followButtonText}>About</Text>
                   </TouchableOpacity>
                 </View>
               </TouchableOpacity>
@@ -128,14 +128,16 @@ export default class RecentProjectScreen extends Component {
                   </Text>
                 </ScrollView>
               </View>
-              <View style={styles.popupButtons}>
-                <TouchableOpacity
-                  onPress={() => {
-                    this.setModalVisible(false);
-                  }}
-                  style={styles.btnClose}>
-                  <Text style={styles.txtClose}>Close</Text>
-                </TouchableOpacity>
+              <View style={{alignSelf: 'center'}}>
+                <View style={styles.popupButtons}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      this.setModalVisible(false);
+                    }}
+                    style={styles.btnClose}>
+                    <Text style={styles.txtClose}>Close</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
           </View>
@@ -148,7 +150,9 @@ export default class RecentProjectScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 20,
+    marginTop: 15,
+    marginLeft: 0,
+    marginRight: 0,
     backgroundColor: '#eeeeee',
   },
   header: {
@@ -206,12 +210,14 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: '#008080',
     fontWeight: 'bold',
+    marginLeft: 35,
   },
   position: {
     fontSize: 14,
     flex: 1,
     alignSelf: 'center',
     color: '#696969',
+    marginLeft: 35,
   },
   about: {
     marginHorizontal: 10,
@@ -223,9 +229,11 @@ const styles = StyleSheet.create({
     width: 75,
     flexDirection: 'row',
     justifyContent: 'center',
+    marginLeft: 40,
     alignItems: 'center',
     borderRadius: 30,
     backgroundColor: '#3B71F3',
+    marginLeft: 52,
   },
   followButtonText: {
     color: '#FFFFFF',
