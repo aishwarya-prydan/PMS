@@ -129,6 +129,7 @@ const SignUpScreen = () => {
         <SocialSignInButtons />
 
         <CustomButtons text="Sign in" onPress={onSignInPress} type="CO" />
+
         <Text style={styles.text1}>Do you have an account? </Text>
       </View>
     </ScrollView>

@@ -1,7 +1,14 @@
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import React from 'react';
+// import {useNavigation} from '@react-navigation/native';
+// import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 
 const AboutCompanyScreen = () => {
+  // const navigation = useNavigation();
+
+  // const onSignInPress = () => {
+  //   navigation.navigate('SignIn');
+  // };
   return (
     <ScrollView>
       <View>
@@ -57,6 +64,10 @@ const AboutCompanyScreen = () => {
         creative team to work together and come up with a concrete version of a
         client’s vision using their skills and artistic know-how.
       </Text>
+
+      {/* <View>
+        <CustomButtons text="Sign in" onPress={onSignInPress} type="BS" />
+      </View> */}
     </ScrollView>
   );
 };
