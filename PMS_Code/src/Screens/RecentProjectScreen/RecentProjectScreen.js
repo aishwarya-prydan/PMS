@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
-    backgroundColor: '#00BFFF',
+    backgroundColor: '#3B71F3',
   },
   followButtonText: {
     color: '#FFFFFF',
