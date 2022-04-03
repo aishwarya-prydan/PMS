@@ -4,6 +4,8 @@
 /* eslint-disable prettier/prettier */
 
 import React from 'react';
+import {Button} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
 import MainScreenTabNavigator from './MainScreenTabNavigator.js';
@@ -17,10 +19,15 @@ import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
 import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen';
 import AboutEmployeeScreen from './../Screens/AboutEmployeeScreen/AboutEmployeeScreen';
+import CustomButtons from '../Components/CustomButtons/CustomButtons.js';
 
 const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => {
+  const navigation = useNavigation();
+  const onSignInPress = () => {
+    navigation.navigate('SignIn');
+  };
   return (
     <Stack.Navigator
       screenOptions={{
@@ -41,6 +48,11 @@ const AuthNavigator = () => {
       <Stack.Screen
         name="Company Information"
         component={MainScreenTabNavigator}
+        options={{
+          headerRight: () => (
+            <Button onPress={onSignInPress} title="Sign in" color="#3B71F3" />
+          ),
+        }}
       />
 
       <Stack.Screen
