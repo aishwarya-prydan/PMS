@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
-import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
 import NumInput from '../../Components/NumInput/NumInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';

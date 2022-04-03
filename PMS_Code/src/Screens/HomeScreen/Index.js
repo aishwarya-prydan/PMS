@@ -3,11 +3,8 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {useNavigation} from '@react-navigation/native';
-import {useForm} from 'react-hook-form';
 
 const Index = () => {
-  const {control, handleSubmit} = useForm();
-
   const navigation = useNavigation();
 
   const OnProjectPressed = () => {
@@ -30,7 +27,7 @@ const Index = () => {
         <CustomButtons
           text="Hire Employee"
           type="FOUR"
-          onPress={handleSubmit(OnEmployeePressed)}
+          onPress={OnEmployeePressed}
         />
       </View>
     </View>

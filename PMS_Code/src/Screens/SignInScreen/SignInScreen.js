@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 import Logo from '../../../assets/images/Logo.png';
-import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
+import CustomFormInput from '../../Components/CustomFormInput/CustomFormInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import SocialSignInButtons from '../../../src/Components/SocialSignInButtons/SocialSignInButtons.js';
 import {useNavigation} from '@react-navigation/native';
@@ -52,14 +52,14 @@ const SignInScreen = () => {
           resizeMode="contain"
         />
 
-        <CustomInput
+        <CustomFormInput
           name="username"
           placeholder="Username"
           control={control}
           rules={{required: 'Username is required'}}
         />
 
-        <CustomInput
+        <CustomFormInput
           name="password"
           placeholder="Password"
           secureTextEntry

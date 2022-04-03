@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React, { useState } from 'react';
-import CustomInput from '../../Components/CustomInput/CustomInput';
+import CustomInput from '../../Components/CustomFormInput/CustomFormInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import { Picker } from '@react-native-picker/picker';
 

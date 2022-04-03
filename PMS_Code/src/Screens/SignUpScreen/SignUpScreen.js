@@ -2,7 +2,7 @@
 /* eslint-disable prettier/prettier */
 import React, {useState, useContext} from 'react';
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
-import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
+import CustomInput from '../../Components/CustomFormInput/CustomFormInput.js';
 import NumInput from '../../Components/NumInput/NumInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import SocialSignInButtons from '../../../src/Components/SocialSignInButtons/SocialSignInButtons.js';

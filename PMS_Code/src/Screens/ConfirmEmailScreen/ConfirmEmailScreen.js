@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
-import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
+import CustomFormInput from '../../Components/CustomFormInput/CustomFormInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';
 import {useForm} from 'react-hook-form';
@@ -25,7 +25,7 @@ const ConfirmEmailScreen = () => {
       <View style={styles.root}>
         <Text style={styles.title}>Forgot Password</Text>
 
-        <CustomInput
+        <CustomFormInput
           name="email"
           control={control}
           placeholder="Email"

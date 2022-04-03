@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import CustomInput from '../../Components/CustomInput/CustomInput';
+import CustomInput from '../../Components/CustomFormInput/CustomFormInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 
 const PartialPaymentScreen = () => {

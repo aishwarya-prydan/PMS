@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
-import CustomInput from '../../../src/Components/CustomInput/CustomInput.js';
+import CustomFormInput from '../../Components/CustomFormInput/CustomFormInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';
 import {useForm} from 'react-hook-form';
@@ -19,7 +19,7 @@ const NewPasswordScreen = () => {
       <View style={styles.root}>
         <Text style={styles.title}>Set New Password</Text>
 
-        <CustomInput
+        <CustomFormInput
           name="password"
           control={control}
           placeholder="New Password"
@@ -33,7 +33,7 @@ const NewPasswordScreen = () => {
           }}
         />
 
-        <CustomInput
+        <CustomFormInput
           name="password-repeat"
           control={control}
           placeholder="Confirm New Password"

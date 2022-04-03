@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { SafeAreaView, View, Text } from 'react-native';
 import React from 'react';
-import CustomInput from '../../Components/CustomInput/CustomInput';
+import CustomInput from '../../Components/CustomFormInput/CustomFormInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import CustomDatePickerInput from '../../Components/CustomDatePicker/CustomDatePickerInput';
 
