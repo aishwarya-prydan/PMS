@@ -15,6 +15,7 @@ import UpdateStatusScreen from '../Screens/UpdateStatusScreen/UpdateStatusScreen
 import MainPaymentScreen from '../Screens/PaymentScreen/MainPaymentScreen.js';
 import FullPaymentScreen from '../Screens/PaymentScreen/FullPaymentScreen.js';
 import PartialPaymentScreen from '../Screens/PaymentScreen/PartialPaymentScreen.js';
+import DevelopersScreen from '../Screens/DeveloperInfoScreen/DeveloperInfoScreen.js';
 import DeveloperOpenProfile from '../Screens/DeveloperOpenProfile/DeveloperOpenProfile.js';
 import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
 import TabNavigator from './TabNavigator';

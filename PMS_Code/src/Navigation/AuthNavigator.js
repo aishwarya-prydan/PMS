@@ -38,7 +38,10 @@ const AuthNavigator = () => {
         component={OnboardingScreen}
         options={{headerShown: false}}
       />
-      <Stack.Screen name="CompanyInfo" component={MainScreenTabNavigator} />
+      <Stack.Screen
+        name="Company Information"
+        component={MainScreenTabNavigator}
+      />
 
       <Stack.Screen
         name="SignIn"
