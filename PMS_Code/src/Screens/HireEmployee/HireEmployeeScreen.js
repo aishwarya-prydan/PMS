@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {Picker} from '@react-native-picker/picker';
+import MultiLineInput from '../../Components/MultiLineInput/MultiLineInput';
 
 const HireEmployee = () => {
   const [LanguageName, setLanguageName] = useState('');
@@ -62,16 +63,7 @@ const HireEmployee = () => {
 
       <CustomInput placeholder="Experience" setValue={setExperience} />
 
-      <TextInput
-        style={styles.input}
-        setValue={setDescription}
-        placeholder="Description"
-      />
-
-      {/* <CustomInput
-        placeholder="Project Description"
-        setValue={setProjectDescription}
-      /> */}
+      <MultiLineInput setValue={setDescription} placeholder="Description" />
 
       <CustomButtons
         text="Submit"
@@ -106,18 +98,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     color: '#000',
     textAlign: 'center',
-  },
-  input: {
-    backgroundColor: 'white',
-    width: '100%',
-    height: '10%',
-
-    borderColor: '#e8e8e8',
-    borderWidth: 1,
-    borderRadius: 5,
-
-    paddingHorizontal: 10,
-    marginVertical: 5,
   },
 });
 

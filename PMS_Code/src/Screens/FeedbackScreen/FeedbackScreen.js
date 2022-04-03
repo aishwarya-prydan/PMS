@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {Picker} from '@react-native-picker/picker';
+import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
 
 const FeedbackScreen = () => {
   const [Feedback, setFeedback] = useState('');
@@ -20,11 +21,7 @@ const FeedbackScreen = () => {
         <Picker.Item label="About Developer" value="Developer" />
       </Picker>
 
-      <TextInput
-        style={styles.input}
-        setValue={setFeedback}
-        placeholder="Feedback"
-      />
+      <MultiLineInput setValue={setFeedback} placeholder="Feedback" />
 
       <CustomButtons
         text="Submit"
