@@ -20,39 +20,39 @@ export default class RecentProjectScreen extends Component {
       data: [
         {
           id: 1,
-          name: 'Mark Doe',
-          position: 'CEO',
-          image: 'https://bootdey.com/img/Content/avatar/avatar7.png',
+          name: 'PMS',
+          position: 'Mobile Application',
+          image: 'https://source.unsplash.com/random',
           about:
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
         },
         {
           id: 2,
-          name: 'John Doe',
-          position: 'CTO',
-          image: 'https://bootdey.com/img/Content/avatar/avatar1.png',
+          name: 'Work Smart',
+          position: 'Website',
+          image: 'https://source.unsplash.com/random',
           about:
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
         },
         {
           id: 3,
-          name: 'Clark Man',
-          position: 'Creative designer',
-          image: 'https://bootdey.com/img/Content/avatar/avatar6.png',
+          name: 'CRM',
+          position: 'Mobile Application',
+          image: 'https://source.unsplash.com/random',
           about:
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
         },
         {
           id: 4,
-          name: 'Jaden Boor',
-          position: 'Front-end dev',
+          name: 'Prydan',
+          position: 'Website',
           image: 'https://bootdey.com/img/Content/avatar/avatar5.png',
           about:
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
         },
         {
           id: 5,
-          name: 'Srick Tree',
+          name: 'Mobile Application',
           position: 'Backend-end dev',
           image: 'https://bootdey.com/img/Content/avatar/avatar4.png',
           about:
@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
   },
 
   name: {
-    fontSize: 18,
+    fontSize: 15,
     flex: 1,
     alignSelf: 'center',
     color: '#008080',
