@@ -11,7 +11,7 @@ import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {Picker} from '@react-native-picker/picker';
 
-const GiveProject = () => {
+const GiveProjectInquiry = () => {
   const [ProjectName, setProjectName] = useState('');
   const [Language, setLanguage] = useState('');
   const [description, setDescription] = useState('');
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     width: 390,
     backgroundColor: 'white',
   },
+
   text1: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -78,4 +79,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GiveProject;
+export default GiveProjectInquiry;

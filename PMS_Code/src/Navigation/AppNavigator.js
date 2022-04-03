@@ -18,6 +18,10 @@ import PartialPaymentScreen from '../Screens/PaymentScreen/PartialPaymentScreen.
 import DevelopersScreen from '../Screens/DeveloperInfoScreen/DeveloperInfoScreen.js';
 import DeveloperOpenProfile from '../Screens/DeveloperOpenProfile/DeveloperOpenProfile.js';
 import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
+import GiveProjectInquiry from '../Screens/GiveProjectInquiry/GiveProjectScreenInquiry.js';
+import HireEmployeeInquiry from '../Screens/HireEmployeeInquiry/HireEmployeeInquiry.js';
+import FeedbackScreen from '../Screens/FeedbackScreen/FeedbackScreen.js';
+import ComplaintScreen from '../Screens/ComplaintScreen/ComplaintScreen.js';
 import TabNavigator from './TabNavigator';
 
 const Stack = createNativeStackNavigator();
@@ -52,6 +56,10 @@ const AppNavigator = () => {
       <Stack.Screen name="Recent Project" component={RecentProjectScreen} />
       <Stack.Screen name="DevelopersScreen" component={DevelopersScreen} />
       <Stack.Screen name="DeveloperProfile" component={DeveloperOpenProfile} />
+      <Stack.Screen name="Project Inquiry" component={GiveProjectInquiry} />
+      <Stack.Screen name="Employee Inquiry" component={HireEmployeeInquiry} />
+      <Stack.Screen name="Feedback Form" component={FeedbackScreen} />
+      <Stack.Screen name="Complaint Form" component={ComplaintScreen} />
       <Stack.Screen
         name="PartialPaymentScreen"
         component={PartialPaymentScreen}

@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   text_FOUR: {
     fontWeight: 'bold',
     color: '#3B71F3',
-    fontSize: 13,
+    fontSize: 15,
   },
   text_FP: {
     fontWeight: 'bold',

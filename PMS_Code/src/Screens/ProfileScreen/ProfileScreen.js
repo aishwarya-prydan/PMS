@@ -14,6 +14,14 @@ const ProfileScreen = () => {
     navigation.navigate('EditProfile');
   };
 
+  const OnFeedbackPressed = () => {
+    navigation.navigate('Feedback Form');
+  };
+
+  const OnComplaintPressed = () => {
+    navigation.navigate('Complaint Form');
+  };
+
   const OnLogOutPressed = () => {
     navigation.navigate('SignIn');
   };
@@ -74,7 +82,7 @@ const ProfileScreen = () => {
       </View>
 
       <View style={styles.infoBoxWrapper}>
-        <View
+        {/* <View
           style={[
             styles.infoBox,
             {
@@ -88,10 +96,7 @@ const ProfileScreen = () => {
         <View style={styles.infoBox}>
           <Title>4</Title>
           <Caption>Developer</Caption>
-        </View>
-      </View>
-
-      <View style={styles.menuWrapper}>
+        </View> */}
         <TouchableRipple onPress={OnEditPressed}>
           <View style={styles.menuItem}>
             <Icon
@@ -103,7 +108,21 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}> Edit Profile </Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+      </View>
+
+      <View style={styles.menuWrapper}>
+        {/* <TouchableRipple onPress={OnEditPressed}>
+          <View style={styles.menuItem}>
+            <Icon
+              name="pencil-square-o"
+              type="font-awesome"
+              size={20}
+              color="#777777"
+            />
+            <Text style={styles.menuItemText}> Edit Profile </Text>
+          </View>
+        </TouchableRipple> */}
+        <TouchableRipple onPress={OnFeedbackPressed}>
           <View style={styles.menuItem}>
             <Icon
               name="envelope"
@@ -111,10 +130,10 @@ const ProfileScreen = () => {
               size={20}
               color="#777777"
             />
-            <Text style={styles.menuItemText}> Option1 </Text>
+            <Text style={styles.menuItemText}> Feedback </Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+        <TouchableRipple onPress={OnComplaintPressed}>
           <View style={styles.menuItem}>
             <Icon
               name="envelope"
@@ -122,7 +141,7 @@ const ProfileScreen = () => {
               size={20}
               color="#777777"
             />
-            <Text style={styles.menuItemText}> Option1 </Text>
+            <Text style={styles.menuItemText}> Complaints</Text>
           </View>
         </TouchableRipple>
         <TouchableRipple onPress={() => {}}>
@@ -175,7 +194,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#dddddddd',
     borderTopWidth: 1,
     flexDirection: 'row',
-    height: 100,
+    height: 60,
   },
   infoBox: {
     width: '50%',

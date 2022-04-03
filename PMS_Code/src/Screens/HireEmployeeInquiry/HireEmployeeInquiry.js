@@ -11,29 +11,31 @@ import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {Picker} from '@react-native-picker/picker';
 
-const GiveProject = () => {
-  const [ProjectName, setProjectName] = useState('');
-  const [Language, setLanguage] = useState('');
+const HireEmployeeInquiry = () => {
+  const [LanguageName, setLanguageName] = useState('');
+  const [Location, setLocation] = useState('');
+  const [Experience, setExperience] = useState('');
   const [description, setDescription] = useState('');
-  const [Department, setDepartment] = useState('');
-  const [deadline, setDeadline] = useState('');
 
   return (
     <View style={styles.container}>
       <Text style={styles.text1}>Please fill the Form</Text>
-      <CustomInput placeholder="Project Name" setValue={setProjectName} />
+      <CustomInput placeholder="Language Name" setValue={setLanguageName} />
 
-      <CustomInput placeholder="Language" setValue={setLanguage} />
+      <CustomInput placeholder="Location" setValue={setLocation} />
 
-      <CustomInput placeholder="Department" setValue={setDepartment} />
-
-      <CustomInput placeholder="Deadline" setValue={setDeadline} />
+      <CustomInput placeholder="Experience" setValue={setExperience} />
 
       <TextInput
         style={styles.input}
         setValue={setDescription}
         placeholder="Description"
       />
+
+      {/* <CustomInput
+        placeholder="Project Description"
+        setValue={setProjectDescription}
+      /> */}
 
       <CustomButtons
         text="Submit"
@@ -56,6 +58,7 @@ const styles = StyleSheet.create({
     width: 390,
     backgroundColor: 'white',
   },
+
   text1: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -78,4 +81,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GiveProject;
+export default HireEmployeeInquiry;
