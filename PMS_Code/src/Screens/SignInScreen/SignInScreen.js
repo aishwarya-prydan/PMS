@@ -1,4 +1,3 @@
-/* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {

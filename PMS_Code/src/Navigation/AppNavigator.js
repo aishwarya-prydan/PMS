@@ -41,6 +41,11 @@ const AppNavigator = () => {
         },
       }}>
       <Stack.Screen
+        name="DeveloperProfile"
+        component={DeveloperOpenProfile}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
         name="Home"
         component={TabNavigator}
         options={{headerShown: true}}
@@ -56,7 +61,7 @@ const AppNavigator = () => {
       <Stack.Screen name="About Screen" component={AboutCompanyScreen} />
       <Stack.Screen name="Recent Project" component={RecentProjectScreen} />
       <Stack.Screen name="DevelopersScreen" component={DevelopersScreen} />
-      <Stack.Screen name="DeveloperProfile" component={DeveloperOpenProfile} />
+
       <Stack.Screen name="Project Inquiry" component={GiveProjectInquiry} />
       <Stack.Screen name="Employee Inquiry" component={HireEmployeeInquiry} />
       <Stack.Screen name="Feedback Form" component={FeedbackScreen} />

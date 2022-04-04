@@ -1,7 +1,14 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import {View, StyleSheet, SafeAreaView, Text, Alert} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  SafeAreaView,
+  Text,
+  Alert,
+  ScrollView,
+} from 'react-native';
 import React from 'react';
 import {Avatar, Title, Caption, TouchableRipple} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
@@ -76,7 +83,27 @@ const DeveloperOpenProfile = () => {
           <Title>4</Title>
         </View>
       </View>
-
+      <ScrollView>
+        <View>
+          <Text style={styles.bio}>
+            ➢ Kishan has professional experience working with Python, React
+            Native, HTML, CSS, DJAngo.Experience with building pixel perfect
+            UI's that match designs {'\n'}➢ Has a GitHub profile
+            https://github.com/kishan-prydan {'\n'}➢ Expert in developing Mobile
+            based applications and cross browser applications {'\n'}➢ Love
+            coding and look forward to taking on complex features. {'\n'}➢
+            Proven ability to analyse problems, root causes, and develop
+            innovative solutions to business challenges and streamlining
+            operations. {'\n'}➢ Worked on GIT for version control, Code Review{' '}
+            {'\n'}➢ Performed Unit testing {'\n'}➢ Experience working with
+            Redux.{'\n'}➢ Created Reusable react presentation and container
+            components. {'\n'}➢ Good understanding and usage of states and
+            props.{'\n'}➢ Implemented EcmaScript6 (ES6) arrow functions,
+            constants, block-scope variables, class inheritance..{'\n'}➢ Solid
+            experience of redux development using Babel, Web pack, NPM.
+          </Text>
+        </View>
+      </ScrollView>
       {/* <View style={styles.userInfoSection}>
         <View style={styles.row}>
           <Icon
@@ -231,6 +258,11 @@ const styles = StyleSheet.create({
     fontWeight: 600,
     fontSize: 16,
     lineHeight: 26,
+  },
+  bio: {
+    marginLeft: 5,
+    marginRight: 5,
+    fontSize: 18,
   },
 });
 export default DeveloperOpenProfile;
