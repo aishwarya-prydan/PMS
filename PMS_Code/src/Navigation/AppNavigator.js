@@ -40,7 +40,6 @@ const AppNavigator = () => {
           fontWeight: 'bold',
         },
       }}>
-      <Stack.Screen name="Quotation" component={QuotationPrice} />
       <Stack.Screen
         name="Home"
         component={TabNavigator}
@@ -66,6 +65,7 @@ const AppNavigator = () => {
         name="PartialPaymentScreen"
         component={PartialPaymentScreen}
       />
+      <Stack.Screen name="Quotation" component={QuotationPrice} />
     </Stack.Navigator>
   );
 };
