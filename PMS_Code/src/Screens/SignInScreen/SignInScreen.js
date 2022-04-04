@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   Text,
   View,
@@ -17,6 +17,7 @@ import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.j
 import SocialSignInButtons from '../../../src/Components/SocialSignInButtons/SocialSignInButtons.js';
 import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
+import axios from 'axios';
 
 const SignInScreen = () => {
   const {height} = useWindowDimensions();
@@ -42,6 +43,29 @@ const SignInScreen = () => {
     navigation.navigate('SignUp');
   };
 
+  const fetchApi = async () => {
+    try {
+      // const api = 'http://192.168.113.17/api/tblUser/';
+      const api = 'https://889c-103-1-100-53.ngrok.io/api/tblUser/';
+      // const api = 'https://jsonplaceholder.typicode.com/todos/10';
+      // const api = 'http://localhost:5000/SignUpapi/1/';
+      const res = await axios.get(api, {
+        headers: {
+          authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ5MDc2MDY3LCJpYXQiOjE2NDkwNzQyNjcsImp0aSI6IjlmODU2OTE1NzA5ODRjNDZiYjQwZWQxNzM3YmZmYzkwIiwidXNlcl9pZCI6MX0.RAQ6Or3f9Nt0crSiZiM_WcYgSmhSNz1FWEt_FuwJ1jA`,
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      });
+      console.log(res.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
@@ -66,8 +90,8 @@ const SignInScreen = () => {
           rules={{
             required: 'Password is required',
             minLength: {
-              value: 3,
-              message: 'Password should be minimum 3 characters long',
+              value: 6,
+              message: 'Password should be minimum 6 characters long',
             },
           }}
         />
