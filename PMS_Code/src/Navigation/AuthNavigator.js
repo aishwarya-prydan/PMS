@@ -46,11 +46,12 @@ const AuthNavigator = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Company Information"
+        name="PMS"
         component={MainScreenTabNavigator}
         options={{
           headerRight: () => (
-            <Button onPress={onSignInPress} title="Sign in" color="#3B71F3" />
+            // <Button onPress={onSignInPress} title="Sign in" color="#3B71F3" />
+            <CustomButtons title="Sign in" onPress={onSignInPress} type="CO" />
           ),
         }}
       />

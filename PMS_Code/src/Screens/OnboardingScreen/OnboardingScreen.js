@@ -119,7 +119,7 @@ const OnboardingScreen = ({navigation}) => {
                     backgroundColor: 'transparent',
                   },
                 ]}
-                onPress={() => navigation.navigate('Company Information')}>
+                onPress={() => navigation.navigate('PMS')}>
                 <Text
                   style={{
                     fontWeight: 'bold',
