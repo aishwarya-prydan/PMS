@@ -21,7 +21,7 @@ const MainScreenTabNavigator = () => {
       <TopTab.Navigator
         screenOptions={{
           tabBarLabelStyle: {fontSize: 13},
-          tabBarItemStyle: {height: 35, marginBottom: 4},
+          tabBarItemStyle: {height: 60, marginBottom: 4},
           headerShown: true,
         }}>
         <TopTab.Screen
