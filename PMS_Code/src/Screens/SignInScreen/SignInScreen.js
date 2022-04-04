@@ -46,12 +46,12 @@ const SignInScreen = () => {
   const fetchApi = async () => {
     try {
       // const api = 'http://192.168.113.17/api/tblUser/';
-      const api = 'https://889c-103-1-100-53.ngrok.io/api/tblUser/';
+      const api = 'https://f33b-103-1-100-53.ngrok.io/api/tblUser/';
       // const api = 'https://jsonplaceholder.typicode.com/todos/10';
       // const api = 'http://localhost:5000/SignUpapi/1/';
       const res = await axios.get(api, {
         headers: {
-          authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ5MDc2MDY3LCJpYXQiOjE2NDkwNzQyNjcsImp0aSI6IjlmODU2OTE1NzA5ODRjNDZiYjQwZWQxNzM3YmZmYzkwIiwidXNlcl9pZCI6MX0.RAQ6Or3f9Nt0crSiZiM_WcYgSmhSNz1FWEt_FuwJ1jA`,
+          authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ5MDc2NTY3LCJpYXQiOjE2NDkwNzQ3NjcsImp0aSI6IjdhMzAxODRkMDM5YjQ2ZWU4YzZjZWMyMjg4YWQ5Y2JlIiwidXNlcl9pZCI6MX0.sJw_vBx6aShHWocmMGFkmnhbuEcEk0_mYV1HBTqv-fk`,
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
