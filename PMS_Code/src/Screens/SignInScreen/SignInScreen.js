@@ -19,6 +19,9 @@ import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
 import axios from 'axios';
 
+
+const PASS_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
+
 const SignInScreen = () => {
   const {height} = useWindowDimensions();
   const navigation = useNavigation();
@@ -89,9 +92,14 @@ const SignInScreen = () => {
           control={control}
           rules={{
             required: 'Password is required',
-            minLength: {
-              value: 6,
-              message: 'Password should be minimum 6 characters long',
+            // minLength: {
+            //   value: 6,
+            //   message: 'Password should be minimum 6 characters long',
+            // },
+            pattern: {
+              value: PASS_REGEX,
+              message:
+                'Password must be at least 6 - 15 characters long, One Uppercase, One Lowercase and One Special Symbol',
             },
           }}
         />

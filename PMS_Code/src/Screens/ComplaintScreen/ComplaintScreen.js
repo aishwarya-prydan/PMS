@@ -1,13 +1,13 @@
 import {View, Text, StyleSheet, TextInput, Alert} from 'react-native';
 import React, {useState} from 'react';
-import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {Picker} from '@react-native-picker/picker';
-import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
-import {useForm, Controller} from 'react-hook-form';
+import {useNavigation} from '@react-navigation/native';
+import {useForm} from 'react-hook-form';
+import MultiLineInput from '../../Components/MultiLineInput/MultiLineInput.js';
 
 const ComplaintScreen = () => {
-  const [Feedback, setFeedback] = useState('');
+  // const [Feedback, setFeedback] = useState('');
   const [selectedValue, setSelectedValue] = useState('WebSite');
 
   const {
@@ -15,6 +15,12 @@ const ComplaintScreen = () => {
     handleSubmit,
     formState: {errors},
   } = useForm();
+
+  const navigation = useNavigation();
+
+  const onHomePressed = () => {
+    navigation.navigate('Home');
+  };
 
   return (
     <View style={styles.container}>
@@ -31,19 +37,20 @@ const ComplaintScreen = () => {
       <MultiLineInput
         name="Complaint"
         style={styles.input}
-        setValue={setFeedback}
+        // setValue={setFeedback}
         placeholder="Complaint"
         control={control}
-        rules={{
-          required: 'Password is required',
-          minLength: {
-            value: 3,
-            message: 'Password should be minimum 3 characters long',
-          },
-        }}
+        rules={{required: 'Complaint is required'}}
       />
 
-      <CustomButtons text="Submit" onPress={handleSubmit()} />
+      {/* <CustomFormInput
+        name="username"
+        placeholder="Username"
+        control={control}
+        rules={{required: 'Username is required'}}
+      /> */}
+
+      <CustomButtons text="Submit" onPress={handleSubmit(onHomePressed)} />
     </View>
   );
 };

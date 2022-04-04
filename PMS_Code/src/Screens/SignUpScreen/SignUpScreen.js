@@ -10,10 +10,14 @@ import {useNavigation} from '@react-navigation/native';
 import {useForm} from 'react-hook-form';
 
 const EMAIL_REGEX =
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  // /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+const PASS_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
 
 const SignUpScreen = () => {
   const {control, handleSubmit, watch} = useForm();
+
   const pwd = watch('password');
   const navigation = useNavigation();
 
@@ -89,9 +93,14 @@ const SignUpScreen = () => {
           secureTextEntry
           rules={{
             required: 'Password is required',
-            minLength: {
-              value: 8,
-              message: 'Password should be at least 8 characters long',
+            // minLength: {
+            //   value: 6,
+            //   message: 'Password should be at least 6 characters long',
+            // },
+            pattern: {
+              value: PASS_REGEX,
+              message:
+                'Password must be at least 6 - 15 characters long, One Uppercase, One Lowercase and One Special Symbol',
             },
           }}
         />

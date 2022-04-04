@@ -40,11 +40,11 @@ const AppNavigator = () => {
           fontWeight: 'bold',
         },
       }}>
-      <Stack.Screen
+      {/* <Stack.Screen
         name="DeveloperProfile"
         component={DeveloperOpenProfile}
         options={{headerShown: false}}
-      />
+      /> */}
       <Stack.Screen
         name="Home"
         component={TabNavigator}

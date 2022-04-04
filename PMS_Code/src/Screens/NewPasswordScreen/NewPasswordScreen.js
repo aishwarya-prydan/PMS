@@ -5,6 +5,9 @@ import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.j
 import {useNavigation} from '@react-navigation/native';
 import {useForm} from 'react-hook-form';
 
+
+const PASS_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
+
 const NewPasswordScreen = () => {
   const {control, handleSubmit, watch} = useForm();
   const pwd = watch('password');
@@ -26,9 +29,14 @@ const NewPasswordScreen = () => {
           secureTextEntry
           rules={{
             required: 'Password is required',
-            minLength: {
-              value: 8,
-              message: 'Password should be at least 8 characters long',
+            // minLength: {
+            //   value: 8,
+            //   message: 'Password should be at least 8 characters long',
+            // },
+            pattern: {
+              value: PASS_REGEX,
+              message:
+                'Password must be at least 6 - 15 characters long, One Uppercase, One Lowercase and One Special Symbol',
             },
           }}
         />

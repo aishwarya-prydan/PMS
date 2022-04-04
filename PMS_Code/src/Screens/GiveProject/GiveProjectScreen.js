@@ -1,18 +1,20 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Alert,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import React, {useState} from 'react';
-import CustomInput from '../../Components/CustomInput/CustomInput';
+import CustomFormInput from '../../Components/CustomFormInput/CustomFormInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
-import {Picker} from '@react-native-picker/picker';
 import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
+import {useForm} from 'react-hook-form';
+import {useNavigation} from '@react-navigation/native';
 
 const GiveProject = () => {
+  const {control, handleSubmit} = useForm();
+
+  const navigation = useNavigation();
+
+  const OnHomePressed = () => {
+    navigation.navigate('Home');
+  };
+
   const [ProjectName, setProjectName] = useState('');
   const [Language, setLanguage] = useState('');
   const [description, setDescription] = useState('');
@@ -22,22 +24,56 @@ const GiveProject = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text1}>Please fill the Form</Text>
-      <CustomInput placeholder="Project Name" setValue={setProjectName} />
-
-      <CustomInput placeholder="Language" setValue={setLanguage} />
-
-      <CustomInput placeholder="Department" setValue={setDepartment} />
-
-      <CustomInput placeholder="Deadline" setValue={setDeadline} />
-
-      <MultiLineInput setValue={setDescription} placeholder="Description" />
-
-      <CustomButtons
-        text="Submit"
-        onPress={() => {
-          Alert.alert('Form submission completed');
+      <CustomFormInput
+        placeholder="Project Name"
+        control={control}
+        setValue={setProjectName}
+        rules={{
+          required: 'Project Name is required',
         }}
       />
+
+      <CustomFormInput
+        placeholder="Language"
+        control={control}
+        setValue={setLanguage}
+        rules={{
+          required: 'Language is required',
+        }}
+      />
+
+      <CustomFormInput
+        placeholder="Department"
+        control={control}
+        setValue={setDepartment}
+        rules={{
+          required: 'Department is required',
+        }}
+      />
+
+      <CustomFormInput
+        placeholder="Deadline"
+        control={control}
+        setValue={setDeadline}
+        rules={{
+          required: 'Deadline is required',
+        }}
+      />
+
+      <MultiLineInput
+        setValue={setDescription}
+        control={control}
+        placeholder="Description"
+        rules={{
+          required: 'Description is required',
+          minLength: {
+            value: 50,
+            message: 'Description should be at least 50 characters long',
+          },
+        }}
+      />
+
+      <CustomButtons text="Submit" onPress={handleSubmit(OnHomePressed)} />
     </View>
   );
 };

@@ -4,12 +4,22 @@ import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {Picker} from '@react-native-picker/picker';
 import MultiLineInput from '../../Components/MultiLineInput/MultiLineInput';
+import {useNavigation} from '@react-navigation/native';
+import {useForm} from 'react-hook-form';
 
 const HireEmployee = () => {
   const [LanguageName, setLanguageName] = useState('');
   const [Location, setLocation] = useState('');
   const [Experience, setExperience] = useState('');
   const [description, setDescription] = useState('');
+
+  const {control, handleSubmit} = useForm();
+
+  const navigation = useNavigation();
+
+  const OnHomePressed = () => {
+    navigation.navigate('Home');
+  };
 
   return (
     // <View style={styles.container}>
@@ -57,20 +67,48 @@ const HireEmployee = () => {
 
     <View style={styles.container}>
       <Text style={styles.text1}>Please fill the Form</Text>
-      <CustomInput placeholder="Language Name" setValue={setLanguageName} />
-
-      <CustomInput placeholder="Location" setValue={setLocation} />
-
-      <CustomInput placeholder="Experience" setValue={setExperience} />
-
-      <MultiLineInput setValue={setDescription} placeholder="Description" />
-
-      <CustomButtons
-        text="Submit"
-        onPress={() => {
-          Alert.alert('Form submission completed');
+      <CustomInput
+        placeholder="Language Name"
+        setValue={setLanguageName}
+        name="LanguageName"
+        control={control}
+        rules={{
+          required: 'Language Name is required',
         }}
       />
+
+      <CustomInput
+        placeholder="Location"
+        setValue={setLocation}
+        name="Location"
+        control={control}
+        rules={{
+          required: 'Location is required',
+        }}
+      />
+
+      <CustomInput
+        placeholder="Experience"
+        setValue={setExperience}
+        name="Experience"
+        control={control}
+        rules={{
+          required: 'Experience is required',
+        }}
+      />
+
+      <MultiLineInput
+        setValue={setDescription}
+        placeholder="Description"
+        name="Description"
+        control={control}
+        secureTextEntry
+        rules={{
+          required: 'Description is required',
+        }}
+      />
+
+      <CustomButtons text="Submit" onPress={handleSubmit(OnHomePressed)} />
     </View>
   );
 };
