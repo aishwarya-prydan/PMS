@@ -22,6 +22,7 @@ import GiveProjectInquiry from '../Screens/GiveProjectInquiry/GiveProjectScreenI
 import HireEmployeeInquiry from '../Screens/HireEmployeeInquiry/HireEmployeeInquiry.js';
 import FeedbackScreen from '../Screens/FeedbackScreen/FeedbackScreen.js';
 import ComplaintScreen from '../Screens/ComplaintScreen/ComplaintScreen.js';
+import QuotationPrice from '../Screens/QuotationPriceScreen/QuotationPrice.js';
 import TabNavigator from './TabNavigator';
 
 const Stack = createNativeStackNavigator();
@@ -39,6 +40,7 @@ const AppNavigator = () => {
           fontWeight: 'bold',
         },
       }}>
+      <Stack.Screen name="Quotation" component={QuotationPrice} />
       <Stack.Screen
         name="Home"
         component={TabNavigator}
