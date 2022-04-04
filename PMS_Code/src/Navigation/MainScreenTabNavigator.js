@@ -15,15 +15,29 @@ const MainScreenTabNavigator = () => {
   };
   return (
     <>
-      <View>
+      {/* <View>
         <CustomButtons text="Sign in" onPress={onSignInPress} type="MAIN" />
-      </View>
+      </View> */}
       <TopTab.Navigator
         screenOptions={{
           tabBarLabelStyle: {fontSize: 13},
-          tabBarItemStyle: {height: 35, marginBottom: 4},
+          tabBarItemStyle: {height: 60, marginBottom: 4},
+          headerShown: true,
         }}>
-        <TopTab.Screen name="About Us" component={AboutCompanyScreen} />
+        <TopTab.Screen
+          name="About Us"
+          component={AboutCompanyScreen}
+          // screenOptions={{
+          //   headerShown: true,
+          //   headerRight: () => (
+          //     <Button
+          //       onPress={() => alert('Clicked !!')}
+          //       title="menu"
+          //       color="#000"
+          //     />
+          //   ),
+          // }}
+        />
         <TopTab.Screen name="Our Employees" component={AboutEmployeeScreen} />
         <TopTab.Screen name="Recent Projects" component={RecentProjectScreen} />
       </TopTab.Navigator>

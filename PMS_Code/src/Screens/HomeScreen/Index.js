@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
-import { StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
+import Logo from '../../../assets/images/Logo.png';
 
 const Index = () => {
   const navigation = useNavigation();
@@ -25,28 +26,34 @@ const Index = () => {
   return (
     <View style={{ backgroundColor: '#f0f0f0' }}>
       <View style={styles.container}>
+        <View style={{flexDirection: 'row', marginTop: 18}}>
+          <Image
+            source={Logo}
+            // style={[
+            //   styles.logo,
+            //   {height: 13},
+            //   {flex: 1},
+            //   {alignItems: 'center'},
+            // ]}
+            style={{
+              width: 140,
+              height: 140,
+              borderRadius: 140 / 2,
+              marginLeft: -220,
+              marginTop: -50,
+            }}
+          />
+        </View>
+
         <Text style={styles.texts}>Welcome to Prydan PMS</Text>
-        <Text style={styles.texts1}>We are here to solve your problems</Text>
-        <CustomButtons
-          text="Inquiry about Give Project"
-          type="FOUR"
-          onPress={OnProjectInquiryPressed}
-        />
-        <CustomButtons
-          text="Inquiry about Hire Employee"
-          type="FOUR"
-          onPress={OnHireEmployeeInquiryPressed}
-        />
-
-        <Text style={styles.main}>OR</Text>
 
         <CustomButtons
-          text="Want to Give Project"
+          text="Post Project"
           type="FOUR"
           onPress={OnProjectPressed}
         />
         <CustomButtons
-          text="Want to Hire Employee"
+          text="Hire Employee"
           type="FOUR"
           onPress={OnEmployeePressed}
         />
@@ -58,7 +65,7 @@ const Index = () => {
 const styles = StyleSheet.create({
   container: {
     width: 395,
-    height: 190,
+    height: 225,
     backgroundColor: '#fff',
     paddingTop: 10,
     marginTop: 15,
@@ -68,10 +75,11 @@ const styles = StyleSheet.create({
   },
   texts: {
     color: 'black',
-    fontWeight: 'bold',
-    fontSize: 25,
-    marginTop: 40,
-    marginBottom: 10,
+    fontSize: 17,
+    marginTop: -100,
+    marginBottom: 5,
+    marginLeft: 20,
+    marginBottom: 20,
   },
   texts1: {
     color: 'black',

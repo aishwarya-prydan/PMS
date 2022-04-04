@@ -81,22 +81,7 @@ const ProfileScreen = () => {
         </View>
       </View>
 
-      <View style={styles.infoBoxWrapper}>
-        {/* <View
-          style={[
-            styles.infoBox,
-            {
-              borderRightColor: '#dddddd',
-              borderRightWidth: 1,
-            },
-          ]}>
-          <Title>2</Title>
-          <Caption>Projects</Caption>
-        </View>
-        <View style={styles.infoBox}>
-          <Title>4</Title>
-          <Caption>Developer</Caption>
-        </View> */}
+      <View style={styles.menuWrapper}>
         <TouchableRipple onPress={OnEditPressed}>
           <View style={styles.menuItem}>
             <Icon
@@ -108,24 +93,10 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}> Edit Profile </Text>
           </View>
         </TouchableRipple>
-      </View>
-
-      <View style={styles.menuWrapper}>
-        {/* <TouchableRipple onPress={OnEditPressed}>
-          <View style={styles.menuItem}>
-            <Icon
-              name="pencil-square-o"
-              type="font-awesome"
-              size={20}
-              color="#777777"
-            />
-            <Text style={styles.menuItemText}> Edit Profile </Text>
-          </View>
-        </TouchableRipple> */}
         <TouchableRipple onPress={OnFeedbackPressed}>
           <View style={styles.menuItem}>
             <Icon
-              name="envelope"
+              name="comment"
               type="font-awesome"
               size={20}
               color="#777777"
@@ -180,7 +151,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   caption: {
-    fontsize: 11,
+    fontSize: 11,
     lineHeight: 13,
     fontWeight: '500',
   },

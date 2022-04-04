@@ -3,10 +3,18 @@ import React, {useState} from 'react';
 import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {Picker} from '@react-native-picker/picker';
+import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
+import {useForm, Controller} from 'react-hook-form';
 
 const ComplaintScreen = () => {
   const [Feedback, setFeedback] = useState('');
   const [selectedValue, setSelectedValue] = useState('WebSite');
+
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
 
   return (
     <View style={styles.container}>
@@ -20,18 +28,22 @@ const ComplaintScreen = () => {
         <Picker.Item label="About Developer" value="Developer" />
       </Picker>
 
-      <TextInput
+      <MultiLineInput
+        name="Complaint"
         style={styles.input}
         setValue={setFeedback}
         placeholder="Complaint"
-      />
-
-      <CustomButtons
-        text="Submit"
-        onPress={() => {
-          Alert.alert('Form submission completed');
+        control={control}
+        rules={{
+          required: 'Password is required',
+          minLength: {
+            value: 3,
+            message: 'Password should be minimum 3 characters long',
+          },
         }}
       />
+
+      <CustomButtons text="Submit" onPress={handleSubmit()} />
     </View>
   );
 };

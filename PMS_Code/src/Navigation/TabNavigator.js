@@ -39,7 +39,12 @@ const TabNavigator = () => {
         component={HireEmployee}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="users" type="font-awesome" color={color} size={23} />
+            <Icon
+              name="handshake-o"
+              type="font-awesome"
+              color={color}
+              size={23}
+            />
           ),
         }}
       />
@@ -65,7 +70,7 @@ const TabNavigator = () => {
         component={ProfileScreen}
         options={{
           tabBarIcon: ({color, size}) => (
-            <Icon name="bars" type="font-awesome" color={color} size={25} />
+            <Icon name="cog" type="font-awesome" color={color} size={25} />
           ),
         }}
       />
