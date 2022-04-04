@@ -33,7 +33,7 @@ const AboutCompanyScreen = () => {
         )}
         scrollEventThrottle={16}>
         <View style={{paddingTop: H_MAX_HEIGHT}}>
-          {/** Page contant goes here **/}
+          {/** Page content goes here **/}
 
           <View>
             <Text style={styles.head}>Welcome To the Prydan PMS</Text>
