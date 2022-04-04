@@ -96,7 +96,7 @@ const ProfileScreen = () => {
         <TouchableRipple onPress={OnFeedbackPressed}>
           <View style={styles.menuItem}>
             <Icon
-              name="envelope"
+              name="comment"
               type="font-awesome"
               size={20}
               color="#777777"

@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {Picker} from '@react-native-picker/picker';
+import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
 
 const ComplaintScreen = () => {
   const [Feedback, setFeedback] = useState('');
@@ -20,7 +21,7 @@ const ComplaintScreen = () => {
         <Picker.Item label="About Developer" value="Developer" />
       </Picker>
 
-      <TextInput
+      <MultiLineInput
         style={styles.input}
         setValue={setFeedback}
         placeholder="Complaint"

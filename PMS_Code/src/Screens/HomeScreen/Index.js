@@ -26,8 +26,8 @@ const Index = () => {
     <View style={{backgroundColor: '#f0f0f0'}}>
       <View style={styles.container}>
         <Text style={styles.texts}>Welcome to Prydan PMS</Text>
-        <Text style={styles.texts1}>We are here to solve your problems</Text>
-        <CustomButtons
+        {/* <Text style={styles.texts1}>We are here to solve your problems</Text> */}
+        {/* <CustomButtons
           text="Inquiry about Give Project"
           type="FOUR"
           onPress={OnProjectInquiryPressed}
@@ -36,17 +36,17 @@ const Index = () => {
           text="Inquiry about Hire Employee"
           type="FOUR"
           onPress={OnHireEmployeeInquiryPressed}
-        />
+        /> */}
 
-        <Text style={styles.main}>OR</Text>
+        {/* <Text style={styles.main}>OR</Text> */}
 
         <CustomButtons
-          text="Want to Give Project"
+          text="Post Project"
           type="FOUR"
           onPress={OnProjectPressed}
         />
         <CustomButtons
-          text="Want to Hire Employee"
+          text="Hire Employee"
           type="FOUR"
           onPress={OnEmployeePressed}
         />
@@ -69,10 +69,9 @@ const styles = StyleSheet.create({
   },
   texts: {
     color: 'black',
-    fontWeight: 'bold',
-    fontSize: 25,
-    marginTop: 40,
-    marginBottom: 10,
+    fontSize: 17,
+    marginTop: 5,
+    marginBottom: 5,
   },
   texts1: {
     color: 'black',
