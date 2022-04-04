@@ -19,20 +19,20 @@ const slides = [
   {
     id: '1',
     image: require('../../../assets/images/image1.png'),
-    title: 'Post a Project',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Hire Developers',
+    subtitle: 'Hire dedicated and experienced developers.',
   },
   {
     id: '2',
     image: require('../../../assets/images/image2.png'),
-    title: 'Hire Developers',
+    title: 'Post Project',
     subtitle: 'Hire dedicated and experienced developers.',
   },
   {
     id: '3',
     image: require('../../../assets/images/image3.png'),
-    title: 'Increase Your Value',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Project Status',
+    subtitle: 'Analyze the status of the project you have posted.',
   },
 ];
 

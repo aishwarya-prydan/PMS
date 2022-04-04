@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {useNavigation} from '@react-navigation/native';
@@ -25,20 +25,15 @@ const Index = () => {
   return (
     <View style={{backgroundColor: '#f0f0f0'}}>
       <View style={styles.container}>
+        <View style={{flexDirection: 'row', marginTop: 18}}>
+          <Image
+            source={{
+              uri: 'https://source.unsplash.com/random',
+            }}
+            size={80}
+          />
+        </View>
         <Text style={styles.texts}>Welcome to Prydan PMS</Text>
-        {/* <Text style={styles.texts1}>We are here to solve your problems</Text> */}
-        {/* <CustomButtons
-          text="Inquiry about Give Project"
-          type="FOUR"
-          onPress={OnProjectInquiryPressed}
-        />
-        <CustomButtons
-          text="Inquiry about Hire Employee"
-          type="FOUR"
-          onPress={OnHireEmployeeInquiryPressed}
-        /> */}
-
-        {/* <Text style={styles.main}>OR</Text> */}
 
         <CustomButtons
           text="Post Project"
