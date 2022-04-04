@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const Index = () => {
   const navigation = useNavigation();
@@ -23,7 +23,7 @@ const Index = () => {
     navigation.navigate('HireEmployee');
   };
   return (
-    <View style={{backgroundColor: '#f0f0f0'}}>
+    <View style={{ backgroundColor: '#f0f0f0' }}>
       <View style={styles.container}>
         <Text style={styles.texts}>Welcome to Prydan PMS</Text>
         <Text style={styles.texts1}>We are here to solve your problems</Text>
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
     borderBottomWidth: 0.5,
     borderTopWidth: 0.5,
-
     alignItems: 'center',
   },
   texts: {
