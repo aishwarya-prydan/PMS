@@ -120,6 +120,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginLeft: 260,
   },
+  text_HD: {
+    fontWeight: 'bold',
+    color: '#fff',
+    fontSize: 18,
+    // marginLeft: 260,
+  },
 });
 
 export default CustomButtons;
