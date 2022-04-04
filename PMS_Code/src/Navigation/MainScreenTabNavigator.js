@@ -15,9 +15,9 @@ const MainScreenTabNavigator = () => {
   };
   return (
     <>
-      <View>
+      {/* <View>
         <CustomButtons text="Sign in" onPress={onSignInPress} type="MAIN" />
-      </View>
+      </View> */}
       <TopTab.Navigator
         screenOptions={{
           tabBarLabelStyle: {fontSize: 13},
