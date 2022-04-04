@@ -12,8 +12,6 @@ import {
 import React from 'react';
 import {Avatar, Title, Caption, TouchableRipple} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const DeveloperOpenProfile = () => {
   const navigation = useNavigation();
@@ -74,7 +72,6 @@ const DeveloperOpenProfile = () => {
               borderRightWidth: 1,
             },
           ]}>
-          {/* <Icon name="tasks" type="font-awesome" size={10} color="#777777" /> */}
           <Caption style={styles.caption}>Experience</Caption>
           <Title>2</Title>
         </View>
@@ -104,100 +101,6 @@ const DeveloperOpenProfile = () => {
           </Text>
         </View>
       </ScrollView>
-      {/* <View style={styles.userInfoSection}>
-        <View style={styles.row}>
-          <Icon
-            name="briefcase"
-            type="font-awesome"
-            size={20}
-            color="#777777"
-          />
-          <Text style={{color: '#777777', marginLeft: 20}}>
-            Experience: 2 Years
-          </Text>
-        </View>
-
-        <View style={styles.row}>
-          <Icon name="tasks" type="font-awesome" size={20} color="#777777" />
-          <Text style={{color: '#777777', marginLeft: 20}}>Projects: 10+ </Text>
-        </View>
-
-        <View style={styles.row}>
-          <Icon name="star" type="font-awesome" size={20} color="#777777" />
-          <Text style={{color: '#777777', marginLeft: 20}}>4.5 Ratings</Text>
-        </View>
-      </View> */}
-      {/* 
-      <View style={styles.infoBoxWrapper}>
-        <View
-          style={[
-            styles.infoBox,
-            {
-              borderRightColor: '#dddddd',
-              borderRightWidth: 1,
-            },
-          ]}>
-          <Title>2</Title>
-          <Caption>Projects</Caption>
-        </View>
-        <View style={styles.infoBox}>
-          <Title>4</Title>
-          <Caption>Developer</Caption>
-        </View>
-      </View> */}
-
-      {/* <View style={styles.menuWrapper}>
-        <TouchableRipple onPress={OnEditPressed}>
-          <View style={styles.menuItem}>
-            <Icon
-              name="pencil-square-o"
-              type="font-awesome"
-              size={20}
-              color="#777777"
-            />
-            <Text style={styles.menuItemText}> Edit Profile </Text>
-          </View>
-        </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
-          <View style={styles.menuItem}>
-            <Icon
-              name="envelope"
-              type="font-awesome"
-              size={20}
-              color="#777777"
-            />
-            <Text style={styles.menuItemText}> Option1 </Text>
-          </View>
-        </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
-          <View style={styles.menuItem}>
-            <Icon
-              name="envelope"
-              type="font-awesome"
-              size={20}
-              color="#777777"
-            />
-            <Text style={styles.menuItemText}> Option1 </Text>
-          </View>
-        </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
-          <View style={styles.menuItem}>
-            <Icon name="gear" type="font-awesome" size={22} color="#777777" />
-            <Text style={styles.menuItemText}>Settings</Text>
-          </View>
-        </TouchableRipple>
-        <TouchableRipple onPress={OnLogOutPressed}>
-          <View style={styles.menuItem}>
-            <Icon
-              name="sign-out"
-              type="font-awesome"
-              size={22}
-              color="#777777"
-            />
-            <Text style={styles.menuItemText}>Log Out</Text>
-          </View>
-        </TouchableRipple>
-      </View> */}
     </SafeAreaView>
   );
 };

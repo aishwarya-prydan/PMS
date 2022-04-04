@@ -74,14 +74,6 @@ const SignInScreen = () => {
 
         <CustomButtons text="Sign In" onPress={handleSubmit(onSignInPressed)} />
 
-        {/* <CustomButtons
-          style={styles.FP}
-          text="Forgot Password?"
-          onPress={onForgotPasswordPressed}
-          // type="TERTIARY"
-          type="FP"
-        /> */}
-
         <CustomButtons
           style={styles.FP}
           text="Forgot Password?"
@@ -109,6 +101,8 @@ const styles = StyleSheet.create({
     width: 370,
     maxWidth: 470,
     maxHeight: 380,
+    // marginLeft: -2,
+    alignSelf: 'center',
   },
 
   text1: {
