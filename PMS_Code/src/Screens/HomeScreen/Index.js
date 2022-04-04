@@ -3,6 +3,7 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import {useNavigation} from '@react-navigation/native';
+import Logo from '../../../assets/images/Logo.png';
 
 const Index = () => {
   const navigation = useNavigation();
@@ -27,12 +28,23 @@ const Index = () => {
       <View style={styles.container}>
         <View style={{flexDirection: 'row', marginTop: 18}}>
           <Image
-            source={{
-              uri: 'https://source.unsplash.com/random',
+            source={Logo}
+            // style={[
+            //   styles.logo,
+            //   {height: 13},
+            //   {flex: 1},
+            //   {alignItems: 'center'},
+            // ]}
+            style={{
+              width: 140,
+              height: 140,
+              borderRadius: 140 / 2,
+              marginLeft: -220,
+              marginTop: -50,
             }}
-            size={80}
           />
         </View>
+
         <Text style={styles.texts}>Welcome to Prydan PMS</Text>
 
         <CustomButtons
@@ -53,7 +65,7 @@ const Index = () => {
 const styles = StyleSheet.create({
   container: {
     width: 395,
-    height: 190,
+    height: 225,
     backgroundColor: '#fff',
     paddingTop: 10,
     marginTop: 15,
@@ -65,8 +77,10 @@ const styles = StyleSheet.create({
   texts: {
     color: 'black',
     fontSize: 17,
-    marginTop: 5,
+    marginTop: -100,
     marginBottom: 5,
+    marginLeft: 20,
+    marginBottom: 20,
   },
   texts1: {
     color: 'black',

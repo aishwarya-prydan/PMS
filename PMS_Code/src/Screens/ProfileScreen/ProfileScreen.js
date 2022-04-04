@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   caption: {
-    fontsize: 11,
+    fontSize: 11,
     lineHeight: 13,
     fontWeight: '500',
   },
