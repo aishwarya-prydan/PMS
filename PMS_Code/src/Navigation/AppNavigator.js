@@ -12,9 +12,6 @@ import EditProfileScreen from '../Screens/EditProfileScreen/EditProfileScreen.js
 import HireEmployeeScreen from '../Screens/HireEmployee/HireEmployeeScreen.js';
 import GiveProjectScreen from '../Screens/GiveProject/GiveProjectScreen.js';
 import UpdateStatusScreen from '../Screens/UpdateStatusScreen/UpdateStatusScreen.js';
-import MainPaymentScreen from '../Screens/PaymentScreen/MainPaymentScreen.js';
-import FullPaymentScreen from '../Screens/PaymentScreen/FullPaymentScreen.js';
-import PartialPaymentScreen from '../Screens/PaymentScreen/PartialPaymentScreen.js';
 import DevelopersScreen from '../Screens/DeveloperInfoScreen/DeveloperInfoScreen.js';
 import DeveloperOpenProfile from '../Screens/DeveloperOpenProfile/DeveloperOpenProfile.js';
 import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen';
@@ -24,7 +21,7 @@ import FeedbackScreen from '../Screens/FeedbackScreen/FeedbackScreen.js';
 import ComplaintScreen from '../Screens/ComplaintScreen/ComplaintScreen.js';
 import QuotationPrice from '../Screens/QuotationPriceScreen/QuotationPrice.js';
 import TabNavigator from './TabNavigator';
-
+import PaymentScreen from '../Screens/PaymentScreen/PaymentScreen.js';
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -45,17 +42,17 @@ const AppNavigator = () => {
         component={DeveloperOpenProfile}
         options={{headerShown: false}}
       /> */}
+
       <Stack.Screen
         name="Home"
         component={TabNavigator}
         options={{headerShown: true}}
       />
+      <Stack.Screen name="Payment Screen" component={PaymentScreen} />
       <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
       <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="Profile" component={ProfileScreen} />
-      <Stack.Screen name="FullPaymentScreen" component={FullPaymentScreen} />
-      <Stack.Screen name="MainPaymentScreen" component={MainPaymentScreen} />
       <Stack.Screen name="MainProject" component={MainProjectScreen} />
       <Stack.Screen name="UpdateStatusScreen" component={UpdateStatusScreen} />
       <Stack.Screen name="About Screen" component={AboutCompanyScreen} />
@@ -66,10 +63,7 @@ const AppNavigator = () => {
       <Stack.Screen name="Employee Inquiry" component={HireEmployeeInquiry} />
       <Stack.Screen name="Feedback Form" component={FeedbackScreen} />
       <Stack.Screen name="Complaint Form" component={ComplaintScreen} />
-      <Stack.Screen
-        name="PartialPaymentScreen"
-        component={PartialPaymentScreen}
-      />
+
       <Stack.Screen name="Quotation" component={QuotationPrice} />
     </Stack.Navigator>
   );
