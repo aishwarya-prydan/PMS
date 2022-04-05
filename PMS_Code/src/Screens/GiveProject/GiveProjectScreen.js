@@ -2,12 +2,12 @@ import {View, Text, StyleSheet} from 'react-native';
 import React, {useState} from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
-// import {useForm} from 'react-hook-form';
+import {useForm} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
 import CustomInput from '../../Components/CustomInput/CustomInput.js';
 
 const GiveProject = () => {
-  // const {control, handleSubmit} = useForm();
+  const {control, handleSubmit} = useForm();
 
   const navigation = useNavigation();
 
@@ -73,7 +73,15 @@ const GiveProject = () => {
         }}
       />
 
-      <CustomButtons text="Submit" onPress={OnHomePressed} />
+      <MultiLineInput
+        name="Feedback"
+        setValue={setFeedback}
+        placeholder="Feedback"
+        control={control}
+        rules={{required: 'Feedback is required'}}
+      />
+
+      <CustomButtons text="Submit" onPress={handleSubmit(OnHomePressed)} />
     </View>
   );
 };

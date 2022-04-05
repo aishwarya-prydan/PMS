@@ -17,7 +17,7 @@ import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.j
 import SocialSignInButtons from '../../../src/Components/SocialSignInButtons/SocialSignInButtons.js';
 import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
-import axios from 'axios';
+// import axios from 'axios';
 
 
 const PASS_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
@@ -46,28 +46,28 @@ const SignInScreen = () => {
     navigation.navigate('SignUp');
   };
 
-  const fetchApi = async () => {
-    try {
-      // const api = 'http://192.168.113.17/api/tblUser/';
-      const api = 'https://f33b-103-1-100-53.ngrok.io/api/tblUser/';
-      // const api = 'https://jsonplaceholder.typicode.com/todos/10';
-      // const api = 'http://localhost:5000/SignUpapi/1/';
-      const res = await axios.get(api, {
-        headers: {
-          authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ5MDc2NTY3LCJpYXQiOjE2NDkwNzQ3NjcsImp0aSI6IjdhMzAxODRkMDM5YjQ2ZWU4YzZjZWMyMjg4YWQ5Y2JlIiwidXNlcl9pZCI6MX0.sJw_vBx6aShHWocmMGFkmnhbuEcEk0_mYV1HBTqv-fk`,
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-      });
-      console.log(res.data);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+  // const fetchApi = async () => {
+  //   try {
+  //     // const api = 'http://192.168.113.17/api/tblUser/';
+  //     const api = 'https://f33b-103-1-100-53.ngrok.io/api/tblUser/';
+  //     // const api = 'https://jsonplaceholder.typicode.com/todos/10';
+  //     // const api = 'http://localhost:5000/SignUpapi/1/';
+  //     const res = await axios.get(api, {
+  //       headers: {
+  //         authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ5MDc2NTY3LCJpYXQiOjE2NDkwNzQ3NjcsImp0aSI6IjdhMzAxODRkMDM5YjQ2ZWU4YzZjZWMyMjg4YWQ5Y2JlIiwidXNlcl9pZCI6MX0.sJw_vBx6aShHWocmMGFkmnhbuEcEk0_mYV1HBTqv-fk`,
+  //         Accept: 'application/json',
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
+  //     console.log(res.data);
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchApi();
-  }, []);
+  // useEffect(() => {
+  //   fetchApi();
+  // }, []);
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
