@@ -9,15 +9,27 @@ import GiveProjectScreen from '../Screens/GiveProject/GiveProjectScreen.js';
 
 const TopTab = createMaterialTopTabNavigator();
 const TopTabNavigator = () => {
+  
   return (
     <TopTab.Navigator
       screenOptions={{
-        tabBarLabelStyle: { fontSize: 13 },
-        tabBarItemStyle: { height: 35, marginBottom: 4 },
+        // tabBarLabelStyle: {fontSize: 13},
+        // tabBarItemStyle: {height: 45, marginBottom: 2, alignSelf: 'center'},
+        tabBarLabelStyle: {fontSize: 13},
+        tabBarItemStyle: {
+          height: 60,
+          marginBottom: 4,
+          width: 100,
+          alignSelf: 'center',
+        },
+        headerShown: true,
       }}>
-      <TopTab.Screen name="Projects" component={MainProjectScreen} />
-      <TopTab.Screen name="Add" component={GiveProjectScreen} />
-      <TopTab.Screen name="Developers" component={DeveloperInfoScreen} />
+      <TopTab.Screen name="Projects Details" component={MainProjectScreen} />
+      <TopTab.Screen name="Add Project" component={GiveProjectScreen} />
+      <TopTab.Screen
+        name="Developers Details"
+        component={DeveloperInfoScreen}
+      />
       <TopTab.Screen name="Project Status" component={UpdateSatusScreen} />
     </TopTab.Navigator>
   );
