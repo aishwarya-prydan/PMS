@@ -26,7 +26,7 @@ const Index = () => {
   return (
     <View style={{backgroundColor: '#f0f0f0'}}>
       <View style={styles.container}>
-        {/* <View style={{flexDirection: 'row', marginTop: 18}}>
+        <View style={{flexDirection: 'row', marginTop: 18}}>
           <Image
             source={Logo}
             // style={[
@@ -43,7 +43,7 @@ const Index = () => {
               marginTop: -50,
             }}
           />
-        </View> */}
+        </View>
 
         <Text style={styles.texts}>Welcome to Prydan PMS</Text>
 
