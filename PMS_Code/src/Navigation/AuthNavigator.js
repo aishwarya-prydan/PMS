@@ -2,11 +2,12 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
-
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Button} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import SplashScreen from 'react-native-splash-screen';
+
 import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
 import MainScreenTabNavigator from './MainScreenTabNavigator.js';
 import SignInScreen from '../Screens/SignInScreen/SignInScreen.js';
@@ -28,6 +29,10 @@ const AuthNavigator = () => {
   const onSignInPress = () => {
     navigation.navigate('SignIn');
   };
+
+  useEffect(() => {
+    SplashScreen.hide();
+  });
   return (
     <Stack.Navigator
       screenOptions={{
