@@ -239,6 +239,14 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 12,
   },
+  txtClose: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    marginBottom: 10,
+    backgroundColor: '#3B71F3',
+    // height: 20,
+    width: 45,
+  },
   /**** modals ****/
   popup: {
     backgroundColor: 'white',
@@ -270,11 +278,12 @@ const styles = StyleSheet.create({
     flex: 1,
     marginVertical: 16,
   },
-  btnClose: {
-    height: 20,
-    backgroundColor: '#20b2aa',
-    padding: 20,
-  },
+  // btnClose: {
+  //   height: 20,
+  //   // backgroundColor: '#20b2aa',
+  //   backgroundColor: '#3B71F3',
+  //   padding: 20,
+  // },
   modalInfo: {
     alignItems: 'center',
     justifyContent: 'center',
