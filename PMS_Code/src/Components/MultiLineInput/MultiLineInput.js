@@ -25,8 +25,8 @@ const MultiLineInput = ({
               {borderColor: error ? 'red' : '#e8e8e8'},
             ]}>
             <TextInput
-              // value={value}
-              // onChangeText={onChange}
+              value={value}
+              onChangeText={onChange}
               OnChangeText={setValue}
               onBlur={onBlur}
               placeholder={placeholder}
