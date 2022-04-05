@@ -1,13 +1,17 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TextInput, Alert} from 'react-native';
 import React, {useState} from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
-import {useForm} from 'react-hook-form';
+import {useForm, Controller} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
-import CustomInput from '../../Components/CustomInput/CustomInput.js';
+import CustomInput from '../../Components/CustomFormInput/CustomFormInput.js';
 
 const GiveProject = () => {
-  const {control, handleSubmit} = useForm();
+  const [description, setDescription] = useState('');
+  const [ProjectName, setProjectName] = useState('');
+  const [Language, setLanguage] = useState('');
+  const [Department, setDepartment] = useState('');
+  const [deadline, setDeadline] = useState('');
 
   const navigation = useNavigation();
 
@@ -15,54 +19,60 @@ const GiveProject = () => {
     navigation.navigate('Home');
   };
 
-  const [ProjectName, setProjectName] = useState('');
-  const [Language, setLanguage] = useState('');
-  const [description, setDescription] = useState('');
-  const [Department, setDepartment] = useState('');
-  const [deadline, setDeadline] = useState('');
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
 
   return (
     <View style={styles.container}>
       <Text style={styles.text1}>Please fill the Form</Text>
+
       <CustomInput
+        name="projectname"
         placeholder="Project Name"
-        // control={control}
+        control={control}
         setValue={setProjectName}
-        // rules={{
-        //   required: 'Project Name is required',
-        // }}
+        rules={{
+          required: 'Project Name is required',
+        }}
       />
 
       <CustomInput
+        name="language"
         placeholder="Language"
-        // control={control}
+        control={control}
         setValue={setLanguage}
-        // rules={{
-        //   required: 'Language is required',
-        // }}
+        rules={{
+          required: 'Language is required',
+        }}
       />
 
       <CustomInput
+        name="department"
         placeholder="Department"
-        // control={control}
+        control={control}
         setValue={setDepartment}
-        // rules={{
-        //   required: 'Department is required',
-        // }}
+        rules={{
+          required: 'Department is required',
+        }}
       />
 
       <CustomInput
+        name="deadline"
         placeholder="Deadline"
-        // control={control}
+        control={control}
         setValue={setDeadline}
-        // rules={{
-        //   required: 'Deadline is required',
-        // }}
+        rules={{
+          required: 'Deadline is required',
+        }}
       />
 
       <MultiLineInput
+        name="Description"
         setValue={setDescription}
-        // control={control}
+        control={control}
         placeholder="Description"
         rules={{
           required: 'Description is required',
@@ -71,14 +81,6 @@ const GiveProject = () => {
             message: 'Description should be at least 50 characters long',
           },
         }}
-      />
-
-      <MultiLineInput
-        name="Feedback"
-        setValue={setFeedback}
-        placeholder="Feedback"
-        control={control}
-        rules={{required: 'Feedback is required'}}
       />
 
       <CustomButtons text="Submit" onPress={handleSubmit(OnHomePressed)} />
@@ -90,13 +92,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 40,
+    paddingBottom: 40,
+    paddingLeft: 10,
+    padding: 10,
   },
 
-  picker: {
-    height: 50,
-    width: 390,
-    backgroundColor: 'white',
-  },
   text1: {
     fontSize: 20,
     fontWeight: 'bold',

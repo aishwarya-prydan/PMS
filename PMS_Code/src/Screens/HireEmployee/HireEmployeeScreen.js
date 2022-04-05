@@ -1,11 +1,10 @@
 import {View, Text, StyleSheet, TextInput, Alert} from 'react-native';
 import React, {useState} from 'react';
-import CustomInput from '../../Components/CustomInput/CustomInput';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
-import {Picker} from '@react-native-picker/picker';
-import MultiLineInput from '../../Components/MultiLineInput/MultiLineInput';
+import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
+import {useForm, Controller} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
-import {useForm} from 'react-hook-form';
+import CustomInput from '../../Components/CustomFormInput/CustomFormInput.js';
 
 const HireEmployee = () => {
   const [LanguageName, setLanguageName] = useState('');
@@ -13,98 +12,63 @@ const HireEmployee = () => {
   const [Experience, setExperience] = useState('');
   const [description, setDescription] = useState('');
 
-  const {control, handleSubmit} = useForm();
-
   const navigation = useNavigation();
 
   const OnHomePressed = () => {
     navigation.navigate('Home');
   };
 
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
+
   return (
-    // <View style={styles.container}>
-    //   <CustomInput
-    //     style={styles.container}
-    //     placeholder="ProjectName"
-    //     setValue={setProjectName}
-    //   />
-
-    //   <CustomInput placeholder="Language" setValue={setLanguage} />
-
-    //   <CustomInput placeholder="Experience" setValue={setExerience} />
-
-    //   <CustomInput placeholder="Location" setValue={setLocation} />
-
-    //   <Picker
-    //     selectedValue={selectedValue}
-    //     align="left"
-    //     style={styles.picker}
-    //     onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
-    //     <Picker.Item label="Home Pages Website" value="HomePagesWebSite" />
-    //     <Picker.Item label="Magazine Website" value="MagazineWebSite" />
-    //     <Picker.Item label="E-Commerce Website" value="E-CommerceWebSite" />
-    //     <Picker.Item label="Blogs" value="Blogs" />
-    //     <Picker.Item label="Portfolio Website" value="PortfolioWebSite" />
-    //     <Picker.Item
-    //       label="Landing Pages Website"
-    //       value="LandingPagesWebSite"
-    //     />
-    //     <Picker.Item label="Social Media Website" value="SocialMediaWebSite" />
-    //     <Picker.Item
-    //       label="Directory & Contact Website"
-    //       value="Directory&ContactWebSite"
-    //     />
-    //     <Picker.Item label="Mobile App" value="MobileApp" />
-    //   </Picker>
-
-    //   <CustomInput
-    //     placeholder="Project Description"
-    //     setValue={setProjectDescription}
-    //   />
-
-    //   <CustomButtons text="Submit" onPress={() => { }} />
-    // </View>
-
     <View style={styles.container}>
       <Text style={styles.text1}>Please fill the Form</Text>
+
       <CustomInput
+        name="languagename"
         placeholder="Language Name"
-        setValue={setLanguageName}
-        name="LanguageName"
         control={control}
+        setValue={setLanguageName}
         rules={{
           required: 'Language Name is required',
         }}
       />
 
       <CustomInput
+        name="location"
         placeholder="Location"
-        setValue={setLocation}
-        name="Location"
         control={control}
+        setValue={setLocation}
         rules={{
           required: 'Location is required',
         }}
       />
 
       <CustomInput
+        name="experience"
         placeholder="Experience"
-        setValue={setExperience}
-        name="Experience"
         control={control}
+        setValue={setExperience}
         rules={{
           required: 'Experience is required',
         }}
       />
 
       <MultiLineInput
-        setValue={setDescription}
-        placeholder="Description"
         name="Description"
+        setValue={setDescription}
         control={control}
-        secureTextEntry
+        placeholder="Description"
         rules={{
           required: 'Description is required',
+          minLength: {
+            value: 50,
+            message: 'Description should be at least 50 characters long',
+          },
         }}
       />
 
@@ -122,13 +86,6 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 
-  picker: {
-    borderWidth: 1,
-    height: 50,
-    width: 390,
-    backgroundColor: 'white',
-    borderRadius: 10,
-  },
   text1: {
     fontSize: 20,
     fontWeight: 'bold',
