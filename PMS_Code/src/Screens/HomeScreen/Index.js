@@ -24,7 +24,7 @@ const Index = () => {
     navigation.navigate('HireEmployee');
   };
   return (
-    <View style={{ backgroundColor: '#f0f0f0' }}>
+    <View style={{backgroundColor: '#f0f0f0'}}>
       <View style={styles.container}>
         <View style={{flexDirection: 'row', marginTop: 18}}>
           <Image
