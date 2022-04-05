@@ -140,7 +140,7 @@ const EditProfileScreen = () => {
             </View>
           </TouchableOpacity>
           <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}}>
-            John Doe
+            Kishan Kumar
           </Text>
         </View>
 
