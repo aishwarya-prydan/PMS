@@ -99,7 +99,7 @@ const SignInScreen = () => {
             pattern: {
               value: PASS_REGEX,
               message:
-                'Password must be at least 6 - 15 characters long, One Uppercase, One Lowercase and One Special Symbol',
+                'Password must be at least 6 - 15 characters long \nOne character must be Uppercase \nOne character must be lowercase \nOne character must be Special Symbol \nOne character must be a Number',
             },
           }}
         />
