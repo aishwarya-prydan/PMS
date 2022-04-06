@@ -11135,6 +11135,11 @@
   "resolved" "https://registry.npmjs.org/react-native-image-crop-picker/-/react-native-image-crop-picker-0.37.3.tgz"
   "version" "0.37.3"
 
+"react-native-image-picker@^4.7.3":
+  "integrity" "sha512-eRKm4wlsmZHmsWFyv77kYc2F+ZyEVqe0m7mqhsMzWk6TQT4FBDtEDxmRDDFq+ivCu/1QD+EPhmYcAIpeGr7Ekg=="
+  "resolved" "https://registry.npmjs.org/react-native-image-picker/-/react-native-image-picker-4.7.3.tgz"
+  "version" "4.7.3"
+
 "react-native-input-xg@^0.0.2":
   "integrity" "sha1-nl7ihNs8Yd+PugWH89YpQ7jCPic="
   "resolved" "https://registry.npmjs.org/react-native-input-xg/-/react-native-input-xg-0.0.2.tgz"
