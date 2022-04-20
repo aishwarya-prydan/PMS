@@ -13,6 +13,8 @@ const EMAIL_REGEX =
   // /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+const USER_REGEX = /^[a-zA-Z0-9]+$/;
+
 const PASS_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
 
 const SignUpScreen = () => {
@@ -135,7 +137,7 @@ const SignUpScreen = () => {
           type="PP"
         />
 
-        <SocialSignInButtons />
+        {/* <SocialSignInButtons /> */}
 
         <CustomButtons text="Sign in" onPress={onSignInPress} type="CO" />
 
