@@ -7,8 +7,14 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 function Item({item}) {
+  const navigation = useNavigation();
+
+  const OnOpenPressed = () => {
+    navigation.navigate('Home');
+  };
   return (
     <View style={styles.listItem}>
       <Image
@@ -20,6 +26,9 @@ function Item({item}) {
         <Text>{item.position}</Text>
       </View>
       <TouchableOpacity
+        onPress={() => {
+          OnOpenPressed;
+        }}
         style={{
           height: 50,
           width: 50,
@@ -44,7 +53,7 @@ export default class DeveloperInfoScreen extends React.Component {
       {
         name: 'Vedangi Patel',
         email: 'miyah.myles@gmail.com',
-        position: 'React Native Developer',
+        position: 'React Developer',
         photo:
           'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
       },

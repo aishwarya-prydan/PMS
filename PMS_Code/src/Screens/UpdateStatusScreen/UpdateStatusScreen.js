@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import ProgressBar from '../../Components/ProgressBar/ProgressBar.js';
 import FlatListComponent from '../../Components/FlatListComponent/FlatListComponent.js';
@@ -21,6 +21,7 @@ export default function UpdateStatusScreen() {
           justifyContent: 'space-evenly',
           flexWrap: 'wrap',
           alignItems: 'center',
+          textAlign: 'center',
         }}>
         {data.map((p, i) => {
           return (

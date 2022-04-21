@@ -91,7 +91,7 @@ export default class RecentProjectScreen extends Component {
                 }}>
                 <Image style={styles.image} source={{uri: item.image}} />
                 <View style={styles.cardContent}>
-                  <Text style={styles.name}>{item.name}</Text>
+                  <Text style={styles.headerm}>{item.name}</Text>
                   <Text style={styles.position}>{item.position}</Text>
                   <TouchableOpacity
                     style={styles.followButton}
@@ -120,7 +120,7 @@ export default class RecentProjectScreen extends Component {
                   <Text style={styles.name}>
                     {this.state.userSelected.name}
                   </Text>
-                  <Text style={styles.position}>
+                  <Text style={styles.position2}>
                     {this.state.userSelected.position}
                   </Text>
                   <Text style={styles.about}>
@@ -158,11 +158,12 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#00CED1',
     height: 200,
+    alignSelf: 'center',
   },
   headerContent: {
     padding: 30,
     alignItems: 'center',
-    flex: 1,
+    // flex: 1,
   },
   detailContent: {
     top: 80,
@@ -184,13 +185,14 @@ const styles = StyleSheet.create({
     width: 90,
     height: 90,
     borderRadius: 45,
+    alignSelf: 'center',
   },
 
   card: {
     shadowColor: '#00000021',
     shadowOffset: {
       width: 0,
-      height: 6,
+      height: 7,
     },
     shadowOpacity: 0.37,
     shadowRadius: 7.49,
@@ -203,14 +205,23 @@ const styles = StyleSheet.create({
     padding: 10,
     flexDirection: 'row',
   },
+  headerm: {
+    fontSize: 15,
+    flex: 1,
+    alignSelf: 'center',
+    color: '#3B71F3',
+    fontWeight: 'bold',
+    marginLeft: 35,
+  },
 
   name: {
     fontSize: 15,
     flex: 1,
     alignSelf: 'center',
-    color: '#008080',
+    color: '#3B71F3',
     fontWeight: 'bold',
-    marginLeft: 35,
+    marginTop: 5,
+    marginBottom: 5,
   },
   position: {
     fontSize: 14,
@@ -218,6 +229,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: '#696969',
     marginLeft: 35,
+  },
+  position2: {
+    fontSize: 14,
+    flex: 1,
+    alignSelf: 'center',
+    color: '#696969',
   },
   about: {
     marginHorizontal: 10,
@@ -229,7 +246,7 @@ const styles = StyleSheet.create({
     width: 75,
     flexDirection: 'row',
     justifyContent: 'center',
-    marginLeft: 40,
+
     alignItems: 'center',
     borderRadius: 30,
     backgroundColor: '#3B71F3',
@@ -244,8 +261,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginBottom: 10,
     backgroundColor: '#3B71F3',
-    // height: 20,
-    width: 45,
+    height: 33,
+    width: 80,
+    textAlign: 'center',
+    borderRadius: 20,
+    fontWeight: '500',
   },
   /**** modals ****/
   popup: {
@@ -260,12 +280,13 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   popupContent: {
-    //alignItems: 'center',
-    margin: 5,
+    alignItems: 'center',
+    // margin: 5,
     height: 250,
   },
   popupHeader: {
     marginBottom: 45,
+    alignSelf: 'center',
   },
   popupButtons: {
     marginTop: 15,

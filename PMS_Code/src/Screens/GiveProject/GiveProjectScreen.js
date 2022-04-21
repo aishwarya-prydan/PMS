@@ -27,8 +27,6 @@ const GiveProject = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text1}>Please fill the Form</Text>
-
       <CustomInput
         name="projectname"
         placeholder="Project Name"

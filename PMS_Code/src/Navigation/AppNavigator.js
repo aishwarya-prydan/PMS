@@ -22,6 +22,7 @@ import ComplaintScreen from '../Screens/ComplaintScreen/ComplaintScreen.js';
 import QuotationPrice from '../Screens/QuotationPriceScreen/QuotationPrice.js';
 import TabNavigator from './TabNavigator';
 import PaymentScreen from '../Screens/PaymentScreen/PaymentScreen.js';
+
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -64,6 +65,7 @@ const AppNavigator = () => {
       <Stack.Screen name="Feedback Form" component={FeedbackScreen} />
       <Stack.Screen name="Complaint Form" component={ComplaintScreen} />
       <Stack.Screen name="Quotation" component={QuotationPrice} />
+      <Stack.Screen name="DeveloperOpen" component={DeveloperOpenProfile} />
     </Stack.Navigator>
   );
 };

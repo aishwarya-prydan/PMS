@@ -25,7 +25,7 @@ const PaymentScreen = () => {
 
   const navigation = useNavigation();
 
-  const OnHomePressed = () => {
+  const OnSubmitPressed = () => {
     navigation.navigate('Home');
   };
 
@@ -103,7 +103,7 @@ const PaymentScreen = () => {
         }}
       />
 
-      <CustomButtons text="Submit" onPress={handleSubmit(OnHomePressed)} />
+      <CustomButtons text="Submit" onPress={handleSubmit(OnSubmitPressed)} />
     </View>
   );
 };

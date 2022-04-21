@@ -44,12 +44,14 @@ export default class MainProjectScreen extends React.Component {
   state = {
     data: [
       {
+        key: 1,
         name: 'PMS',
         email: 'miyah.myles44@gmail.com',
         position: 'Project Management System ',
         photo: 'https://randomuser.me/api/portraits/women/44.jpg',
       },
       {
+        key: 2,
         name: 'E-Waste Management',
         email: 'miyah.myles@gmail.com',
         position: 'E-Waste Management System',
