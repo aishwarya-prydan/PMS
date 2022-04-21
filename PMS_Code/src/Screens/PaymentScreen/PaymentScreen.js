@@ -31,7 +31,9 @@ const PaymentScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text1}>Fill the Payment Form</Text>
+      <Text style={styles.text1}>
+        Currently accepting payment through cheque only
+      </Text>
       <Picker
         selectedValue={selectedValue}
         align="left"
@@ -41,7 +43,7 @@ const PaymentScreen = () => {
         <Picker.Item label="Partial Payment " value="Developer" />
       </Picker>
 
-      <CustomFormInput
+      {/* <CustomFormInput
         name="paymentmode"
         placeholder="Payment Mode"
         control={control}
@@ -53,7 +55,7 @@ const PaymentScreen = () => {
             message: 'Payment is accepted only using the cheque book',
           },
         }}
-      />
+      /> */}
 
       <NumInput
         name="chequeno"
@@ -123,11 +125,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   text1: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 13,
+    fontWeight: '500',
     marginTop: -20,
     marginBottom: 10,
-    color: '#000',
+    color: '#5c5a5a',
     textAlign: 'center',
   },
   input: {

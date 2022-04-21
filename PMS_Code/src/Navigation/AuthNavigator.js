@@ -20,7 +20,6 @@ import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
 import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen';
 import AboutEmployeeScreen from './../Screens/AboutEmployeeScreen/AboutEmployeeScreen';
-import CustomButtons from '../Components/CustomButtons/CustomButtons.js';
 
 const Stack = createNativeStackNavigator();
 

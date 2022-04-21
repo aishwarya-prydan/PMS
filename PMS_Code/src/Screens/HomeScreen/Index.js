@@ -29,12 +29,6 @@ const Index = () => {
         <View style={{flexDirection: 'row', marginTop: 18}}>
           <Image
             source={Logo}
-            // style={[
-            //   styles.logo,
-            //   {height: 13},
-            //   {flex: 1},
-            //   {alignItems: 'center'},
-            // ]}
             style={{
               width: 140,
               height: 140,

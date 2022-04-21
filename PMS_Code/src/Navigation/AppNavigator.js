@@ -42,7 +42,7 @@ const AppNavigator = () => {
         component={DeveloperOpenProfile}
         options={{headerShown: false}}
       /> */}
-
+      <Stack.Screen name="Quotation" component={QuotationPrice} />
       <Stack.Screen
         name="Home"
         component={TabNavigator}
@@ -63,8 +63,6 @@ const AppNavigator = () => {
       <Stack.Screen name="Employee Inquiry" component={HireEmployeeInquiry} />
       <Stack.Screen name="Feedback Form" component={FeedbackScreen} />
       <Stack.Screen name="Complaint Form" component={ComplaintScreen} />
-
-      <Stack.Screen name="Quotation" component={QuotationPrice} />
     </Stack.Navigator>
   );
 };

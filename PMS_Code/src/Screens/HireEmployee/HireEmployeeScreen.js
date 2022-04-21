@@ -15,7 +15,7 @@ const HireEmployee = () => {
   const navigation = useNavigation();
 
   const OnHomePressed = () => {
-    navigation.navigate('Home');
+    navigation.navigate('Quotation');
   };
 
   const {
