@@ -33,6 +33,7 @@
     "react-last-status": "^0.0.18",
     "react-native": "0.67.1",
     "react-native-date-input": "^1.0.11",
+    "react-native-date-picker": "^4.2.1",
     "react-native-datefield": "^0.3.5",
     "react-native-datepicker": "^1.7.2",
     "react-native-eject": "^0.1.2",

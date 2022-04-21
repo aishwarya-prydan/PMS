@@ -1,10 +1,12 @@
-import {View, Text, StyleSheet, TextInput, Alert} from 'react-native';
+import {View, Text, StyleSheet, TextInput, Alert, Button} from 'react-native';
 import React, {useState} from 'react';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons';
 import MultiLineInput from './../../Components/MultiLineInput/MultiLineInput';
 import {useForm, Controller} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
 import CustomInput from '../../Components/CustomFormInput/CustomFormInput.js';
+// import DatePickerAnd from '../../Components/DatePickerAnd/DatePickerAnd';
+import DatePicker from 'react-native-date-picker';
 
 const HireEmployee = () => {
   const [LanguageName, setLanguageName] = useState('');
@@ -17,6 +19,8 @@ const HireEmployee = () => {
   const OnHomePressed = () => {
     navigation.navigate('Quotation');
   };
+  const [date, setDate] = useState(new Date());
+  const [open, setOpen] = useState(false);
 
   const {
     control,
@@ -47,6 +51,19 @@ const HireEmployee = () => {
           required: 'Location is required',
         }}
       />
+      {/* <Button title="Select Date" onPress={() => setOpen(true)} />
+      <DatePicker
+        modal
+        open={open}
+        date={date}
+        onConfirm={date => {
+          setOpen(false);
+          setDate(date);
+        }}
+        onCancel={() => {
+          setOpen(false);
+        }}
+      /> */}
 
       <CustomInput
         name="experience"

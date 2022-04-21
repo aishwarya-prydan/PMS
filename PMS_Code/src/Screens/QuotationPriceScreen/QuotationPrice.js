@@ -22,7 +22,7 @@ export default function QuotationPrice() {
     <View style={styles.container}>
       <View style={styles.mainbox}>
         <PricingCard
-          color="blue"
+          color="#3B71F3"
           title="Quotation for Developer"
           price="Rs 25,000"
           info={['Estimated Budget']}

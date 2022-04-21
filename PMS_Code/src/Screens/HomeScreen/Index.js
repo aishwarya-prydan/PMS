@@ -30,26 +30,30 @@ const Index = () => {
           <Image
             source={Logo}
             style={{
-              width: 140,
-              height: 140,
-              borderRadius: 140 / 2,
-              marginLeft: -220,
-              marginTop: -50,
+              top: -50,
+              right: 79,
+              width: 141,
+              height: 121,
+              position: 'absolute',
             }}
           />
         </View>
 
-        <Text style={styles.texts}>Welcome to Prydan PMS</Text>
+        <Text style={styles.texts}>
+          Welcome to Prydan PMS. Select an option get started below{' '}
+        </Text>
 
         <CustomButtons
           text="Post Project"
           type="FOUR"
           onPress={OnProjectPressed}
+          marginLeft="10"
         />
         <CustomButtons
           text="Hire Employee"
           type="FOUR"
           onPress={OnEmployeePressed}
+          right="16"
         />
       </View>
     </View>
@@ -63,17 +67,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingTop: 10,
     marginTop: 15,
-    borderBottomWidth: 0.5,
-    borderTopWidth: 0.5,
+    borderBottomWidth: 0.3,
+    borderTopWidth: 0.3,
+    shadowColor: 'black',
     alignItems: 'center',
   },
   texts: {
     color: 'black',
     fontSize: 17,
-    marginTop: -100,
-    marginBottom: 5,
-    marginLeft: 20,
-    marginBottom: 20,
+    textAlign: 'center',
+    fontWeight: '500',
+    marginBottom: 10,
+    marginLeft: 74,
+    // marginTop: -100,
+    // marginBottom: 5,
+    // marginBottom: 20,
   },
   texts1: {
     color: 'black',
