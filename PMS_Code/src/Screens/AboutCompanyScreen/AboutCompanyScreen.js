@@ -25,7 +25,7 @@ const AboutCompanyScreen = () => {
   const {height} = useWindowDimensions();
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: '#fff'}}>
       <ScrollView
         onScroll={Animated.event(
           [{nativeEvent: {contentOffset: {y: scrollOffsetY}}}],

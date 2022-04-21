@@ -114,7 +114,7 @@ export default class RecentProjectScreen extends Component {
               <View style={styles.popupContent}>
                 <ScrollView contentContainerStyle={styles.modalInfo}>
                   <Image
-                    style={styles.image}
+                    style={styles.image2}
                     source={{uri: this.state.userSelected.image}}
                   />
                   <Text style={styles.name}>
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   detailContent: {
     top: 80,
     height: 500,
-    width: Dimensions.get('screen').width - 90,
+    // width: Dimensions.get('screen').width - 90,
     marginHorizontal: 30,
     flexDirection: 'row',
     position: 'absolute',
@@ -186,6 +186,13 @@ const styles = StyleSheet.create({
     height: 90,
     borderRadius: 45,
     alignSelf: 'center',
+  },
+  image2: {
+    width: 90,
+    height: 90,
+    borderRadius: 45,
+    alignSelf: 'center',
+    marginTop: 5,
   },
 
   card: {
