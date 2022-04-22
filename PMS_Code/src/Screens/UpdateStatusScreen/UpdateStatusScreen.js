@@ -2,10 +2,12 @@ import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import ProgressBar from '../../Components/ProgressBar/ProgressBar.js';
 import FlatListComponent from '../../Components/FlatListComponent/FlatListComponent.js';
+import {Title} from 'react-native-paper';
 
 const data = [
   {
     percentage: 70,
+    title: 'Progress',
     color: 'blue',
     max: 15,
   },
@@ -23,6 +25,9 @@ export default function UpdateStatusScreen() {
           alignItems: 'center',
           textAlign: 'center',
         }}>
+        {/* <View>
+          <Text>Progress</Text>
+        </View> */}
         {data.map((p, i) => {
           return (
             <ProgressBar
@@ -32,6 +37,7 @@ export default function UpdateStatusScreen() {
               color={p.color}
               delay={500 + 100 * i}
               max={p.max}
+              Text="%"
             />
           );
         })}
