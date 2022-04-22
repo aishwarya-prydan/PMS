@@ -24,7 +24,7 @@ export default function QuotationPrice() {
         <PricingCard
           color="#3B71F3"
           title="Quotation for Developer"
-          price="Rs 25,000"
+          price="Rs 15,000"
           info={['Estimated Budget']}
           // button={{title: 'Hire'}}
           button={{

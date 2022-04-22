@@ -139,9 +139,6 @@ const EditProfileScreen = () => {
               </ImageBackground>
             </View>
           </TouchableOpacity>
-          <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}}>
-            Kishan Kumar
-          </Text>
         </View>
 
         <View style={styles.action}>
