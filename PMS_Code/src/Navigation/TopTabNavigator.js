@@ -23,8 +23,8 @@ const TopTabNavigator = () => {
         },
         headerShown: true,
       }}>
-      <TopTab.Screen name="Projects Details" component={MainProjectScreen} />
       <TopTab.Screen name="Add Project" component={GiveProjectScreen} />
+      <TopTab.Screen name="Projects Details" component={MainProjectScreen} />
       <TopTab.Screen
         name="Developers Details"
         component={DeveloperInfoScreen}
