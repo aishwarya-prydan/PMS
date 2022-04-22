@@ -8,15 +8,15 @@ import {
 } from 'react-native';
 import React from 'react';
 
-function Item({item}) {
+function Item({ item }) {
   return (
     <View style={styles.listItem}>
       <Image
-        source={{uri: item.pic}}
-        style={{width: 60, height: 60, borderRadius: 30}}
+        source={{ uri: item.pic }}
+        style={{ width: 60, height: 60, borderRadius: 30 }}
       />
-      <View style={{alignItems: 'center', flex: 1}}>
-        <Text style={{fontWeight: 'bold'}}>{item.title}</Text>
+      <View style={{ alignItems: 'center', flex: 1 }}>
+        <Text style={{ fontWeight: 'bold' }}>{item.title}</Text>
         <Text>{item.details}</Text>
       </View>
       <TouchableOpacity
@@ -63,10 +63,10 @@ export default class FlatListComponent extends React.Component {
     return (
       <View style={styles.container}>
         <FlatList
-          style={{flex: 1}}
+          style={{ flex: 1 }}
           data={this.state.data}
-          renderItem={({item}) => <Item item={item} />}
-          keyExtractor={item => item.email}
+          renderItem={({ item }) => <Item item={item} />}
+          keyExtractor={item => item.key}
         />
       </View>
     );
