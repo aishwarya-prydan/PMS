@@ -115,12 +115,12 @@ const ProfileScreen = () => {
             <Text style={styles.menuItemText}> Complaints</Text>
           </View>
         </TouchableRipple>
-        <TouchableRipple onPress={() => {}}>
+        {/* <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
             <Icon name="gear" type="font-awesome" size={22} color="#777777" />
             <Text style={styles.menuItemText}>Settings</Text>
           </View>
-        </TouchableRipple>
+        </TouchableRipple> */}
         <TouchableRipple onPress={OnLogOutPressed}>
           <View style={styles.menuItem}>
             <Icon

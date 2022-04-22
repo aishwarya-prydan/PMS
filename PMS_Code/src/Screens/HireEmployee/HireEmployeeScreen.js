@@ -30,8 +30,6 @@ const HireEmployee = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text1}>Please fill the Form</Text>
-
       <CustomInput
         name="languagename"
         placeholder="Language Name"
