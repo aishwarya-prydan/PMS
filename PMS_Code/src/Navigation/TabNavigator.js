@@ -9,7 +9,8 @@ import MainProjectScreen from '../Screens/MainProjectScreen/MainProjectScreen.js
 import TopTabNavigator from '../Navigation/TopTabNavigator.js';
 import {Icon} from 'react-native-elements';
 import {color} from 'react-native-reanimated';
-import HireEmployee from './../Screens/HireEmployee/HireEmployeeScreen';
+// import HireEmployee from './../Screens/HireEmployee/HireEmployeeScreen';
+import DTopTabNavigator from './DTopTabNavigator.js';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +37,7 @@ const TabNavigator = () => {
       />
       <Tab.Screen
         name="Hire"
-        component={HireEmployee}
+        component={DTopTabNavigator}
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon
@@ -57,7 +58,7 @@ const TabNavigator = () => {
           tabBarBadgeStyle: {backgroundColor: '#fff'},
           tabBarIcon: ({color, size}) => (
             <Icon
-              name="address-card"
+              name="briefcase"
               type="font-awesome"
               color={color}
               size={23}
