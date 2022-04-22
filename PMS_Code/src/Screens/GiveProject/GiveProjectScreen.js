@@ -15,8 +15,8 @@ const GiveProject = () => {
 
   const navigation = useNavigation();
 
-  const OnHomePressed = () => {
-    navigation.navigate('Home');
+  const OnSubmitPressed = () => {
+    navigation.navigate('ProjectQuotation');
   };
 
   const {
@@ -81,7 +81,7 @@ const GiveProject = () => {
         }}
       />
 
-      <CustomButtons text="Submit" onPress={handleSubmit(OnHomePressed)} />
+      <CustomButtons text="Submit" onPress={handleSubmit(OnSubmitPressed)} />
     </View>
   );
 };
