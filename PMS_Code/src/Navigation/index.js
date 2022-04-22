@@ -3,8 +3,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
 
-import React, {useState} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import AuthNavigator from './AuthNavigator';
 import AppNavigator from './AppNavigator';
 

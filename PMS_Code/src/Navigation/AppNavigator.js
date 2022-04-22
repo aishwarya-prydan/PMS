@@ -4,7 +4,7 @@
 /* eslint-disable prettier/prettier */
 
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
 import RecentProjectScreen from '../Screens/RecentProjectScreen/RecentProjectScreen.js';
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen.js';
@@ -23,6 +23,7 @@ import QuotationPrice from '../Screens/QuotationPriceScreen/QuotationPrice.js';
 import TabNavigator from './TabNavigator';
 import PaymentScreen from '../Screens/PaymentScreen/PaymentScreen.js';
 import ProjectQuotation from '../Screens/ProjectQuatation4/ProjectQuotation.js';
+import HiredDeveloperScreen from '../Screens/HiredDeveloper/HiredDeveloperScreen.js';
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -44,10 +45,12 @@ const AppNavigator = () => {
         options={{headerShown: false}}
       /> */}
 
+
+      <Stack.Screen name="Hired Developer Screen" component={HiredDeveloperScreen} />
       <Stack.Screen
         name="Home"
         component={TabNavigator}
-        options={{headerShown: true}}
+        options={{ headerShown: true }}
       />
       <Stack.Screen name="Payment Screen" component={PaymentScreen} />
       <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
