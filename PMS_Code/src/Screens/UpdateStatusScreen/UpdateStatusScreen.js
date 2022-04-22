@@ -42,6 +42,10 @@ export default function UpdateStatusScreen() {
           );
         })}
       </View>
+      <View style={styles.Heading}>
+        <Text style={styles.Heading}>Project Progress</Text>
+      </View>
+
       <FlatListComponent />
     </View>
   );
@@ -59,5 +63,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  Heading: {
+    textAlign: 'center',
+    fontWeight: '600',
+    alignSelf: 'center',
+    fontSize: 18,
+    marginTop: 5,
+    marginBottom: 5,
   },
 });

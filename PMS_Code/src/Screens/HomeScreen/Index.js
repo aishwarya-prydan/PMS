@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 17,
     textAlign: 'center',
-    fontWeight: '500',
+    fontWeight: '600',
     marginBottom: 10,
     marginLeft: 74,
     // marginTop: -100,

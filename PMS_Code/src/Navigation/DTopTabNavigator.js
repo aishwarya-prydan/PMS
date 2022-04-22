@@ -8,7 +8,10 @@ import HireEmployeeScreen from './../Screens/HireEmployee/HireEmployeeScreen';
 const TopTab = createMaterialTopTabNavigator();
 const DTopTabNavigator = () => {
   return (
-    <TopTab.Navigator>
+    <TopTab.Navigator
+      screenOptions={{
+        tabBarLabelStyle: {fontSize: 12, fontWeight: '600'},
+      }}>
       <TopTab.Screen name="Hire Developer" component={HireEmployeeScreen} />
       <TopTab.Screen name="Developers" component={HiredDeveloperScreen} />
     </TopTab.Navigator>

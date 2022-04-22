@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 // import Constants from 'expo-constants';
-import Svg, { G, Circle, Rect } from 'react-native-svg';
+import Svg, {G, Circle, Rect} from 'react-native-svg';
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
@@ -19,7 +19,7 @@ export default function ProgressBar({
   strokeWidth = 10,
   duration = 15,
   color = 'tomato',
-  // text = '%',
+
   delay = 0,
   textColor,
   max = 100,
@@ -70,7 +70,7 @@ export default function ProgressBar({
 
   return (
     <View
-      style={{ width: radius * 2, height: radius * 2, justifyContent: 'center' }}>
+      style={{width: radius * 2, height: radius * 2, justifyContent: 'center'}}>
       <Svg
         height={radius * 2}
         width={radius * 2}
@@ -107,7 +107,7 @@ export default function ProgressBar({
         defaultValue="0"
         style={[
           StyleSheet.absoluteFillObject,
-          { fontSize: radius / 2, color: textColor ?? color },
+          {fontSize: radius / 2, color: textColor ?? color},
           styles.text,
         ]}
       />
