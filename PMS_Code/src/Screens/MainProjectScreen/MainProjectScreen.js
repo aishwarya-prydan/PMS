@@ -16,15 +16,15 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-function Item({item}) {
+function Item({ item }) {
   return (
     <View style={styles.listItem}>
       <Image
-        source={{uri: item.photo}}
-        style={{width: 60, height: 60, borderRadius: 30}}
+        source={{ uri: item.photo }}
+        style={{ width: 60, height: 60, borderRadius: 30 }}
       />
-      <View style={{alignItems: 'center', flex: 1}}>
-        <Text style={{alignItems: 'center', fontWeight: 'bold'}}>
+      <View style={{ alignItems: 'center', flex: 1 }}>
+        <Text style={{ alignItems: 'center', fontWeight: 'bold' }}>
           {item.name}
         </Text>
         <Text>{item.position}</Text>
@@ -48,15 +48,15 @@ export default class MainProjectScreen extends React.Component {
         name: 'PMS',
         email: 'miyah.myles44@gmail.com',
         position: 'Project Management System ',
-        photo: 'https://randomuser.me/api/portraits/women/44.jpg',
+        photo: 'https://image.shutterstock.com/image-vector/pms-psm-mps-unique-modern-600w-1812611029.jpg',
       },
       {
         key: 2,
-        name: 'E-Waste Management',
+        name: 'CRM',
         email: 'miyah.myles@gmail.com',
         position: 'E-Waste Management System',
         photo:
-          'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
+          'https://www.crmsoftwareapp.com/f_logo.png',
       },
     ],
   };
@@ -65,9 +65,9 @@ export default class MainProjectScreen extends React.Component {
     return (
       <View style={styles.container}>
         <FlatList
-          style={{flex: 1}}
+          style={{ flex: 1 }}
           data={this.state.data}
-          renderItem={({item}) => <Item item={item} />}
+          renderItem={({ item }) => <Item item={item} />}
           keyExtractor={item => item.email}
         />
       </View>
