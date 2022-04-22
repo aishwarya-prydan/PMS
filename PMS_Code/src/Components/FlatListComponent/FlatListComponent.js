@@ -34,28 +34,28 @@ export default class FlatListComponent extends React.Component {
     data: [
       {
         key: 1,
-        title: 'Mahendra Parmar',
+        title: 'Kishan Kumar',
         details: 'Onboarding Screen Added with Updates',
-        pic: 'https://cdn-ajggd.nitrocdn.com/kMoOFpDlsOVtlYJLrnSRNCQXaUFHZPTY/assets/static/optimized/rev-1786124/wp-content/uploads/2021/06/Cool-profile-picture-Zoom.jpg',
+        pic: 'https://randomuser.me/api/portraits/men/97.jpg',
       },
       {
         key: 2,
-        title: 'Parth Patel',
+        title: 'Vedangi Patel',
         details: 'Profile Screen Added with edit profile feature',
-        pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYH_VDaGfxQ_cPhkgDPyoxXJgnnKHzEw7kdg&usqp=CAU',
+        pic: 'https://randomuser.me/api/portraits/women/57.jpg',
       },
       {
         key: 3,
-        title: 'Shivam Sharma',
+        title: 'Aishwarya Birewar',
         details: 'Splash Screen Updated',
-        pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZLbGYytOlD9VGApZn68STwAeeyP5lcOiIvA&usqp=CAU',
+        pic: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
       },
-      {
-        key: 4,
-        title: 'Parth Rana',
-        details: 'Integration Done for the Project..',
-        pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCglgC3HBBR1077cPmES_UKP2CebigAOFDXPSLY9sTBSLimPemOFmfPeNpYOec8fL3IVA&usqp=CAU',
-      },
+      // {
+      //   key: 4,
+      //   title: 'Parth Rana',
+      //   details: 'Integration Done for the Project..',
+      //   pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCglgC3HBBR1077cPmES_UKP2CebigAOFDXPSLY9sTBSLimPemOFmfPeNpYOec8fL3IVA&usqp=CAU',
+      // },
     ],
   };
 
