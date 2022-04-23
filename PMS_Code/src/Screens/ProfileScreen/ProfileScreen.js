@@ -43,41 +43,30 @@ const ProfileScreen = () => {
                 {
                   marginTop: 15,
                   marginBottom: 5,
+                  fontWeight: '700',
+                  alignItems: 'center',
                 })
               }>
               Aishwarya Birewar
             </Title>
-
-            <Caption style={styles.caption}>Prydan</Caption>
           </View>
         </View>
       </View>
 
       <View style={styles.userInfoSection}>
         <View style={styles.row}>
-          <Icon
-            name="map-marker"
-            type="font-awesome"
-            size={20}
-            color="#777777"
-          />
-          <Text style={{color: '#777777', marginLeft: 20}}>
-            Ahmedabad, India
-          </Text>
+          <Icon name="map-marker" type="font-awesome" size={20} />
+          <Text style={{marginLeft: 20}}>Ahmedabad, India</Text>
         </View>
 
         <View style={styles.row}>
-          <Icon name="phone" type="font-awesome" size={20} color="#777777" />
-          <Text style={{color: '#777777', marginLeft: 20}}>
-            +91 9923475689{' '}
-          </Text>
+          <Icon name="phone" type="font-awesome" size={20} />
+          <Text style={{marginLeft: 20}}>+91 9923475689 </Text>
         </View>
 
         <View style={styles.row}>
-          <Icon name="envelope" type="font-awesome" size={20} color="#777777" />
-          <Text style={{color: '#777777', marginLeft: 20}}>
-            aishwarya21@gmail.com
-          </Text>
+          <Icon name="envelope" type="font-awesome" size={20} />
+          <Text style={{marginLeft: 20}}>aishwarya21@gmail.com</Text>
         </View>
       </View>
 

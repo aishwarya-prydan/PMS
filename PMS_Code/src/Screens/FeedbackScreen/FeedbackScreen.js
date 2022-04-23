@@ -24,7 +24,6 @@ const FeedbackScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text1}>Please fill the Form</Text>
       <Picker
         selectedValue={selectedValue}
         align="left"
@@ -63,14 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
   },
-  text1: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginTop: -20,
-    marginBottom: 10,
-    color: '#000',
-    textAlign: 'center',
-  },
+
   input: {
     backgroundColor: 'white',
     width: '100%',

@@ -26,7 +26,7 @@ const slides = [
     id: '2',
     image: require('../../../assets/images/image2.png'),
     title: 'Post Project',
-    subtitle: 'Hire dedicated and experienced developers.',
+    subtitle: 'Post the project to buit it more user friendly and satisfying.',
   },
   {
     id: '3',
