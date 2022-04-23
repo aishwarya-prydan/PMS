@@ -16,15 +16,15 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-function Item({ item }) {
+function Item({item}) {
   return (
     <View style={styles.listItem}>
       <Image
-        source={{ uri: item.photo }}
-        style={{ width: 60, height: 60, borderRadius: 30 }}
+        source={{uri: item.photo}}
+        style={{width: 60, height: 60, borderRadius: 30}}
       />
-      <View style={{ alignItems: 'center', flex: 1 }}>
-        <Text style={{ alignItems: 'center', fontWeight: 'bold' }}>
+      <View style={{alignItems: 'center', flex: 1}}>
+        <Text style={{alignItems: 'center', fontWeight: 'bold'}}>
           {item.name}
         </Text>
         <Text>{item.position}</Text>
@@ -45,18 +45,10 @@ export default class MainProjectScreen extends React.Component {
     data: [
       {
         key: 1,
-        name: 'PMS',
-        email: 'miyah.myles44@gmail.com',
-        position: 'Project Management System ',
-        photo: 'https://image.shutterstock.com/image-vector/pms-psm-mps-unique-modern-600w-1812611029.jpg',
-      },
-      {
-        key: 2,
         name: 'CRM',
         email: 'miyah.myles@gmail.com',
-        position: 'E-Waste Management System',
-        photo:
-          'https://www.crmsoftwareapp.com/f_logo.png',
+        position: 'Customer Relationship Management',
+        photo: 'https://www.crmsoftwareapp.com/f_logo.png',
       },
     ],
   };
@@ -65,9 +57,9 @@ export default class MainProjectScreen extends React.Component {
     return (
       <View style={styles.container}>
         <FlatList
-          style={{ flex: 1 }}
+          style={{flex: 1}}
           data={this.state.data}
-          renderItem={({ item }) => <Item item={item} />}
+          renderItem={({item}) => <Item item={item} />}
           keyExtractor={item => item.email}
         />
       </View>

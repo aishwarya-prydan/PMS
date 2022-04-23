@@ -20,8 +20,7 @@ import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
 import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen';
 import AboutEmployeeScreen from './../Screens/AboutEmployeeScreen/AboutEmployeeScreen';
-// import HomeScreen from './../Screens/HomeScreen/Index.js';
-import TabNavigator from './TabNavigator.js';
+
 const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => {
@@ -95,7 +94,6 @@ const AuthNavigator = () => {
       <Stack.Screen name="Privacy Policy" component={PrivacyPolicyScreen} />
       <Stack.Screen name="AboutCompany" component={AboutCompanyScreen} />
       <Stack.Screen name="AboutEmployee" component={AboutEmployeeScreen} />
-      <Stack.Screen name="Home" component={TabNavigator} />
     </Stack.Navigator>
   );
 };
