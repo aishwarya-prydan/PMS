@@ -13,7 +13,7 @@ export const AuthProvider = ({children}) => {
 
   const register = (name, email, password, successcallback) => {
     setIsLoading(true);
-    console.log(name, email, password);
+    // console.log(name, email, password);
     axios
       .post(`${BASE_URL}/user/register/`, {
         name,
@@ -31,7 +31,7 @@ export const AuthProvider = ({children}) => {
       })
       .catch(e => {
         console.log(`register error ${e}`);
-        // Alert.alert('Invalid username and password');
+        Alert.alert('Invalid Credentials');
         setIsLoading(false);
       });
   };

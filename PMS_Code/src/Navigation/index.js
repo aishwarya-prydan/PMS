@@ -5,7 +5,9 @@
 
 import React, {useContext} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import {Button} from 'react-native';
 import {AuthContext} from '../Context/AuthContext.js';
+import {useNavigation} from '@react-navigation/native';
 import SplashScreen from '../Screens/SplashScreen/SplashScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignInScreen from '../Screens/SignInScreen/SignInScreen.js';
@@ -15,6 +17,8 @@ import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen/ForgotPassword
 import ConfirmCodeScreen from '../Screens/ConfirmCodeScreen/ConfirmCodeScreen.js';
 import NewPasswordScreen from '../Screens/NewPasswordScreen/NewPasswordScreen.js';
 import TermsOfUseScreen from '../Screens/TermsOfUseScreen/TermsOfUseScreen.js';
+import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
+import MainScreenTabNavigator from './MainScreenTabNavigator.js';
 import PrivacyPolicyScreen from '../Screens/PrivacyPolicyScreen/PrivacyPolicyScreen.js';
 import AboutCompanyScreen from '../Screens/AboutCompanyScreen/AboutCompanyScreen.js';
 import RecentProjectScreen from '../Screens/RecentProjectScreen/RecentProjectScreen.js';
@@ -38,6 +42,43 @@ import HiredDeveloperScreen from '../Screens/HiredDeveloper/HiredDeveloperScreen
 
 const Stack = createNativeStackNavigator();
 
+const Root = () => {
+  const navigation = useNavigation();
+
+  const onSignInPress = () => {
+    navigation.navigate('SignIn');
+  };
+
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#3B71F3',
+        },
+        headerTitleAlign: 'center',
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}>
+      <Stack.Screen
+        name="Onboarding"
+        component={OnboardingScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="PMS"
+        component={MainScreenTabNavigator}
+        options={{
+          headerRight: () => (
+            <Button onPress={onSignInPress} title="Sign in" color="#3B71F3" />
+          ),
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 const Navigation = () => {
   const {userInfo, splashLoading} = useContext(AuthContext);
 
@@ -45,7 +86,17 @@ const Navigation = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#3B71F3',
+          },
+          headerTitleAlign: 'center',
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}>
         {splashLoading ? (
           <Stack.Screen
             name="Splash Screen"
@@ -104,6 +155,29 @@ const Navigation = () => {
           </>
         ) : (
           <>
+            <Stack.Screen
+              name="Root"
+              component={Root}
+              options={{headerShown: false}}
+            />
+            {/* <Stack.Screen
+              name="Onboarding"
+              component={OnboardingScreen}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="PMS"
+              component={MainScreenTabNavigator}
+              options={{
+                headerRight: () => (
+                  <Button
+                    onPress={navigation.navigate('SignIn')}
+                    title="Sign in"
+                    color="#3B71F3"
+                  />
+                ),
+              }}
+            /> */}
             <Stack.Screen
               name="SignIn"
               component={SignInScreen}

@@ -10,6 +10,8 @@ import {useForm} from 'react-hook-form';
 import Spinner from 'react-native-loading-spinner-overlay';
 import {AuthContext} from '../../Context/AuthContext.js';
 
+
+const PASS_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
 const EMAIL_REGEX =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -82,6 +84,15 @@ const SignUpScreen = ({navigation}) => {
           secureTextEntry
           rules={{
             required: 'Password is required',
+            minLength: {
+              value: 6,
+              message: 'Password should be at least 6 characters long',
+            },
+            // pattern: {
+            //   value: PASS_REGEX,
+            //   message:
+            //     'Password must be at least 6 - 15 characters long \nOne character must be Uppercase \nOne character must be lowercase \nOne character must be Special Symbol \nOne character must be a Number',
+            // },
           }}
         />
 

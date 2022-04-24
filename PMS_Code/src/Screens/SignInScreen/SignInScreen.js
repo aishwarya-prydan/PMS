@@ -70,6 +70,7 @@ const SignInScreen = ({navigation}) => {
           secureTextEntry
           rules={{
             required: 'Password is required',
+            // pattern: {value: PASS_REGEX, message: 'Password is invalid'},
           }}
         />
 
