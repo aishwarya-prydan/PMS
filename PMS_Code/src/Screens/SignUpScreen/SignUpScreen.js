@@ -62,7 +62,7 @@ const SignUpScreen = () => {
           }}
         />
 
-        <NumInput
+        {/* <NumInput
           name="mobile number"
           control={control}
           placeholder="Mobile Number"
@@ -77,7 +77,7 @@ const SignUpScreen = () => {
               message: 'mobilenumber should be max 10 characters long',
             },
           }}
-        />
+        /> */}
 
         <CustomInput
           name="email"
@@ -146,7 +146,6 @@ const SignUpScreen = () => {
     </ScrollView>
   );
 };
-
 
 const styles = StyleSheet.create({
   root: {

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Vedangi from '../../../assets/images/Vedangi.jpeg';
 import {
   StyleSheet,
   Text,
