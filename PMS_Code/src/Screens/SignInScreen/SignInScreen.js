@@ -1,41 +1,35 @@
-/* eslint-disable prettier/prettier */
-import React, {useState, useEffect} from 'react';
+import React, {useState, useContext} from 'react';
 import {
   Text,
   View,
   Image,
   StyleSheet,
   useWindowDimensions,
-  TextInput,
   ScrollView,
-  Button,
 } from 'react-native';
 
 import Logo from '../../../assets/images/Logo.png';
-import CustomFormInput from '../../Components/CustomFormInput/CustomFormInput.js';
+import CustomInput from '../../Components/CustomFormInput/CustomFormInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
-import SocialSignInButtons from '../../../src/Components/SocialSignInButtons/SocialSignInButtons.js';
-import {useNavigation} from '@react-navigation/native';
 import {useForm, Controller} from 'react-hook-form';
-import axios from 'axios';
+import Spinner from 'react-native-loading-spinner-overlay';
+import {AuthContext} from '../../../src/Context/AuthContext.js';
 
 const PASS_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
+const EMAIL_REGEX =
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const SignInScreen = () => {
+const SignInScreen = ({navigation}) => {
   const {height} = useWindowDimensions();
-  const navigation = useNavigation();
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const {isLoading, login} = useContext(AuthContext);
 
   const {
     control,
     handleSubmit,
     formState: {errors},
   } = useForm();
-
-  const onSignInPressed = data => {
-    console.log(data);
-    // validate user
-    navigation.navigate('Home');
-  };
 
   const OnForgotPasswordPress = () => {
     navigation.navigate('ConfirmEmail');
@@ -45,28 +39,9 @@ const SignInScreen = () => {
     navigation.navigate('SignUp');
   };
 
-  const fetchApi = async () => {
-    try {
-      const api = 'http://cdee-103-1-100-53.ngrok.io/api/tblUser/';
-      const res = await axios.get(api, {
-        headers: {
-          authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUwNDUyODg2LCJpYXQiOjE2NTA0NDIwODYsImp0aSI6IjcxNGEwMzRiOTQ5NTQ1YjI5ZjUwNTlkMmQ4OTlhZTQxIiwidXNlcl9pZCI6MX0.9PF4VyOlkGDCXgLdIDpxelKmnPXH92rubO6DX1Ol0Wg`,
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-      });
-      console.log(res.data);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-  useEffect(() => {
-    fetchApi();
-  }, []);
-
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
+      <Spinner visible={isLoading} />
       <View style={styles.root}>
         <Image
           source={Logo}
@@ -74,43 +49,46 @@ const SignInScreen = () => {
           resizeMode="contain"
         />
 
-        <CustomFormInput
-          name="username"
-          placeholder="Username"
+        <CustomInput
+          name="email"
           control={control}
-          rules={{required: 'Username is required'}}
-        />
-
-        <CustomFormInput
-          name="password"
-          placeholder="Password"
-          secureTextEntry
-          control={control}
+          value={email}
+          onChangeText={text => setEmail(text)}
+          placeholder="Email"
           rules={{
-            required: 'Password is required',
-            // minLength: {
-            //   value: 6,
-            //   message: 'Password should be minimum 6 characters long',
-            // },
-            pattern: {
-              value: PASS_REGEX,
-              message:
-                'Password must be at least 6 - 15 characters long \nOne character must be Uppercase \nOne character must be lowercase \nOne character must be Special Symbol \nOne character must be a Number',
-            },
+            required: 'Email is required',
+            pattern: {value: EMAIL_REGEX, message: 'Email is invalid'},
           }}
         />
 
-        <CustomButtons text="Sign In" onPress={handleSubmit(onSignInPressed)} />
+        <CustomInput
+          name="password"
+          control={control}
+          value={password}
+          onChangeText={text => setPassword(text)}
+          placeholder="Password"
+          secureTextEntry
+          rules={{
+            required: 'Password is required',
+          }}
+        />
+
+        <CustomButtons
+          text="Sign In"
+          onPress={handleSubmit(data => {
+            console.log(data);
+            login(data.email, data.password, () => {
+              navigation.navigate('Home');
+            });
+          })}
+        />
 
         <CustomButtons
           style={styles.FP}
           text="Forgot Password?"
-          // onPress={() => navigation.navigate(OnForgotPasswordPressed)}
           onPress={OnForgotPasswordPress}
           type="FP"
         />
-
-        {/* <SocialSignInButtons /> */}
 
         <CustomButtons text="Create one" onPress={onSignUpPress} type="CO" />
         <Text style={styles.text1}>Don't have an account? </Text>
@@ -129,7 +107,6 @@ const styles = StyleSheet.create({
     width: 370,
     maxWidth: 470,
     maxHeight: 380,
-    // marginLeft: -2,
     alignSelf: 'center',
   },
 

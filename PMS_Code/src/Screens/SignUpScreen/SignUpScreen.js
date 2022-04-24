@@ -1,32 +1,29 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
+
 import React, {useState, useContext} from 'react';
 import {Text, View, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../Components/CustomFormInput/CustomFormInput.js';
-import NumInput from '../../Components/NumInput/NumInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
-import SocialSignInButtons from '../../../src/Components/SocialSignInButtons/SocialSignInButtons.js';
 import {useNavigation} from '@react-navigation/native';
 import {useForm} from 'react-hook-form';
+import Spinner from 'react-native-loading-spinner-overlay';
+import {AuthContext} from '../../Context/AuthContext.js';
 
 const EMAIL_REGEX =
-  // /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const USER_REGEX = /^[a-zA-Z0-9]+$/;
-
-const PASS_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
-
-const SignUpScreen = () => {
+const SignUpScreen = ({navigation}) => {
   const {control, handleSubmit, watch} = useForm();
 
-  const pwd = watch('password');
-  const navigation = useNavigation();
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
 
-  const onRegisterPressed = data => {
-    console.log(data);
-    navigation.navigate('Home');
-  };
+  const {isLoading, register} = useContext(AuthContext);
+
+  const pwd = watch('password');
+  // const navigation = useNavigation();
 
   const onSignInPress = () => {
     navigation.navigate('SignIn');
@@ -42,12 +39,15 @@ const SignUpScreen = () => {
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
+      <Spinner visible={isLoading} />
       <View style={styles.root}>
         <Text style={styles.title}>Create an account</Text>
 
         <CustomInput
-          name="username"
+          name="name"
           control={control}
+          value={name}
+          onChangeText={text => setName(text)}
           placeholder="Username"
           rules={{
             required: 'Username is required',
@@ -62,26 +62,11 @@ const SignUpScreen = () => {
           }}
         />
 
-        {/* <NumInput
-          name="mobile number"
-          control={control}
-          placeholder="Mobile Number"
-          rules={{
-            required: 'mobile number is required',
-            minLength: {
-              value: 10,
-              message: 'mobile number should be min 10 characters long',
-            },
-            maxLength: {
-              value: 10,
-              message: 'mobilenumber should be max 10 characters long',
-            },
-          }}
-        /> */}
-
         <CustomInput
           name="email"
           control={control}
+          value={email}
+          onChangeText={text => setEmail(text)}
           placeholder="Email"
           rules={{
             required: 'Email is required',
@@ -91,40 +76,29 @@ const SignUpScreen = () => {
         <CustomInput
           name="password"
           control={control}
+          value={password}
+          onChangeText={text => setPassword(text)}
           placeholder="Password"
           secureTextEntry
           rules={{
             required: 'Password is required',
-            // minLength: {
-            //   value: 6,
-            //   message: 'Password should be at least 6 characters long',
-            // },
-            pattern: {
-              value: PASS_REGEX,
-              message:
-                'Password must be at least 6 - 15 characters long \nOne character must be Uppercase \nOne character must be lowercase \nOne character must be Special Symbol \nOne character must be a Number',
-            },
-          }}
-        />
-
-        <CustomInput
-          name="password-repeat"
-          control={control}
-          placeholder="Repeat Password"
-          secureTextEntry
-          rules={{
-            validate: value => value === pwd || 'Password do not match',
           }}
         />
 
         <CustomButtons
           text="Register"
-          onPress={handleSubmit(onRegisterPressed)}
+          onPress={handleSubmit(data => {
+            console.log(data);
+            register(data.name, data.email, data.password, () => {
+              // navigation.navigate('SignIn');
+            });
+          })}
         />
 
         <Text style={styles.text2}>
           By Registering, you confirm that you accept our
         </Text>
+
         <CustomButtons
           text="Terms of Use"
           onPress={OnTermsOfUsePressed}
@@ -136,8 +110,6 @@ const SignUpScreen = () => {
           onPress={OnPrivacyPressed}
           type="PP"
         />
-
-        {/* <SocialSignInButtons /> */}
 
         <CustomButtons text="Sign in" onPress={onSignInPress} type="CO" />
 
@@ -177,19 +149,15 @@ const styles = StyleSheet.create({
   },
 
   text2: {
-    // fontWeight: 'bold',
     marginTop: 10,
     marginLeft: -30,
     fontSize: 14,
-    // marginBottom: 10,
   },
 
   text3: {
-    // fontWeight: 'bold',
     marginTop: -40.8,
     marginLeft: -115,
     fontSize: 14,
-    // marginBottom: 10,
   },
 });
 

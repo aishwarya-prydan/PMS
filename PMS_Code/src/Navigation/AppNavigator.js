@@ -22,7 +22,7 @@ import ComplaintScreen from '../Screens/ComplaintScreen/ComplaintScreen.js';
 import QuotationPrice from '../Screens/QuotationPriceScreen/QuotationPrice.js';
 import TabNavigator from './TabNavigator';
 import PaymentScreen from '../Screens/PaymentScreen/PaymentScreen.js';
-import ProjectQuotation from '../Screens/ProjectQuatation4/ProjectQuotation.js';
+import ProjectQuotation from '../Screens/ProjectQuatation/ProjectQuotation.js';
 import HiredDeveloperScreen from '../Screens/HiredDeveloper/HiredDeveloperScreen.js';
 import SignInScreen from '../Screens/SignInScreen/SignInScreen.js';
 

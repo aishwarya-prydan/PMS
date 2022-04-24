@@ -7,7 +7,7 @@ import {useForm, Controller} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
 
 const FeedbackScreen = () => {
-  const [Feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState('');
   const [selectedValue, setSelectedValue] = useState('WebSite');
 
   const navigation = useNavigation();

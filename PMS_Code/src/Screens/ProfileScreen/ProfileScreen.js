@@ -2,13 +2,16 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import {View, StyleSheet, SafeAreaView, Text, Alert} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import {Avatar, Title, Caption, TouchableRipple} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {AuthContext} from '../../Context/AuthContext';
 
 const ProfileScreen = () => {
   const navigation = useNavigation();
+
+  const {isLoading, isLogout} = useContext(AuthContext);
 
   const OnEditPressed = () => {
     navigation.navigate('EditProfile');
@@ -105,7 +108,7 @@ const ProfileScreen = () => {
           </View>
         </TouchableRipple>
 
-        <TouchableRipple onPress={OnLogOutPressed}>
+        <TouchableRipple onPress={isLogout}>
           <View style={styles.menuItem}>
             <Icon
               name="sign-out"

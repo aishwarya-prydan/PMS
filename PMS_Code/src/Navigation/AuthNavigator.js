@@ -6,7 +6,6 @@ import React, {useEffect} from 'react';
 import {Button} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import SplashScreen from 'react-native-splash-screen';
 
 import OnboardingScreen from '../Screens/OnboardingScreen/OnboardingScreen.js';
 import MainScreenTabNavigator from './MainScreenTabNavigator.js';
@@ -25,13 +24,10 @@ const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => {
   const navigation = useNavigation();
-  const onSignInPress = () => {
-    navigation.navigate('SignIn');
-  };
+  // const onSignInPress = () => {
+  //   navigation.navigate('SignIn');
+  // };
 
-  useEffect(() => {
-    SplashScreen.hide();
-  });
   return (
     <Stack.Navigator
       screenOptions={{
@@ -54,7 +50,11 @@ const AuthNavigator = () => {
         component={MainScreenTabNavigator}
         options={{
           headerRight: () => (
-            <Button onPress={onSignInPress} title="Sign in" color="#3B71F3" />
+            <Button
+              onPress={navigation.navigate('SignIn')}
+              title="Sign in"
+              color="#3B71F3"
+            />
             // <CustomButtons title="Sign in" onPress={onSignInPress} type="CO" />
           ),
         }}

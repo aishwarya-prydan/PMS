@@ -3,6 +3,7 @@ import React from 'react';
 import {View, Text, TextInput, StyleSheet, setValue} from 'react-native';
 import {Controller} from 'react-hook-form';
 
+
 const CustomFormInput = ({
   control,
   name,
@@ -15,7 +16,7 @@ const CustomFormInput = ({
       control={control}
       name={name}
       rules={rules}
-      render={({field: {value, onChange, onBlur}, fieldState: {error}}) => (
+      render={({field: {onChange, onBlur}, fieldState: {error}}) => (
         <>
           <View
             style={[
@@ -23,12 +24,13 @@ const CustomFormInput = ({
               {borderColor: error ? 'red' : '#e8e8e8'},
             ]}>
             <TextInput
-              value={value}
+              // value={value}
               onChangeText={onChange}
               onBlur={onBlur}
               placeholder={placeholder}
               style={styles.input}
               secureTextEntry={secureTextEntry}
+              // rules={rules}
             />
           </View>
           {error && (
