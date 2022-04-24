@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet, StatusBar} from 'react-native';
 import Navigation from './src/Navigation/index';
 // import Navigation from './src/Navigation'
 import {LogBox} from 'react-native';
@@ -24,6 +24,7 @@ LogBox.ignoreLogs([
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
+      <StatusBar backgroundColor="#000" />
       <Navigation />
     </SafeAreaView>
   );

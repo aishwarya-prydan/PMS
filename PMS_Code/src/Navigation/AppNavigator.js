@@ -24,6 +24,7 @@ import TabNavigator from './TabNavigator';
 import PaymentScreen from '../Screens/PaymentScreen/PaymentScreen.js';
 import ProjectQuotation from '../Screens/ProjectQuatation4/ProjectQuotation.js';
 import HiredDeveloperScreen from '../Screens/HiredDeveloper/HiredDeveloperScreen.js';
+import SignInScreen from '../Screens/SignInScreen/SignInScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -73,6 +74,7 @@ const AppNavigator = () => {
         component={HiredDeveloperScreen}
       />
       <Stack.Screen name="ProjectQuotation" component={ProjectQuotation} />
+      <Stack.Screen name="SignIn" component={SignInScreen} />
     </Stack.Navigator>
   );
 };
