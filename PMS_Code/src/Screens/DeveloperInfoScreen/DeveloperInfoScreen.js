@@ -22,7 +22,7 @@ export default class DeveloperInfoScreen extends Component {
           id: 1,
           name: 'Kishan Kumar',
           position: 'Full Stack Developer',
-          image: 'https://randomuser.me/api/portraits/men/97.jpg',
+          image: 'https://randomuser.me/api/portraits/men/94.jpg',
           about:
             'Kishan has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
         },
@@ -34,23 +34,15 @@ export default class DeveloperInfoScreen extends Component {
           about:
             ' Vedangi has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
         },
+
         {
           id: 3,
-          name: 'Aishwarya Birewar',
-          position: 'React Native Developer',
-          image:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
+          name: 'Abishek Yadav',
+          position: 'Dot Net Developer',
+          image: 'https://randomuser.me/api/portraits/men/20.jpg',
           about:
-            'Aishwarya has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
+            'Abhishek has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
         },
-        // {
-        //   id: 4,
-        //   name: 'Abishek Yadav',
-        //   position: 'Dot Net Developer',
-        //   image: 'https://bootdey.com/img/Content/avatar/avatar5.png',
-        //   about:
-        //     'Abhishek has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
-        // },
         // {
         //   id: 5,
         //   name: 'Mihir Koshti',

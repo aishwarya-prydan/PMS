@@ -49,7 +49,7 @@ const AppNavigator = () => {
       <Stack.Screen
         name="Home"
         component={TabNavigator}
-        options={{headerShown: true}}
+        options={{headerShown: true, title: 'PMS'}}
       />
       <Stack.Screen name="Payment Screen" component={PaymentScreen} />
       <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
