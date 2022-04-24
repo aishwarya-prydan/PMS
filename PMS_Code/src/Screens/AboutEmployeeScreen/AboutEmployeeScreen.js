@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -36,12 +36,12 @@ export default class AboutEmployeeScreen extends Component {
         },
         {
           id: 3,
-          name: 'Aishwarya Birewar',
+          name: 'Shweta Seladiya',
           position: 'React Native Developer',
           image:
-            'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
+            'https://randomuser.me/api/portraits/women/63.jpg',
           about:
-            'Aishwarya has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
+            'Shweta has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
         },
         {
           id: 4,
@@ -59,18 +59,34 @@ export default class AboutEmployeeScreen extends Component {
           about:
             'Mihir  has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
         },
+        {
+          id: 6,
+          name: 'Gunjan Shukla',
+          position: 'Dot Net Developer',
+          image: 'https://randomuser.me/api/portraits/men/9.jpg',
+          about:
+            'Gunjan has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
+        },
+        {
+          id: 7,
+          name: 'Sachin Koshti',
+          position: 'Dot Net Developer',
+          image: 'https://randomuser.me/api/portraits/men/97.jpg',
+          about:
+            'Sachin has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
+        },
       ],
     };
   }
 
   clickEventListener = item => {
-    this.setState({userSelected: item}, () => {
+    this.setState({ userSelected: item }, () => {
       this.setModalVisible(true);
     });
   };
 
   setModalVisible(visible) {
-    this.setState({modalVisible: visible});
+    this.setState({ modalVisible: visible });
   }
 
   render() {
@@ -83,14 +99,14 @@ export default class AboutEmployeeScreen extends Component {
           keyExtractor={item => {
             return item.id;
           }}
-          renderItem={({item}) => {
+          renderItem={({ item }) => {
             return (
               <TouchableOpacity
                 style={styles.card}
                 onPress={() => {
                   this.clickEventListener(item);
                 }}>
-                <Image style={styles.image} source={{uri: item.image}} />
+                <Image style={styles.image} source={{ uri: item.image }} />
                 <View style={styles.cardContent}>
                   <Text style={styles.headerm}>{item.name}</Text>
                   <Text style={styles.position}>{item.position}</Text>
@@ -116,7 +132,7 @@ export default class AboutEmployeeScreen extends Component {
                 <ScrollView contentContainerStyle={styles.modalInfo}>
                   <Image
                     style={styles.image2}
-                    source={{uri: this.state.userSelected.image}}
+                    source={{ uri: this.state.userSelected.image }}
                   />
                   <Text style={styles.name}>
                     {this.state.userSelected.name}
@@ -129,7 +145,7 @@ export default class AboutEmployeeScreen extends Component {
                   </Text>
                 </ScrollView>
               </View>
-              <View style={{alignSelf: 'center'}}>
+              <View style={{ alignSelf: 'center' }}>
                 <View style={styles.popupButtons}>
                   <TouchableOpacity
                     onPress={() => {
