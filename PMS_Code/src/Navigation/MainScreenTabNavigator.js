@@ -15,9 +15,6 @@ const MainScreenTabNavigator = () => {
   };
   return (
     <>
-      {/* <View>
-        <CustomButtons text="Sign in" onPress={onSignInPress} type="MAIN" />
-      </View> */}
       <TopTab.Navigator
         screenOptions={{
           tabBarLabelStyle: {fontSize: 13},
@@ -27,16 +24,16 @@ const MainScreenTabNavigator = () => {
         <TopTab.Screen
           name="About Us"
           component={AboutCompanyScreen}
-          // screenOptions={{
-          //   headerShown: true,
-          //   headerRight: () => (
-          //     <Button
-          //       onPress={() => alert('Clicked !!')}
-          //       title="menu"
-          //       color="#000"
-          //     />
-          //   ),
-          // }}
+          screenOptions={{
+            headerShown: true,
+            headerRight: () => (
+              <Button
+                onPress={() => alert('Clicked !!')}
+                title="menu"
+                color="#000"
+              />
+            ),
+          }}
         />
         <TopTab.Screen name="Our Employees" component={AboutEmployeeScreen} />
         <TopTab.Screen name="Recent Projects" component={RecentProjectScreen} />
