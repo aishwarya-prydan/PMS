@@ -75,6 +75,14 @@ export default class AboutEmployeeScreen extends Component {
           about:
             'Sachin has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
         },
+        {
+          id: 8,
+          name: 'Aman Gujaral',
+          position: 'Java Developer',
+          image: 'https://randomuser.me/api/portraits/men/11.jpg',
+          about:
+            'Aman has professional experience working with Python, React Native, HTML, CSS, DJAngo.Experience with building pixel perfect  UIs that match designs. Expert in developing Mobile based applications and cross browser applications. Love coding and look forward to taking on complex features. Proven ability to analyse problems, root causes, and develop innovative solutions to business challenges and streamlining operations.  Worked on GIT for version control, Code Review Performed Unit testing. Experience working with Redux. Created Reusable react presentation and container components. Good understanding and usage of states and props. Implemented EcmaScript6 (ES6) arrow functions, constants, block-scope variables, class inheritance. Solid experience of redux development using Babel, Web pack, NPM.',
+        },
       ],
     };
   }

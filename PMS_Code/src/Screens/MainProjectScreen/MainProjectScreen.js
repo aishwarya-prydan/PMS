@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -21,24 +21,24 @@ export default class MainProjectScreen extends Component {
         {
           id: 1,
           name: 'PMS',
-          position: 'Mobile Application',
-          image:
-            'data:image/jpeg;base64,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',
+          position: 'Project Management System',
+          image: 'data:image/jpeg;base64,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',
           about:
-            'PMS is a Project Management System Mobile Application which provides the facility to customer to give the project online through the application or also they can hire our employees through the application.',
+            '',
         },
+
       ],
     };
   }
 
   clickEventListener = item => {
-    this.setState({userSelected: item}, () => {
+    this.setState({ userSelected: item }, () => {
       this.setModalVisible(true);
     });
   };
 
   setModalVisible(visible) {
-    this.setState({modalVisible: visible});
+    this.setState({ modalVisible: visible });
   }
 
   render() {
@@ -51,21 +51,21 @@ export default class MainProjectScreen extends Component {
           keyExtractor={item => {
             return item.id;
           }}
-          renderItem={({item}) => {
+          renderItem={({ item }) => {
             return (
               <TouchableOpacity
                 style={styles.card}
                 onPress={() => {
                   this.clickEventListener(item);
                 }}>
-                <Image style={styles.image} source={{uri: item.image}} />
+                <Image style={styles.image} source={{ uri: item.image }} />
                 <View style={styles.cardContent}>
                   <Text style={styles.headerm}>{item.name}</Text>
                   <Text style={styles.position}>{item.position}</Text>
                   <TouchableOpacity
                     style={styles.followButton}
                     onPress={() => this.clickEventListener(item)}>
-                    <Text style={styles.followButtonText}>About</Text>
+                    <Text style={styles.followButtonText}>Open</Text>
                   </TouchableOpacity>
                 </View>
               </TouchableOpacity>
@@ -84,7 +84,7 @@ export default class MainProjectScreen extends Component {
                 <ScrollView contentContainerStyle={styles.modalInfo}>
                   <Image
                     style={styles.image2}
-                    source={{uri: this.state.userSelected.image}}
+                    source={{ uri: this.state.userSelected.image }}
                   />
                   <Text style={styles.name}>
                     {this.state.userSelected.name}
@@ -97,7 +97,7 @@ export default class MainProjectScreen extends Component {
                   </Text>
                 </ScrollView>
               </View>
-              <View style={{alignSelf: 'center'}}>
+              <View style={{ alignSelf: 'center' }}>
                 <View style={styles.popupButtons}>
                   <TouchableOpacity
                     onPress={() => {
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     height: 90,
     borderRadius: 45,
     alignSelf: 'center',
-    marginTop: 5,
+    marginTop: 10,
   },
 
   card: {
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   headerm: {
-    fontSize: 15,
+    fontSize: 17,
     flex: 1,
     alignSelf: 'center',
     color: '#3B71F3',
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
   },
 
   name: {
-    fontSize: 15,
+    fontSize: 17,
     flex: 1,
     alignSelf: 'center',
     color: '#3B71F3',
@@ -211,6 +211,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     color: '#696969',
+    marginBottom: 10,
   },
   about: {
     marginHorizontal: 10,
@@ -218,37 +219,41 @@ const styles = StyleSheet.create({
 
   followButton: {
     marginTop: 10,
+    // marginleft: 10,
+    // marginright: 20,
     height: 30,
     width: 75,
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
 
     alignItems: 'center',
     borderRadius: 30,
-    backgroundColor: '#3B71F3',
+    // backgroundColor: '#3B71F3',
     marginLeft: 52,
   },
   followButtonText: {
-    color: '#FFFFFF',
-    fontSize: 12,
+    color: '#3B71F3',
+    fontSize: 15,
+    fontWeight: '800',
   },
   txtClose: {
-    color: '#FFFFFF',
-    fontSize: 15,
+    color: '#3B71F3',
+    fontSize: 16,
     marginBottom: 10,
-    backgroundColor: '#3B71F3',
+    // backgroundColor: '#3B71F3',
     height: 33,
     width: 80,
     textAlign: 'center',
-    borderRadius: 20,
+    // borderRadius: 20,
     fontWeight: '500',
   },
   /**** modals ****/
   popup: {
     backgroundColor: 'white',
-    marginTop: 80,
+    marginTop: 20,
     marginHorizontal: 20,
     borderRadius: 7,
+    height: 700,
   },
   popupOverlay: {
     backgroundColor: '#00000057',
@@ -258,7 +263,7 @@ const styles = StyleSheet.create({
   popupContent: {
     alignItems: 'center',
     // margin: 5,
-    height: 250,
+    height: 600,
   },
   popupHeader: {
     marginBottom: 45,

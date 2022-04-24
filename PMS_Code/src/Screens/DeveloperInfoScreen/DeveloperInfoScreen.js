@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -56,13 +56,13 @@ export default class DeveloperInfoScreen extends Component {
   }
 
   clickEventListener = item => {
-    this.setState({userSelected: item}, () => {
+    this.setState({ userSelected: item }, () => {
       this.setModalVisible(true);
     });
   };
 
   setModalVisible(visible) {
-    this.setState({modalVisible: visible});
+    this.setState({ modalVisible: visible });
   }
 
   render() {
@@ -75,14 +75,14 @@ export default class DeveloperInfoScreen extends Component {
           keyExtractor={item => {
             return item.id;
           }}
-          renderItem={({item}) => {
+          renderItem={({ item }) => {
             return (
               <TouchableOpacity
                 style={styles.card}
                 onPress={() => {
                   this.clickEventListener(item);
                 }}>
-                <Image style={styles.image} source={{uri: item.image}} />
+                <Image style={styles.image} source={{ uri: item.image }} />
                 <View style={styles.cardContent}>
                   <Text style={styles.headerm}>{item.name}</Text>
                   <Text style={styles.position}>{item.position}</Text>
@@ -108,7 +108,7 @@ export default class DeveloperInfoScreen extends Component {
                 <ScrollView contentContainerStyle={styles.modalInfo}>
                   <Image
                     style={styles.image2}
-                    source={{uri: this.state.userSelected.image}}
+                    source={{ uri: this.state.userSelected.image }}
                   />
                   <Text style={styles.name}>
                     {this.state.userSelected.name}
@@ -121,7 +121,7 @@ export default class DeveloperInfoScreen extends Component {
                   </Text>
                 </ScrollView>
               </View>
-              <View style={{alignSelf: 'center'}}>
+              <View style={{ alignSelf: 'center' }}>
                 <View style={styles.popupButtons}>
                   <TouchableOpacity
                     onPress={() => {
