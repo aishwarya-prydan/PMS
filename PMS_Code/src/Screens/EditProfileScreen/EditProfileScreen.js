@@ -13,15 +13,20 @@ import {useTheme} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-
+import CustomButtons from '../../Components/CustomButtons/CustomButtons.js';
 import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
-
+import {useNavigation} from '@react-navigation/native';
 import ImagePicker from 'react-native-image-crop-picker';
 
 const EditProfileScreen = () => {
+  const navigation = useNavigation();
   const [image, setImage] = useState('https://source.unsplash.com/random');
   const {colors} = useTheme();
+
+  const OnHomePressed = () => {
+    navigation.navigate('Home');
+  };
 
   const takePhotoFromCamera = () => {
     ImagePicker.openCamera({
@@ -227,9 +232,10 @@ const EditProfileScreen = () => {
             ]}
           />
         </View>
-        <TouchableOpacity style={styles.commandButton} onPress={() => {}}>
+        {/* <TouchableOpacity style={styles.commandButton} onPress={OnHomePressed}>
           <Text style={styles.panelButtonTitle}>Submit</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
+        <CustomButtons text="Submit" onPress={OnHomePressed} />
       </Animated.View>
     </View>
   );

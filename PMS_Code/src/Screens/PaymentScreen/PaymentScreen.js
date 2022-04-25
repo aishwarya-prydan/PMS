@@ -6,6 +6,7 @@ import {useForm, Controller} from 'react-hook-form';
 import {useNavigation} from '@react-navigation/native';
 import CustomButtons from '../../Components/CustomButtons/CustomButtons.js';
 import NumInput from '../../Components/NumInput/NumInput.js';
+import CustomInput from '../../Components/CustomFormInput/CustomFormInput.js';
 
 const VALID = 'Cheque Book Only';
 
@@ -15,6 +16,7 @@ const PaymentScreen = () => {
   const [PaymentMode, setPaymentMode] = useState('Cheque Book Only');
   const [ChequeNo, setChequeNo] = useState('');
   const [BankName, setBankName] = useState('');
+  const [date, setDate] = useState('');
   const [BankIFSCCode, setBankIFSCCode] = useState('');
 
   const {
@@ -100,6 +102,16 @@ const PaymentScreen = () => {
             value: 11,
             message: 'Bank IFSC Code should be max 11 characters long',
           },
+        }}
+      />
+
+      <CustomInput
+        name="date"
+        placeholder="Date(dd/mm/yy)"
+        control={control}
+        setValue={setDate}
+        rules={{
+          required: 'Date is required',
         }}
       />
 

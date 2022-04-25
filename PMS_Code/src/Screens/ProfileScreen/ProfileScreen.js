@@ -72,7 +72,7 @@ const ProfileScreen = () => {
 
         <View style={styles.row}>
           <Icon name="envelope" type="font-awesome" size={20} />
-          <Text style={{marginLeft: 20}}>aishwarya21@gmail.com</Text>
+          <Text style={{marginLeft: 20}}>aishwaryab@gmail.com</Text>
         </View>
       </View>
 

@@ -19,7 +19,7 @@ const TabNavigator = () => {
   return (
     <>
       {/* <View style={styles.container}> */}
-      <Spinner visible={isLoading} />
+      {/* <Spinner visible={isLoading} /> */}
       {/* <Text style={styles.welcome}>Welcome {userInfo.email}</Text>
       </View> */}
       <Tab.Navigator
