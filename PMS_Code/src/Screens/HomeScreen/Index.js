@@ -31,7 +31,7 @@ const Index = () => {
             source={Logo}
             style={{
               top: -50,
-              right: 79,
+              right: 90,
               width: 141,
               height: 121,
               position: 'absolute',
@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '600',
     marginBottom: 10,
-    marginLeft: 74,
+    marginLeft: 66,
+    marginRight: 35,
     // marginTop: -100,
     // marginBottom: 5,
     // marginBottom: 20,
