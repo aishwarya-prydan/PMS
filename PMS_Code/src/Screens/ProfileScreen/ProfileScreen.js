@@ -8,8 +8,10 @@ import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {AuthContext} from '../../Context/AuthContext';
 
+
 const ProfileScreen = () => {
   const navigation = useNavigation();
+  const {userInfo, register} = useContext(AuthContext);
 
   const {isLoading, isLogout} = useContext(AuthContext);
 
@@ -35,7 +37,7 @@ const ProfileScreen = () => {
         <View style={{flexDirection: 'row', marginTop: 18}}>
           <Avatar.Image
             source={{
-              uri: 'https://source.unsplash.com/random',
+              uri: 'https://source.unsplash.com/random/girl5',
             }}
             size={80}
           />
@@ -50,7 +52,8 @@ const ProfileScreen = () => {
                   alignItems: 'center',
                 })
               }>
-              Aishwarya Birewar
+              {userInfo.user.name}
+              {/* Kishan */}
             </Title>
           </View>
         </View>

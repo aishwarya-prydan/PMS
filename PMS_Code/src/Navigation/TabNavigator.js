@@ -8,19 +8,19 @@ import ProfileScreen from './../Screens/ProfileScreen/ProfileScreen';
 import TopTabNavigator from '../Navigation/TopTabNavigator.js';
 import {Icon} from 'react-native-elements';
 import DTopTabNavigator from './DTopTabNavigator.js';
-// import Spinner from 'react-native-loading-spinner-overlay';
-// import {AuthContext} from '../Context/AuthContext.js';
+import Spinner from 'react-native-loading-spinner-overlay';
+import {AuthContext} from '../Context/AuthContext.js';
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
-  // const {userInfo, isLoading} = useContext(AuthContext);
+  const {userInfo, isLoading} = useContext(AuthContext);
 
   return (
     <>
-      {/* <View style={styles.container}>
-        <Spinner visible={isLoading} />
-        <Text style={styles.welcome}>Welcome {userInfo.email}</Text>
+      {/* <View style={styles.container}> */}
+      <Spinner visible={isLoading} />
+      {/* <Text style={styles.welcome}>Welcome {userInfo.email}</Text>
       </View> */}
       <Tab.Navigator
         screenOptions={{
