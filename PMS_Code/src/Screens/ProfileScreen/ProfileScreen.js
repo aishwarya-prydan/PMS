@@ -45,13 +45,15 @@ const ProfileScreen = () => {
               style={
                 (styles.title,
                 {
-                  marginTop: 15,
+                  marginTop: 25,
+                  fontSize: 25,
                   marginBottom: 5,
                   fontWeight: '700',
                   alignItems: 'center',
+                  marginLeft: 15,
                 })
               }>
-              Aishwarya Birewar
+              Aishwarya
               {/* {userInfo.user.name} */}
               {/* Kishan */}
             </Title>
