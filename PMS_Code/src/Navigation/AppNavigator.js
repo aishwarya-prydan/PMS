@@ -52,9 +52,17 @@ const AppNavigator = () => {
         component={TabNavigator}
         options={{headerShown: true, title: 'PMS'}}
       />
-      <Stack.Screen name="Payment Screen" component={PaymentScreen} />
+      <Stack.Screen
+        name="Payment Screen"
+        component={PaymentScreen}
+        options={{title: 'Hire Developer'}}
+      />
       <Stack.Screen name="HireEmployee" component={HireEmployeeScreen} />
-      <Stack.Screen name="GiveProject" component={GiveProjectScreen} />
+      <Stack.Screen
+        name="GiveProject"
+        component={GiveProjectScreen}
+        options={{title: 'Post a Project'}}
+      />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="MainProject" component={MainProjectScreen} />
