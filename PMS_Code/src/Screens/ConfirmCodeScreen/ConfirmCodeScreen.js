@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View, StyleSheet, ScrollView} from 'react-native';
+import {Text, View, StyleSheet, ScrollView, Alert} from 'react-native';
 import NumInput from '../../Components/NumInput/NumInput.js';
 import CustomButtons from '../../../src/Components/CustomButtons/CustomButtons.js';
 import {useNavigation} from '@react-navigation/native';
@@ -10,7 +10,7 @@ const ConfirmCodeScreen = () => {
   const navigation = useNavigation();
 
   const ConfirmPressed = () => {
-    navigation.navigate('NewPassword');
+    Alert.alert('Invalid Code');
   };
 
   const OnSignInPress = () => {
